@@ -1,0 +1,446 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+@font-face {
+  font-family: "Gilroy-bold";
+  src: url(/Dubai/web/fonts/Gilroy-Bold.woff2);
+}
+@font-face {
+  font-family: "Gilroy-semibold";
+  src: url(/Dubai/web/fonts/Gilroy-Semibold.woff2);
+}
+:root {
+  --line-heigth: 1.2em;
+}
+
+.title1 {
+  color: white;
+  font-family: "Gilroy-bold";
+  font-size: 18px;
+  line-height: var(--line-heigth);
+}
+
+.subtitle1 {
+  font-family: "Work Sans";
+  font-weight: 400;
+  font-size: 10px;
+  line-height: var(--line-heigth);
+  color: #FFFFFF;
+}
+
+.title2 {
+  display: inline;
+  cursor: pointer;
+  font-family: "Gilroy-semibold";
+  font-size: 36px;
+  line-height: var(--line-heigth);
+  text-transform: uppercase;
+  color: #FFFFFF;
+  transition-duration: 0.3s;
+}
+.title2:hover {
+  color: #FCD54C;
+  transition-duration: 0.3s;
+}
+
+.submenu {
+  display: none;
+  margin: 20px 0 20px 22px;
+}
+.submenu a {
+  font-family: "Gilroy-semibold";
+  text-decoration: none;
+  font-size: 14px;
+  line-height: var(--line-heigth);
+  color: #FFFFFF;
+  transition-duration: 0.3s;
+}
+.submenu a:hover {
+  color: #FCD54C;
+  transition-duration: 0.3s;
+}
+
+body {
+  background-color: #272727;
+}
+
+.main__projects {
+  margin-top: 45px;
+}
+
+.container__main {
+  width: 288px;
+  margin: 0px auto;
+  position: relative;
+}
+
+.header__visible {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+.header__invisible {
+  position: absolute;
+  background-color: #272727;
+  display: none;
+  z-index: 1;
+  top: 8%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 292px;
+  height: 100%;
+}
+
+.visible__burger img {
+  cursor: pointer;
+  margin-top: 12px;
+  width: 18px;
+  height: 18px;
+}
+
+.stack__subtitle {
+  opacity: 0.6;
+}
+
+.logo__rectangle {
+  width: 30px;
+  height: 49px;
+  border: 2px solid #FCD54C;
+  border-right: none;
+}
+.logo__stack {
+  margin-top: -45px;
+  margin-left: 12px;
+}
+
+.invisible__menu {
+  margin: 52px 0 60px 23px;
+}
+.invisible__info {
+  border-top: 1px solid #FCD54C;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info__button {
+  padding-top: 40px;
+}
+.info__button a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 165px;
+  height: 41px;
+  background-color: #FCD54C;
+  border: transparent;
+  font-family: "Work Sans";
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.14em;
+  color: #000000;
+  transition-duration: 0.3s;
+}
+.info__button a:active {
+  background-color: #000000;
+  color: #FCD54C;
+  transition-duration: 0.3s;
+}
+.info__phone {
+  margin: 40px 0 40px 0;
+}
+.info__phone a {
+  font-family: "Gilroy-semibold";
+  text-decoration: none;
+  font-size: 16px;
+  line-height: var(--line-heigth);
+  color: #FFFFFF;
+}
+.info__lang {
+  display: flex;
+  width: 44px;
+  justify-content: space-between;
+  font-family: "Gilroy-semibold";
+  font-size: 14px;
+  line-height: var(--line-heigth);
+  text-transform: uppercase;
+  color: #929292;
+  margin-bottom: 15px;
+}
+
+.arrow {
+  cursor: pointer;
+  width: 0;
+  height: 0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-bottom: 10px solid white;
+  transform: rotate(180deg);
+}
+
+.box {
+  display: flex;
+  width: 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__buy {
+  margin-bottom: 20px;
+}
+.menu__blog {
+  margin-bottom: 20px;
+}
+.menu__about {
+  margin-bottom: 20px;
+}
+.submenu__first {
+  margin-bottom: 15px;
+}
+.submenu__second {
+  margin-bottom: 15px;
+}
+.submenu__third {
+  margin-bottom: 15px;
+}
+
+.blog__box {
+  width: 140px;
+}
+.about__box {
+  width: 150px;
+}
+.contact__box {
+  width: 200px;
+}
+
+.lang__en {
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+.lang__en:hover {
+  color: #FCD54C;
+  transition-duration: 0.3s;
+}
+.lang__ru {
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+.lang__ru:hover {
+  color: #FCD54C;
+  transition-duration: 0.3s;
+}
+
+._active {
+  color: #FCD54C;
+}
+
+.welcome__picture {
+  margin-top: 28px;
+  background: url(/Dubai/web/img/MOBILE/main320px1.png);
+  width: 285px;
+  height: 322px;
+}
+
+.picture__top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.top__rectangle {
+  border: 4px solid #FCD54C;
+  border-right: none;
+  width: 61px;
+  height: 192px;
+  margin-top: 24px;
+}
+.top__case {
+  display: flex;
+  flex-direction: column;
+  height: 160px;
+  margin-left: -48px;
+}
+
+.case__subtitle {
+  margin: 7px 0 7px 0;
+  text-transform: uppercase;
+}
+.case__title {
+  margin-bottom: 61px;
+  width: 231px;
+  font-family: "Space Grotesk";
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.27em;
+  text-transform: capitalize;
+  color: #FFFFFF;
+}
+.case__title span {
+  color: #FCD54C;
+}
+.case__link {
+  display: flex;
+  align-items: center;
+  width: 135px;
+}
+
+.link__text a {
+  text-decoration: none;
+  font-family: "Work Sans";
+  font-weight: 700;
+  font-size: 12px;
+  line-height: var(--line-heigth);
+  color: #FFFFFF;
+}
+.link__arrow {
+  margin-left: 2px;
+  width: 10px;
+  height: 9px;
+  border: 1px solid #FFFFFF;
+  opacity: 0.8;
+  transform: rotate(45deg);
+  border-left: none;
+  border-bottom: none;
+}
+
+.bottom__slider {
+  width: 80px;
+  margin: 60px 0 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider__prev {
+  cursor: pointer;
+  font-family: "Gilroy-bold";
+  font-size: 10px;
+  line-height: 2.4em;
+  letter-spacing: 0.2em;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+.slider__stick {
+  height: 15px;
+  width: 1px;
+  background-color: white;
+}
+.slider__next {
+  cursor: pointer;
+  font-family: "Gilroy-bold";
+  font-size: 10px;
+  line-height: 2.4em;
+  letter-spacing: 0.2em;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+._chosen {
+  opacity: 1;
+}
+
+.welcome__numbers {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #FCD54C;
+  z-index: 0;
+  color: #FFFFFF;
+}
+
+.title3 {
+  font-family: "Gilroy-bold";
+  font-size: 40px;
+  line-height: var(--line-heigth);
+  cursor: pointer;
+}
+
+.subtitle2 {
+  font-family: "Work Sans";
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 1.25em;
+  margin-bottom: 6px;
+}
+
+.title4 {
+  font-family: "Gilroy-bold";
+  font-size: 24px;
+  line-height: var(--line-heigth);
+  color: #FFFFFF;
+}
