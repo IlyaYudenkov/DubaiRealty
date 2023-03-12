@@ -1,19 +1,16 @@
-let burgerMenu = document.querySelector('.visible__burger');
+let visibleBurger = document.querySelector('.visible__burger');
+let invisibleBurger = document.querySelector('.banner__burger');
 //функция позволяет открывать скрытое меню и менять иконку бургера через data-trigger 
-showCloseHiddenMenu = (event) => {
-    if(event.target.dataset.trigger == 'false'){
-        document.querySelector('.visible__burger img').src = '/Dubai/web/img/MOBILE/closeBurger.svg'
+showHiddenMenu = () => {
         document.querySelector('.header__invisible').style.display = 'block';
-        event.target.dataset.trigger = 'true';
-    }
-    else {
-        document.querySelector('.visible__burger img').src = '/Dubai/web/img/MOBILE/Burger.svg'
-        document.querySelector('.header__invisible').style.display = 'none';
-        event.target.dataset.trigger = 'false';
-    }
+        document.body.style.overflow = 'hidden';
 }
-burgerMenu.addEventListener('click', showCloseHiddenMenu)
-
+closeHiddenMenu = () => {
+    document.querySelector('.header__invisible').style.display = 'none';
+    document.body.style.overflow = 'visible';
+}
+visibleBurger.addEventListener('click', showHiddenMenu)
+invisibleBurger.addEventListener('click', closeHiddenMenu)
 
 
 let buyArrow = document.querySelector('.box__arrow')
@@ -149,4 +146,46 @@ document.querySelector('.three__title').addEventListener('click', () => {
     document.querySelector('.slider__next').classList.add('_chosen');
 })
 
+//функции слайдера 
+let offset = 0;
+buildingSlide = () => {
+    offset = 295;
+    document.querySelector('.slider__body').style.left = -offset + 'px';
+    document.querySelector('.navigation__building').classList.add('_active')
+    document.querySelector('.navigation__interior').classList.remove('_active')
+    document.querySelector('.navigation__all').classList.remove('_active')
+    document.querySelector('.pagination__two').style.backgroundColor = '#FCD54C';
+    document.querySelector('.pagination__one').style.backgroundColor = '#929292';
+    document.querySelector('.pagination__three').style.backgroundColor = '#929292';
+}
+document.querySelector('.navigation__building').addEventListener('click', buildingSlide)
+document.querySelector('.pagination__two').addEventListener('click', buildingSlide)
+
+
+allSlide = () => {
+    offset = 0;
+    document.querySelector('.slider__body').style.left = offset + 'px';
+    document.querySelector('.navigation__all').classList.add('_active')
+    document.querySelector('.navigation__interior').classList.remove('_active')
+    document.querySelector('.navigation__building').classList.remove('_active')
+    document.querySelector('.pagination__one').style.backgroundColor = '#FCD54C';
+    document.querySelector('.pagination__two').style.backgroundColor = '#929292';
+    document.querySelector('.pagination__three').style.backgroundColor = '#929292';
+}
+document.querySelector('.navigation__all').addEventListener('click', allSlide)
+document.querySelector('.pagination__one').addEventListener('click', allSlide)
+
+interiorSlide = () => {
+    offset = 590;
+    document.querySelector('.slider__body').style.left = -offset + 'px';
+    document.querySelector('.navigation__interior').classList.add('_active')
+    document.querySelector('.navigation__all').classList.remove('_active')
+    document.querySelector('.navigation__building').classList.remove('_active')
+    document.querySelector('.pagination__three').style.backgroundColor = '#FCD54C';
+    document.querySelector('.pagination__two').style.backgroundColor = '#929292';
+    document.querySelector('.pagination__one').style.backgroundColor = '#929292';
+    
+}
+document.querySelector('.navigation__interior').addEventListener('click', interiorSlide)
+document.querySelector('.pagination__three').addEventListener('click', interiorSlide)
 

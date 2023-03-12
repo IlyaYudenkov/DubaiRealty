@@ -13,9 +13,16 @@
     font-family: 'Gilroy-semibold';
     src: url(/Dubai/web/fonts/Gilroy-Semibold.woff2);
 }
+@font-face {
+    font-family: 'Gilroy-semiboldItalic';
+    src: url(/Dubai/web/fonts/Gilroy-SemiboldItalic.woff2);
+}
 
 :root{
     --line-heigth: 1.2em;
+}
+.html{
+    scroll-behavior: smooth;
 }
 
 .title1{
@@ -65,7 +72,6 @@
 }
 body{
     background-color: #272727;
-    
 }
 
 .main {
@@ -80,7 +86,6 @@ body{
 	&__main {
         width: 288px;
         margin: 0px auto;
-        position: relative;
 	}
 }
 
@@ -93,15 +98,17 @@ body{
 
     }
     &__invisible{
-        position: absolute;
+        position: fixed;
         background-color: #272727;
         display: none;
         z-index: 1;
-        top: 8%;
+        top: 0%;
         left: 50%;
         transform: translate(-50%, 0%);
-        width: 292px;
+        width: 313px;
         height: 100%;
+        overflow-y: scroll;
+        padding: 0 5px;
     }
 }
 
@@ -116,6 +123,7 @@ body{
         width: 18px;
         height: 18px;
     }
+    
 }
 .stack {
 
@@ -145,8 +153,6 @@ body{
 
     &__menu {
         margin: 52px 0 60px 23px;
-        
-        
     }
     &__info{
         border-top: 1px solid #FCD54C;
@@ -154,7 +160,42 @@ body{
         flex-direction: column;
         align-items: center;
     }
+    &__banner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 16px;
+    }
 }
+
+
+.banner {
+
+    &__logo {
+    }
+    &__burger img{
+        cursor: pointer;
+        margin-top: 10px;
+        width: 18px;
+        height: 18px;
+    }
+
+}
+.logo {
+
+    &__rectangle {
+        width: 30px;
+        height: 49px;
+        border: 2px solid #FCD54C;
+        border-right: none;
+    }
+
+    &__stack {
+        margin-top: -45px;
+        margin-left: 12px;
+    }
+}
+
 
 
 .info{
@@ -246,7 +287,8 @@ body{
         
     }
 
-    &__submenu {
+    &__submenu div{
+        margin-bottom: 15px;  
     }
 }
 .box {
@@ -261,15 +303,14 @@ body{
 .submenu {
 
     &__first {
-        margin-bottom: 15px;     
+           
     }
 
     &__second {
-        margin-bottom: 15px;
+
     }
 
     &__third {
-        margin-bottom: 15px;
     }
 }
 .blog {
@@ -278,7 +319,8 @@ body{
         width: 140px;
     }
 
-    &__submenu {
+    &__submenu div{
+        margin-bottom: 15px;  
     }
 }
 .about {
@@ -287,13 +329,17 @@ body{
         width: 150px;
     }
 
-    &__submenu {
+    &__submenu div{
+        margin-bottom: 15px;  
     }
 }
 .contact {
 
     &__box {
         width: 200px;
+    }
+    &__submenu div{
+        margin-bottom: 15px;  
     }
 }
 .lang {
@@ -392,11 +438,6 @@ body{
 .link {
 
     &__text a{
-        text-decoration: none;
-        font-family: 'Work Sans';
-        font-weight: 700;
-        font-size: 12px;
-        line-height: var(--line-heigth);
         color: #FFFFFF;
     }
 
@@ -410,6 +451,13 @@ body{
         border-left: none;
         border-bottom: none;
     }
+}
+.text{
+    text-decoration: none;
+    font-family: 'Work Sans';
+    font-weight: 700;
+    font-size: 12px;
+    line-height: var(--line-heigth);
 }
 .bottom {
 
@@ -454,7 +502,6 @@ body{
     opacity: 1.0;
 }
 
-
 .welcome {
 
     &__numbers {
@@ -462,30 +509,10 @@ body{
         display: flex;
         justify-content: space-between;
         border-bottom: 1px solid #FCD54C;
-        z-index: 0;
         color: #FFFFFF;
     }
 }
-.numbers {
 
-    &__one {
-    }
-
-    &__two {
-    }
-
-    &__three {
-    }
-}
-.one {
-
-    &__title {
-    
-    }
-
-    &__subtitle {
-    }
-}
 .title3 { 
         font-family: 'Gilroy-bold';
         font-size: 40px;
@@ -499,24 +526,6 @@ body{
         line-height: 1.25em;
         margin-bottom: 6px;
 }
-.two {
-
-    &__title {
-
-    }
-
-    &__subtitle {
-    }
-}
-.three {
-
-    &__title {
-
-    }
-
-    &__subtitle {
-    }
-}
 
 .title4{
     font-family: 'Gilroy-bold';
@@ -525,4 +534,262 @@ body{
     color: #FFFFFF;
 }
 
+//latest projects
+.projects {
+
+    &__slider {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+    }
+    &__title{
+        margin-bottom: 20px;
+    }
+}
+.slider {
+
+    &__navigation {
+        display: flex;
+        justify-content: space-between;
+        color: #FFFFFF;
+        
+    }
+
+    &__body {  
+        margin: 10px 0 20px 0;
+        display: grid;
+        grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr 1fr 1fr;
+        color: #FFFFFF;
+        width: 288px;
+        position: relative;
+        top: 55%;
+        left: 0%;
+        transition-duration: 0.4s;
+    }
+
+    &__pagination {
+        display: flex;
+        justify-content: space-between;
+        width: 75px;
+        margin: 0px auto;
+    }
+}
+.paragraph{
+    cursor: pointer;
+    font-family: 'Work Sans';
+    font-weight: 600;
+    font-size: 12px;
+    line-height: var(--line-heigth);
+    
+    &:hover{
+        color: #FCD54C;
+    }
+}
+.navigation {
+
+    &__all {   
+    }
+
+    &__building {
+    }
+
+    &__interior {    
+    }
+
+    &__viewAll a{
+        font-family: 'Gilroy-semiboldItalic';
+        font-size: 12px;
+        line-height: var(--line-heigth);
+        color: #929292;
+        cursor: pointer;
+        &:hover{
+            color: #FCD54C;
+        }
+    }
+}
+.cart{
+    width: 140px;
+    height: 186px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 15px 10px 10px 10px;
+    margin-right: 7px;
+    
+}
+.body {
+
+    &__cartOne {
+        background: url(/Dubai/web/img/MOBILE/villas.jpg);
+        margin:0 7px 10px 0;
+        
+    }
+
+    &__cartTwo {
+        background-color: #FCD54C;
+        color: #272727;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 15px 10px 10px 10px;
+    }
+
+    &__cartThree {
+        background: url(/Dubai/web/img/MOBILE/houses.jpg);
+    }
+
+    &__cartFour {
+        background: url(/Dubai/web/img/MOBILE/villas2.jpg);
+    }
+    &__cartFive{
+        background: url(/Dubai/web/img/MOBILE/villas2.jpg);
+    }
+    &__cartSix{
+        background: url(/Dubai/web/img/MOBILE/villas2.jpg);
+    }
+    &__cartSeven{
+        background: url(/Dubai/web/img/MOBILE/villas.jpg);
+    }
+    &__cartEight{
+        background: url(/Dubai/web/img/MOBILE/houses.jpg);
+    }
+    &__cartNine{
+        background: url(/Dubai/web/img/MOBILE/villas.jpg);
+    }
+    &__cartTen{
+        background: url(/Dubai/web/img/MOBILE/houses.jpg);
+    }
+    &__cartEleven{
+        background: url(/Dubai/web/img/MOBILE/villas2.jpg);
+    }
+    &__cartTwelve{
+        background: url(/Dubai/web/img/MOBILE/houses.jpg);
+    }
+
+}
+.cartOne {
+
+    &__title {
+    }
+}
+.title5 {
+    font-family: 'Gilroy-bold';
+    font-size: 18px;
+    line-height: var(--line-heigth);
+}
+.cartTwo {
+
+    &__title {
+    }
+
+    &__subtitle {
+        color: #272727;   
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 74px;
+        &:hover{
+            text-decoration: underline;
+        }
+       
+    }
+}
+
+.link {
+
+    &__info a{
+        color: #272727;
+    }
+
+    &__pointer {
+        margin-top: 1px;
+        height: 5px;
+        width: 5px;
+        border: 1px solid #272727;
+        transform: rotate(45deg);
+        border-left: none;
+        border-bottom: none;
+    }
+}
+
+.cartThree {
+
+    &__title {
+    }
+}
+.cartFour {
+
+    &__title {
+    }
+}
+
+.pagination {
+
+    &__one {
+        background-color: #FCD54C;
+    }
+
+    &__two {
+        background-color: #929292;  
+    }
+
+    &__three {
+        background-color: #929292;  
+    }
+}
+.round{
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+}
+
+
+////////////////////expertise
+.main {
+
+    &__expertise {
+        margin-top: 80px;
+    }
+}
+.expertise {
+
+    &__title {
+        font-family: 'Work Sans';
+        font-weight: 600;
+        font-size: 14px;
+        line-height: var(--line-heigth);
+        color: #FCD54C;
+        
+    }
+
+    &__subtitle {
+        margin: 10px 0;
+    }
+
+    &__text {
+        font-family: 'Work Sans';
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 160%;
+        color: #E8E8E8;
+    }
+
+    &__video {
+        margin: 40px 0;
+    }
+
+    &__maryKay {
+    }
+
+    &__photoOne {
+    }
+
+    &__photoTwo {
+    }
+}
 

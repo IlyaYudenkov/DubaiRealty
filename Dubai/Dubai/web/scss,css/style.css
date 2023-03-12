@@ -82,8 +82,16 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Gilroy-semibold";
   src: url(/Dubai/web/fonts/Gilroy-Semibold.woff2);
 }
+@font-face {
+  font-family: "Gilroy-semiboldItalic";
+  src: url(/Dubai/web/fonts/Gilroy-SemiboldItalic.woff2);
+}
 :root {
   --line-heigth: 1.2em;
+}
+
+.html {
+  scroll-behavior: smooth;
 }
 
 .title1 {
@@ -144,7 +152,6 @@ body {
 .container__main {
   width: 288px;
   margin: 0px auto;
-  position: relative;
 }
 
 .header__visible {
@@ -154,15 +161,17 @@ body {
   margin-top: 16px;
 }
 .header__invisible {
-  position: absolute;
+  position: fixed;
   background-color: #272727;
   display: none;
   z-index: 1;
-  top: 8%;
+  top: 0%;
   left: 50%;
   transform: translate(-50%, 0%);
-  width: 292px;
+  width: 313px;
   height: 100%;
+  overflow-y: scroll;
+  padding: 0 5px;
 }
 
 .visible__burger img {
@@ -195,6 +204,30 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.invisible__banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.banner__burger img {
+  cursor: pointer;
+  margin-top: 10px;
+  width: 18px;
+  height: 18px;
+}
+
+.logo__rectangle {
+  width: 30px;
+  height: 49px;
+  border: 2px solid #FCD54C;
+  border-right: none;
+}
+.logo__stack {
+  margin-top: -45px;
+  margin-left: 12px;
 }
 
 .info__button {
@@ -269,24 +302,29 @@ body {
 .menu__about {
   margin-bottom: 20px;
 }
-.submenu__first {
-  margin-bottom: 15px;
-}
-.submenu__second {
-  margin-bottom: 15px;
-}
-.submenu__third {
+.buy__submenu div {
   margin-bottom: 15px;
 }
 
 .blog__box {
   width: 140px;
 }
+.blog__submenu div {
+  margin-bottom: 15px;
+}
+
 .about__box {
   width: 150px;
 }
+.about__submenu div {
+  margin-bottom: 15px;
+}
+
 .contact__box {
   width: 200px;
+}
+.contact__submenu div {
+  margin-bottom: 15px;
 }
 
 .lang__en {
@@ -360,11 +398,6 @@ body {
 }
 
 .link__text a {
-  text-decoration: none;
-  font-family: "Work Sans";
-  font-weight: 700;
-  font-size: 12px;
-  line-height: var(--line-heigth);
   color: #FFFFFF;
 }
 .link__arrow {
@@ -376,6 +409,14 @@ body {
   transform: rotate(45deg);
   border-left: none;
   border-bottom: none;
+}
+
+.text {
+  text-decoration: none;
+  font-family: "Work Sans";
+  font-weight: 700;
+  font-size: 12px;
+  line-height: var(--line-heigth);
 }
 
 .bottom__slider {
@@ -419,7 +460,6 @@ body {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #FCD54C;
-  z-index: 0;
   color: #FFFFFF;
 }
 
@@ -443,4 +483,186 @@ body {
   font-size: 24px;
   line-height: var(--line-heigth);
   color: #FFFFFF;
+}
+
+.projects__slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+.projects__title {
+  margin-bottom: 20px;
+}
+
+.slider__navigation {
+  display: flex;
+  justify-content: space-between;
+  color: #FFFFFF;
+}
+.slider__body {
+  margin: 10px 0 20px 0;
+  display: grid;
+  grid-template: 1fr 1fr/1fr 1fr 1fr 1fr 1fr 1fr;
+  color: #FFFFFF;
+  width: 288px;
+  position: relative;
+  top: 55%;
+  left: 0%;
+  transition-duration: 0.4s;
+}
+.slider__pagination {
+  display: flex;
+  justify-content: space-between;
+  width: 75px;
+  margin: 0px auto;
+}
+
+.paragraph {
+  cursor: pointer;
+  font-family: "Work Sans";
+  font-weight: 600;
+  font-size: 12px;
+  line-height: var(--line-heigth);
+}
+.paragraph:hover {
+  color: #FCD54C;
+}
+
+.navigation__viewAll a {
+  font-family: "Gilroy-semiboldItalic";
+  font-size: 12px;
+  line-height: var(--line-heigth);
+  color: #929292;
+  cursor: pointer;
+}
+.navigation__viewAll a:hover {
+  color: #FCD54C;
+}
+
+.cart {
+  width: 140px;
+  height: 186px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 15px 10px 10px 10px;
+  margin-right: 7px;
+}
+
+.body__cartOne {
+  background: url(/Dubai/web/img/MOBILE/villas.jpg);
+  margin: 0 7px 10px 0;
+}
+.body__cartTwo {
+  background-color: #FCD54C;
+  color: #272727;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 15px 10px 10px 10px;
+}
+.body__cartThree {
+  background: url(/Dubai/web/img/MOBILE/houses.jpg);
+}
+.body__cartFour {
+  background: url(/Dubai/web/img/MOBILE/villas2.jpg);
+}
+.body__cartFive {
+  background: url(/Dubai/web/img/MOBILE/villas2.jpg);
+}
+.body__cartSix {
+  background: url(/Dubai/web/img/MOBILE/villas2.jpg);
+}
+.body__cartSeven {
+  background: url(/Dubai/web/img/MOBILE/villas.jpg);
+}
+.body__cartEight {
+  background: url(/Dubai/web/img/MOBILE/houses.jpg);
+}
+.body__cartNine {
+  background: url(/Dubai/web/img/MOBILE/villas.jpg);
+}
+.body__cartTen {
+  background: url(/Dubai/web/img/MOBILE/houses.jpg);
+}
+.body__cartEleven {
+  background: url(/Dubai/web/img/MOBILE/villas2.jpg);
+}
+.body__cartTwelve {
+  background: url(/Dubai/web/img/MOBILE/houses.jpg);
+}
+
+.title5 {
+  font-family: "Gilroy-bold";
+  font-size: 18px;
+  line-height: var(--line-heigth);
+}
+
+.cartTwo__subtitle {
+  color: #272727;
+}
+.cartTwo__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 74px;
+}
+.cartTwo__link:hover {
+  text-decoration: underline;
+}
+
+.link__info a {
+  color: #272727;
+}
+.link__pointer {
+  margin-top: 1px;
+  height: 5px;
+  width: 5px;
+  border: 1px solid #272727;
+  transform: rotate(45deg);
+  border-left: none;
+  border-bottom: none;
+}
+
+.pagination__one {
+  background-color: #FCD54C;
+}
+.pagination__two {
+  background-color: #929292;
+}
+.pagination__three {
+  background-color: #929292;
+}
+
+.round {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+}
+
+.main__expertise {
+  margin-top: 80px;
+}
+
+.expertise__title {
+  font-family: "Work Sans";
+  font-weight: 600;
+  font-size: 14px;
+  line-height: var(--line-heigth);
+  color: #FCD54C;
+}
+.expertise__subtitle {
+  margin: 10px 0;
+}
+.expertise__text {
+  font-family: "Work Sans";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  color: #E8E8E8;
+}
+.expertise__video {
+  margin: 40px 0;
 }
