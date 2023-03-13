@@ -189,3 +189,38 @@ interiorSlide = () => {
 document.querySelector('.navigation__interior').addEventListener('click', interiorSlide)
 document.querySelector('.pagination__three').addEventListener('click', interiorSlide)
 
+
+
+document.querySelector('.subtitleLink__text').addEventListener('mouseover', () => {
+    document.querySelector('.subtitleLink__arrow').style.borderColor = '#FCD54C'
+})
+document.querySelector('.subtitleLink__text').addEventListener('mouseout', () => {
+    document.querySelector('.subtitleLink__arrow').style.borderColor = '#929292'
+})
+
+
+document.querySelector('.reference__text').addEventListener('mouseover', () => {
+    document.querySelector('.reference__arrow').style.borderColor = '#FFFFFF'
+})
+document.querySelector('.reference__text').addEventListener('mouseout', () => {
+    document.querySelector('.reference__arrow').style.borderColor = '#FCD54C';
+})
+
+//Carts slider
+let offset2 = 0;
+firstCart = () => {
+    offset2 = 0;
+    document.querySelector('.articles__carts').style.left = offset2 + 'px';
+    document.querySelector('.pagination__first').style.backgroundColor = '#FCD54C';
+    document.querySelector('.pagination__second').style.backgroundColor = '#929292';
+    document.querySelector('.pagination__third').style.backgroundColor = '#929292';
+}
+secondCart = () => {
+    offset2 = 288;
+    document.querySelector('.articles__carts').style.left = -offset2 + 'px';
+    document.querySelector('.pagination__second').style.backgroundColor = '#FCD54C';
+    document.querySelector('.pagination__first').style.backgroundColor = '#929292';
+    document.querySelector('.pagination__third').style.backgroundColor = '#929292';
+}
+
+document.querySelector('.pagination__second').addEventListener('click', secondCart)

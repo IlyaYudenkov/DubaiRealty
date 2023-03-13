@@ -789,10 +789,6 @@ body {
   border: 1px solid #272727;
 }
 
-.main__articles {
-  overflow: hidden;
-}
-
 .articles__top {
   display: flex;
   justify-content: space-between;
@@ -803,26 +799,8 @@ body {
 }
 .articles__discover {
   border: 1px solid #FCD54C;
-  padding: 30px 21px;
+  padding: 30px 23px;
 }
-.articles__photoTwo {
-  margin: 20px 0 86px 0;
-}
-.articles__carts {
-  display: flex;
-  margin-bottom: 20px;
-  width: 864px;
-  position: relative;
-  top: 0;
-  left: 0;
-}
-.articles__pagination {
-  display: flex;
-  justify-content: space-between;
-  width: 75px;
-  margin: 0px auto;
-}
-
 .top__subtitleLink a {
   display: flex;
   align-items: center;
@@ -850,91 +828,10 @@ body {
   border-bottom: none;
 }
 
-.text2 {
+.discover__date {
   font-family: "Work Sans";
   font-weight: 400;
   font-size: 12px;
   line-height: var(--line-heigth);
   color: #FFFFFF;
-}
-
-.discover__title {
-  margin: 13px 0;
-}
-.discover__text {
-  color: #929292;
-  margin-bottom: 33px;
-}
-.discover__reference a {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 79px;
-}
-
-.reference__text {
-  font-family: "Work Sans";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 12px;
-  color: #FCD54C;
-}
-.reference__text:hover {
-  color: #FFFFFF;
-}
-.reference__arrow {
-  cursor: pointer;
-  height: 7px;
-  width: 6px;
-  border: 1px solid #FCD54C;
-  transform: rotate(45deg);
-  border-left: none;
-  border-bottom: none;
-}
-
-.carts__paul {
-  border: 1px solid #FCD54C;
-  padding: 50px 25px 10px 23px;
-  width: 290px;
-}
-
-.paul__photo img {
-  border-radius: 50%;
-  width: 68px;
-  height: 68px;
-  margin-top: -85px;
-}
-.paul__quotes {
-  font-family: "Work Sans";
-  font-weight: 600;
-  font-size: 100px;
-  color: #FCD54C;
-  text-align: right;
-  margin-top: -55px;
-}
-.paul__title {
-  font-family: "Gilroy-bold";
-  font-size: 25px;
-  line-height: var(--line-heigth);
-  color: #FFFFFF;
-  margin-top: -50px;
-}
-.paul__post {
-  margin: 13px 0 8px 0;
-}
-.paul__post span {
-  color: #FCD54C;
-}
-.paul__description {
-  color: #929292;
-}
-
-.pagination__first {
-  background-color: #FCD54C;
-}
-.pagination__second {
-  background-color: #929292;
-}
-.pagination__third {
-  background-color: #929292;
 }
