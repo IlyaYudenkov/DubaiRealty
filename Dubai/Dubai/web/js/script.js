@@ -1,6 +1,6 @@
 let visibleBurger = document.querySelector('.visible__burger');
 let invisibleBurger = document.querySelector('.banner__burger');
-//функция позволяет открывать скрытое меню и менять иконку бургера через data-trigger 
+//функции позволяют открывать и скрывать скрытое меню и менять иконку бургера через data-trigger 
 showHiddenMenu = () => {
         document.querySelector('.header__invisible').style.display = 'block';
         document.body.style.overflow = 'hidden';
@@ -13,59 +13,26 @@ visibleBurger.addEventListener('click', showHiddenMenu)
 invisibleBurger.addEventListener('click', closeHiddenMenu)
 
 
-let buyArrow = document.querySelector('.box__arrow')
-let blogArrow = document.querySelector('.box__arrow2')
-let aboutArrow = document.querySelector('.box__arrow3')
-let contactArrow = document.querySelector('.box__arrow4')
 
-let buySubmenu = document.querySelector('.buy__submenu')
-let blogSubmenu = document.querySelector('.blog__submenu')
-let aboutSubmenu = document.querySelector('.about__submenu')
-let contactSubmenu = document.querySelector('.contact__submenu')
-
-
-//функция позволяет открывать скрытые submenu конкретного пункта (и менять "стрелочки" через data-trigger и родитель event.targetA)
-openCloseSubmenu = (event) => {
-    if(event.target.dataset.trigger == 'true'){
-        event.target.style.transform = 'rotate(0deg)';
-        if(event.target.parentNode.classList[0] == 'buy__box'){
-            buySubmenu.style.display = 'block';
-        }
-        else if(event.target.parentNode.classList[0] == 'blog__box'){
-            blogSubmenu.style.display = 'block';
-        }
-        else if(event.target.parentNode.classList[0] == 'about__box'){
-            aboutSubmenu.style.display = 'block';
-        }
-        else if(event.target.parentNode.classList[0] == 'contact__box'){
-            contactSubmenu.style.display = 'block';
-        }
-        event.target.dataset.trigger = 'false';
-        
+//функция позволяет открывать скрытые submenu конкретного пункта через data-trigger и this
+function openCloseSubmenu (event){
+  let submenu =  event.target.parentNode.parentNode.childNodes[3];
+    if(this.querySelector('div:last-child').dataset.trigger == 'true'){
+      this.querySelector('div:last-child').style.transform = 'rotate(0deg)';
+      submenu.style.display = 'block';
+      this.querySelector('div:last-child').dataset.trigger = 'false';
     }
-    else if(event.target.dataset.trigger = 'false'){
-        event.target.style.transform = 'rotate(180deg)';
-        if(event.target.parentNode.classList[0] == 'buy__box'){
-            buySubmenu.style.display = 'none';
-        }
-        else if(event.target.parentNode.classList[0] == 'blog__box'){
-            blogSubmenu.style.display = 'none';
-        }
-        else if(event.target.parentNode.classList[0] == 'about__box'){
-            aboutSubmenu.style.display = 'none';
-        }
-        else if(event.target.parentNode.classList[0] == 'contact__box'){
-            contactSubmenu.style.display = 'none';
-        }
-        event.target.dataset.trigger = 'true';
-       
+    else if(this.querySelector('div:last-child').dataset.trigger == 'false'){
+        this.querySelector('div:last-child').style.transform = 'rotate(180deg)';
+        submenu.style.display = 'none';
+        this.querySelector('div:last-child').dataset.trigger = 'true'; 
     }
 }
 
-buyArrow.addEventListener('click', openCloseSubmenu);
-blogArrow.addEventListener('click', openCloseSubmenu);
-aboutArrow.addEventListener('click', openCloseSubmenu);
-contactArrow.addEventListener('click', openCloseSubmenu);
+document.querySelector('.buy__box').addEventListener('click', openCloseSubmenu);
+document.querySelector('.blog__box').addEventListener('click', openCloseSubmenu);
+document.querySelector('.about__box').addEventListener('click', openCloseSubmenu);
+document.querySelector('.contact__box').addEventListener('click', openCloseSubmenu);
 
 //функция для смены языка (пока только меняет цвет выбранного языкового обозначения)
 langRu = () => {
@@ -190,27 +157,29 @@ document.querySelector('.navigation__interior').addEventListener('click', interi
 document.querySelector('.pagination__three').addEventListener('click', interiorSlide)
 
 
-
-document.querySelector('.subtitleLink__text').addEventListener('mouseover', () => {
+document.querySelector('.top__subtitleLink').addEventListener('mouseover', () => {
     document.querySelector('.subtitleLink__arrow').style.borderColor = '#FCD54C'
+    document.querySelector('.subtitleLink__text').style.color = '#FCD54C'
 })
-document.querySelector('.subtitleLink__text').addEventListener('mouseout', () => {
+document.querySelector('.top__subtitleLink').addEventListener('mouseout', () => {
     document.querySelector('.subtitleLink__arrow').style.borderColor = '#929292'
+    document.querySelector('.subtitleLink__text').style.color = '#929292'
 })
 
-
-document.querySelector('.reference__text').addEventListener('mouseover', () => {
-    document.querySelector('.reference__arrow').style.borderColor = '#FFFFFF'
+document.querySelector('.discover__reference').addEventListener('mouseover', () => {
+    document.querySelector('.reference__arrow').style.borderColor = '#FFFFFF';
+    document.querySelector('.reference__text').style.color = '#FFFFFF';
 })
-document.querySelector('.reference__text').addEventListener('mouseout', () => {
+document.querySelector('.discover__reference').addEventListener('mouseout', () => {
     document.querySelector('.reference__arrow').style.borderColor = '#FCD54C';
+    document.querySelector('.reference__text').style.color = '#FCD54C';
 })
 
 //Carts slider
 let slider = document.querySelector('.articles__slider'),
   sliderList = slider.querySelector('.slider-container'),
   sliderTrack = slider.querySelector('.slider__track'),
-  slides = slider.querySelectorAll('.track__paul'),
+  slides = slider.querySelectorAll('.slide'),
   slideWidth = slides[0].offsetWidth,
   slideIndex = 0,
   posInit = 0,
@@ -232,7 +201,7 @@ let slider = document.querySelector('.articles__slider'),
     sliderTrack.style.transition = 'transform .5s';
     sliderTrack.style.transform = `translate3d(-${slideIndex * slideWidth}px, 0px, 0px)`;
   }
-  
+ 
   getEvent = () => event.type.search('touch') !== -1 ? event.touches[0] : event,
 
 swipeStart = function() {
@@ -289,7 +258,7 @@ swipeAction = () => {
     }
 
     // запрет ухода вправо на последнем слайде
-    if (slideIndex === --slides.length) {
+    if (slideIndex  === --slides.length) {
       if (posInit > posX1) {
         setTransform(transform, lastTrf);
         return;
@@ -303,12 +272,11 @@ swipeAction = () => {
       reachEdge();
       return;
     }
-
     // двигаем слайд
     sliderTrack.style.transform = `translate3d(${transform - posX2}px, 0px, 0px)`;
   }
 }
-swipeEnd = function() {
+swipeEnd = () => {
     // финальная позиция курсора
     posFinal = posInit - posX1;
   
@@ -333,6 +301,21 @@ swipeEnd = function() {
         slideIndex++;
       }
     }
+    if(slideIndex == 0){
+      document.querySelector('.pagination__first').style.backgroundColor = '#FCD54C'
+      document.querySelector('.pagination__second').style.backgroundColor = '#929292'
+      document.querySelector('.pagination__third').style.backgroundColor = '#929292'
+    }
+    else if(slideIndex == 1){
+      document.querySelector('.pagination__first').style.backgroundColor = '#929292';
+      document.querySelector('.pagination__second').style.backgroundColor = '#FCD54C';
+      document.querySelector('.pagination__third').style.backgroundColor = '#929292';
+    }
+    else if(slideIndex == 2){
+      document.querySelector('.pagination__first').style.backgroundColor = '#929292';
+      document.querySelector('.pagination__second').style.backgroundColor = '#929292';
+      document.querySelector('.pagination__third').style.backgroundColor = '#FCD54C';
+    }
   
     // убираем знак минус и сравниваем с порогом сдвига слайда
     if (allowSwipe) {
@@ -340,7 +323,7 @@ swipeEnd = function() {
         // если мы тянули вправо, то уменьшаем номер текущего слайда
           if (posInit < posX1) {
             slideIndex--;
-              // если мы тянули влево, то увеличиваем номер текущего слайда
+        // если мы тянули влево, то увеличиваем номер текущего слайда
           } else if (posInit > posX1) {
             slideIndex++;
           }
@@ -355,7 +338,7 @@ swipeEnd = function() {
         }
   };
 
-  setTransform = function(transform, comapreTransform) {
+  setTransform = (transform, comapreTransform) => {
     if (transform >= comapreTransform) {
       if (transform > comapreTransform) {
         sliderTrack.style.transform = `translate3d(${comapreTransform}px, 0px, 0px)`;
@@ -363,7 +346,7 @@ swipeEnd = function() {
     }
     allowSwipe = false;
   },
-  reachEdge = function() {
+  reachEdge = () => {
     transition = false;
     swipeEnd();
     allowSwipe = true;
@@ -376,4 +359,55 @@ sliderTrack.addEventListener('transitionend', () => allowSwipe = true);
 slider.addEventListener('touchstart', swipeStart);
 slider.addEventListener('mousedown', swipeStart);
 
-//
+
+
+
+//FAQ
+
+openCloseAnswer = (event) => {
+  if(event.target.dataset.trigger == 'false'){
+    event.target.style.transform = 'rotate(135deg)';
+    event.target.dataset.trigger = 'true'
+    if(event.target.parentNode.classList[0] == 'first__visible'){
+      document.querySelector('.first__invisible').style.display = 'block';
+    }
+    if(event.target.parentNode.classList[0] == 'second__visible'){
+      document.querySelector('.second__invisible').style.display = 'block';
+    }
+    if(event.target.parentNode.classList[0] == 'third__visible'){
+      document.querySelector('.third__invisible').style.display = 'block';
+    }
+    if(event.target.parentNode.classList[0] == 'fourth__visible'){
+      document.querySelector('.fourth__invisible').style.display = 'block';
+    }
+    if(event.target.parentNode.classList[0] == 'fifth__visible'){
+      document.querySelector('.fifth__invisible').style.display = 'block';
+    }
+    
+  }
+  else if(event.target.dataset.trigger = 'true'){
+    event.target.style.transform = 'rotate(45deg)';
+    event.target.dataset.trigger ='false';
+    if(event.target.parentNode.classList[0] == 'first__visible'){
+      document.querySelector('.first__invisible').style.display = 'none';
+    }
+    if(event.target.parentNode.classList[0] == 'second__visible'){
+      document.querySelector('.second__invisible').style.display = 'none';
+    }
+    if(event.target.parentNode.classList[0] == 'third__visible'){
+      document.querySelector('.third__invisible').style.display = 'none';
+    }
+    if(event.target.parentNode.classList[0] == 'fourth__visible'){
+      document.querySelector('.fourth__invisible').style.display = 'none';
+    }
+    if(event.target.parentNode.classList[0] == 'fifth__visible'){
+      document.querySelector('.fifth__invisible').style.display = 'none';
+    }
+  }
+}
+
+document.querySelector('.visible__arrow_first').addEventListener('click', openCloseAnswer)
+document.querySelector('.visible__arrow_second').addEventListener('click', openCloseAnswer)
+document.querySelector('.visible__arrow_third').addEventListener('click', openCloseAnswer)
+document.querySelector('.visible__arrow_fourth').addEventListener('click', openCloseAnswer)
+document.querySelector('.visible__arrow_fifth').addEventListener('click', openCloseAnswer)

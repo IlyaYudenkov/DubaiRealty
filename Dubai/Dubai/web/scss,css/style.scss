@@ -287,7 +287,7 @@ body{
 .buy {
 
     &__box {
-        
+
     }
 
     &__submenu div{
@@ -923,17 +923,12 @@ body{
 .top {
 
     &__title {
-     
     }
 
     &__subtitleLink a{
         display: flex;
         align-items: center;
         color: #929292;
-        &:hover{
-            color: #FCD54C;
-            border-color: #FCD54C;
-        }
     }
 }
 
@@ -967,12 +962,10 @@ body{
 .discover {
 
     &__date {
-        
     }
 
     &__title {
         margin: 13px 0;
-
     }
 
     &__text {
@@ -995,15 +988,12 @@ body{
         font-weight: 600;
         font-size: 12px;
         color: #FCD54C;
-        &:hover{
-            color:#FFFFFF;
-        }
         }
 
     &__arrow {
         cursor: pointer;
         height: 7px;
-        width: 6px;
+        width: 7px;
         border: 1px solid #FCD54C;
         transform: rotate(45deg);
         border-left: none;
@@ -1018,6 +1008,7 @@ body{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        width: 285px;
     }
 
     &__photoOne {
@@ -1197,5 +1188,144 @@ body{
         background-color: #929292;  
     }
 }
+
+//FAQ
+
+.main {
+
+    &__faq {
+        margin: 50px 0;     
+    }
+}
+.faq {
+    &__title{
+        margin-bottom: 20px;
+    }
+    &__questions {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.questions {
+
+    &__first {
+    }
+
+    &__second {
+    }
+
+    &__third {
+
+    }
+
+    &__fourth {
+        
+    }
+
+    &__fifth {
+    }
+}
+.first {
+
+    &__visible {
+        height: 63px;
+        border: 1px solid #929292;
+        border-left: none;
+        border-right: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__invisible {
+    }
+}
+.visible {
+
+    &__text {
+        width: 243px;
+    }
+
+    &__arrow {
+    }
+}
+.visibleBox{
+    height: 63px;
+    border: 1px solid #929292;
+    border-left: transparent;
+    border-right: transparent;
+    border-top: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.invisibleBox{
+    display: none;
+    font-family: 'Work Sans';
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 130%;
+    color: #929292;
+    padding: 7px;
+}
+.arrow2 {
+    height: 12px;
+    width: 12px;
+    border: 1px solid #FCD54C;
+    transform: rotate(45deg);
+    border-left: none;
+    border-bottom: none;
+    margin-right: 2.7px;
+    cursor: pointer;
+}
+.text3{
+    font-family: 'Work Sans';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 130%;
+    color: #FFFFFF;
+}
+.second {
+
+    &__visible {
+        
+    }
+
+    &__invisible {  
+    }
+}
+.third {
+
+    &__visible {
+    }
+
+    &__invisible {
+    }
+}
+.fourth {
+
+    &__visible {
+    }
+
+    &__invisible {
+    }
+}
+.fifth {
+
+    &__visible {
+    }
+
+    &__invisible {
+    }
+
+}
+.fifth {
+
+    &__visible {
+    }
+    &__invisible {
+    }
+}
+
 
 
