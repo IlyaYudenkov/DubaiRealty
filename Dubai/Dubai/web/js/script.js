@@ -16,16 +16,17 @@ invisibleBurger.addEventListener('click', closeHiddenMenu)
 
 //функция позволяет открывать скрытые submenu конкретного пункта через data-trigger и this
 function openCloseSubmenu (event){
+  let mainMenu = event.target.parentNode.parentNode;
   let submenu =  event.target.parentNode.parentNode.childNodes[3];
-    if(this.querySelector('div:last-child').dataset.trigger == 'true'){
+    if(mainMenu.dataset.trigger == 'true'){
       this.querySelector('div:last-child').style.transform = 'rotate(0deg)';
       submenu.style.display = 'block';
-      this.querySelector('div:last-child').dataset.trigger = 'false';
+      mainMenu.dataset.trigger = 'false';
     }
-    else if(this.querySelector('div:last-child').dataset.trigger == 'false'){
+    else if(mainMenu.dataset.trigger == 'false'){
         this.querySelector('div:last-child').style.transform = 'rotate(180deg)';
         submenu.style.display = 'none';
-        this.querySelector('div:last-child').dataset.trigger = 'true'; 
+        mainMenu.dataset.trigger = 'true'; 
     }
 }
 
@@ -89,7 +90,7 @@ nextSlide = () => {
 document.querySelector('.slider__prev').addEventListener('click', prevSlide);
 document.querySelector('.slider__next').addEventListener('click', nextSlide);
 
-document.querySelector('.one__title').addEventListener('click', () => {
+document.querySelector('.one__title').addEventListener('click', (event) => {
     document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/MOBILE/main320px1.png)';
     document.querySelector('.two__title').classList.remove('_active');
     document.querySelector('.three__title').classList.remove('_active');
@@ -360,54 +361,25 @@ slider.addEventListener('touchstart', swipeStart);
 slider.addEventListener('mousedown', swipeStart);
 
 
+//FAQ открытие ответов
 
-
-//FAQ
-
-openCloseAnswer = (event) => {
-  if(event.target.dataset.trigger == 'false'){
-    event.target.style.transform = 'rotate(135deg)';
-    event.target.dataset.trigger = 'true'
-    if(event.target.parentNode.classList[0] == 'first__visible'){
-      document.querySelector('.first__invisible').style.display = 'block';
-    }
-    if(event.target.parentNode.classList[0] == 'second__visible'){
-      document.querySelector('.second__invisible').style.display = 'block';
-    }
-    if(event.target.parentNode.classList[0] == 'third__visible'){
-      document.querySelector('.third__invisible').style.display = 'block';
-    }
-    if(event.target.parentNode.classList[0] == 'fourth__visible'){
-      document.querySelector('.fourth__invisible').style.display = 'block';
-    }
-    if(event.target.parentNode.classList[0] == 'fifth__visible'){
-      document.querySelector('.fifth__invisible').style.display = 'block';
-    }
-    
+function openCloseAnswer  (event)  {
+  let questionSubmenu = event.target.parentNode.parentNode.childNodes[3];
+  let questionMainMenu = event.target.parentNode.parentNode;
+  if(questionMainMenu.dataset.trigger == 'false'){
+    this.querySelector('div:last-child').style.transform = 'rotate(135deg)';
+    questionSubmenu.style.display = 'block';
+    questionMainMenu.dataset.trigger = 'true';
   }
-  else if(event.target.dataset.trigger = 'true'){
-    event.target.style.transform = 'rotate(45deg)';
-    event.target.dataset.trigger ='false';
-    if(event.target.parentNode.classList[0] == 'first__visible'){
-      document.querySelector('.first__invisible').style.display = 'none';
-    }
-    if(event.target.parentNode.classList[0] == 'second__visible'){
-      document.querySelector('.second__invisible').style.display = 'none';
-    }
-    if(event.target.parentNode.classList[0] == 'third__visible'){
-      document.querySelector('.third__invisible').style.display = 'none';
-    }
-    if(event.target.parentNode.classList[0] == 'fourth__visible'){
-      document.querySelector('.fourth__invisible').style.display = 'none';
-    }
-    if(event.target.parentNode.classList[0] == 'fifth__visible'){
-      document.querySelector('.fifth__invisible').style.display = 'none';
-    }
+  else if(questionMainMenu.dataset.trigger == 'true'){
+    this.querySelector('div:last-child').style.transform = 'rotate(45deg)';
+    questionSubmenu.style.display = 'none';
+    questionMainMenu.dataset.trigger = 'false';
   }
 }
 
-document.querySelector('.visible__arrow_first').addEventListener('click', openCloseAnswer)
-document.querySelector('.visible__arrow_second').addEventListener('click', openCloseAnswer)
-document.querySelector('.visible__arrow_third').addEventListener('click', openCloseAnswer)
-document.querySelector('.visible__arrow_fourth').addEventListener('click', openCloseAnswer)
-document.querySelector('.visible__arrow_fifth').addEventListener('click', openCloseAnswer)
+document.querySelector('.questions__first').addEventListener('click', openCloseAnswer)
+document.querySelector('.questions__second').addEventListener('click', openCloseAnswer)
+document.querySelector('.questions__third').addEventListener('click', openCloseAnswer)
+document.querySelector('.questions__fourth').addEventListener('click', openCloseAnswer)
+document.querySelector('.questions__fifth').addEventListener('click', openCloseAnswer)
