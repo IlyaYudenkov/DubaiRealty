@@ -383,3 +383,48 @@ document.querySelector('.questions__second').addEventListener('click', openClose
 document.querySelector('.questions__third').addEventListener('click', openCloseAnswer)
 document.querySelector('.questions__fourth').addEventListener('click', openCloseAnswer)
 document.querySelector('.questions__fifth').addEventListener('click', openCloseAnswer)
+
+
+//footer
+
+function openCloseSubmenuFooter (event){
+  console.log(event.target.parentNode.parentNode)
+  let mainMenuFooter = event.target.parentNode.parentNode;
+  let subMenuFooter = event.target.parentNode.parentNode.childNodes[3];
+  if(mainMenuFooter.dataset.trigger == 'true'){
+    subMenuFooter.style.display = 'block';
+    mainMenuFooter.dataset.trigger = 'false';
+  }
+  else if(mainMenuFooter.dataset.trigger == 'false'){
+    subMenuFooter.style.display = 'none';
+    mainMenuFooter.dataset.trigger = 'true';
+  }
+}
+document.querySelector('.contextMenu__buy').addEventListener('click', openCloseSubmenuFooter)
+document.querySelector('.contextMenu__services').addEventListener('click', openCloseSubmenuFooter)
+document.querySelector('.contextMenu__information').addEventListener('click', openCloseSubmenuFooter)
+document.querySelector('.contextMenu__about').addEventListener('click', openCloseSubmenuFooter)
+
+
+
+//modalWindow
+
+openModalWindow = () => {
+  document.querySelector('.modal').style.display = 'flex';
+  document.body.style.background = 'rgba(39, 39, 39, 0.9)';
+}
+closeModalWindow = () => {
+    document.querySelector('.modal').style.display = 'none';
+    document.body.style.background = '';
+}
+
+
+document.querySelector('.info__button').addEventListener('click', openModalWindow)
+document.querySelector('.mid__button').addEventListener('click', openModalWindow)
+document.querySelector('.window__close').addEventListener('click', closeModalWindow)
+document.querySelector('.modal').addEventListener('click', (event) => {
+    if(event.target === document.querySelector('.modal')){
+    document.querySelector('.modal').style.display = 'none';
+    document.body.style.background = '';
+}
+})
