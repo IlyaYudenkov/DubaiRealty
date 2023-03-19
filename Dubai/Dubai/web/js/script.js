@@ -116,22 +116,13 @@ document.querySelector('.three__title').addEventListener('click', () => {
 
 //функции слайдера 
 let offset = 0;
-buildingSlide = () => {
-    offset = 295;
-    document.querySelector('.slider__body').style.left = -offset + 'px';
-    document.querySelector('.navigation__building').classList.add('_active')
-    document.querySelector('.navigation__interior').classList.remove('_active')
-    document.querySelector('.navigation__all').classList.remove('_active')
-    document.querySelector('.pagination__two').style.backgroundColor = '#FCD54C';
-    document.querySelector('.pagination__one').style.backgroundColor = '#929292';
-    document.querySelector('.pagination__three').style.backgroundColor = '#929292';
-}
-document.querySelector('.navigation__building').addEventListener('click', buildingSlide)
-document.querySelector('.pagination__two').addEventListener('click', buildingSlide)
-
-
 allSlide = () => {
+  if(screen.width < 768){
     offset = 0;
+  }
+  else if(screen.width > 768){
+    offset = 0;
+  }
     document.querySelector('.slider__body').style.left = offset + 'px';
     document.querySelector('.navigation__all').classList.add('_active')
     document.querySelector('.navigation__interior').classList.remove('_active')
@@ -143,15 +134,38 @@ allSlide = () => {
 document.querySelector('.navigation__all').addEventListener('click', allSlide)
 document.querySelector('.pagination__one').addEventListener('click', allSlide)
 
-interiorSlide = () => {
-    offset = 590;
+buildingSlide = () => {
+  if(screen.width < 768){
+    offset = 295;
+  }
+  else if(screen.width > 768){
+    offset = 703;
+  }
     document.querySelector('.slider__body').style.left = -offset + 'px';
-    document.querySelector('.navigation__interior').classList.add('_active')
+    document.querySelector('.navigation__building').classList.add('_active')
+    document.querySelector('.navigation__interior').classList.remove('_active')
     document.querySelector('.navigation__all').classList.remove('_active')
-    document.querySelector('.navigation__building').classList.remove('_active')
-    document.querySelector('.pagination__three').style.backgroundColor = '#FCD54C';
-    document.querySelector('.pagination__two').style.backgroundColor = '#929292';
+    document.querySelector('.pagination__two').style.backgroundColor = '#FCD54C';
     document.querySelector('.pagination__one').style.backgroundColor = '#929292';
+    document.querySelector('.pagination__three').style.backgroundColor = '#929292';
+}
+document.querySelector('.navigation__building').addEventListener('click', buildingSlide)
+document.querySelector('.pagination__two').addEventListener('click', buildingSlide)
+
+interiorSlide = () => {
+  if(screen.width < 768){
+    offset = 590;
+  }
+  else if(screen.width > 768){
+    offset = 1410;
+  }
+  document.querySelector('.slider__body').style.left = -offset + 'px';
+  document.querySelector('.navigation__interior').classList.add('_active')
+  document.querySelector('.navigation__all').classList.remove('_active')
+  document.querySelector('.navigation__building').classList.remove('_active')
+  document.querySelector('.pagination__three').style.backgroundColor = '#FCD54C';
+  document.querySelector('.pagination__two').style.backgroundColor = '#929292';
+  document.querySelector('.pagination__one').style.backgroundColor = '#929292';
     
 }
 document.querySelector('.navigation__interior').addEventListener('click', interiorSlide)
