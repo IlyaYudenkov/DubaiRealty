@@ -192,8 +192,9 @@ document.querySelector('.discover__reference').addEventListener('mouseout', () =
 
 //Carts slider
 let slider = document.querySelector('.articles__slider'),
-  sliderList = slider.querySelector('.slider-container'),
-  sliderTrack = slider.querySelector('.slider__track'),
+sliderTrack = slider.querySelector('.slider__track');
+if(screen.width < 769){
+let sliderList = slider.querySelector('.slider-container'),
   slides = slider.querySelectorAll('.slide'),
   slideWidth = slides[0].offsetWidth,
   slideIndex = 0,
@@ -373,8 +374,33 @@ sliderList.classList.add('grab');
 sliderTrack.addEventListener('transitionend', () => allowSwipe = true);
 slider.addEventListener('touchstart', swipeStart);
 slider.addEventListener('mousedown', swipeStart);
-
-
+}
+else if(screen.width > 769){
+  firstSlide = () => {  
+    sliderTrack.style.transform = 'translate3d(0px, 0px, 0px)';
+    sliderTrack.style.transitionDuration = '0.5s'
+    event.target.style.background = '#FCD54C';
+    document.querySelector('.pagination__second').style.backgroundColor = '#929292';
+    document.querySelector('.pagination__third').style.backgroundColor = '#929292'; 
+   }
+   secondSlide = (event) => {
+    sliderTrack.style.transform = 'translate3d(-730px, 0px, 0px)';
+    sliderTrack.style.transitionDuration = '0.5s'
+    document.querySelector('.pagination__first').style.backgroundColor = '#929292';
+    event.target.style.background = '#FCD54C';
+    document.querySelector('.pagination__third').style.backgroundColor = '#929292'; 
+   }
+   thirdSlide = (event) => {
+    sliderTrack.style.transform = 'translate3d(-1460px, 0px, 0px)';
+    sliderTrack.style.transitionDuration = '0.5s';
+    document.querySelector('.pagination__first').style.backgroundColor = '#929292';
+    document.querySelector('.pagination__second').style.backgroundColor = '#929292'; 
+    event.target.style.background = '#FCD54C';
+   }
+}
+document.querySelector('.pagination__first').addEventListener('click', firstSlide)
+document.querySelector('.pagination__second').addEventListener('click', secondSlide)
+document.querySelector('.pagination__third').addEventListener('click', thirdSlide)
 //FAQ открытие ответов
 
 function openCloseAnswer  (event)  {
@@ -402,7 +428,6 @@ document.querySelector('.questions__fifth').addEventListener('click', openCloseA
 //footer
 
 function openCloseSubmenuFooter (event){
-  console.log(event.target.parentNode.parentNode)
   let mainMenuFooter = event.target.parentNode.parentNode;
   let subMenuFooter = event.target.parentNode.parentNode.childNodes[3];
   if(mainMenuFooter.dataset.trigger == 'true'){
@@ -434,7 +459,7 @@ closeModalWindow = () => {
 
 
 document.querySelector('.info__button').addEventListener('click', openModalWindow)
-document.querySelector('.mid__button').addEventListener('click', openModalWindow)
+document.querySelector('.down__button').addEventListener('click', openModalWindow)
 document.querySelector('.window__close').addEventListener('click', closeModalWindow)
 document.querySelector('.modal').addEventListener('click', (event) => {
     if(event.target === document.querySelector('.modal')){
