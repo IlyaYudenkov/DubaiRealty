@@ -36,23 +36,35 @@ document.querySelector('.about__box').addEventListener('click', openCloseSubmenu
 document.querySelector('.contact__box').addEventListener('click', openCloseSubmenu);
 
 //функция для смены языка (пока только меняет цвет выбранного языкового обозначения)
-langRu = () => {
-    if(document.querySelector('.lang__en').classList.contains('_active')){
-        document.querySelector('.lang__en').classList.remove('_active')
-        document.querySelector('.lang__ru').classList.toggle('_active')
+langRu = (event) => {
+    if(event.target.parentNode.childNodes[1].classList.contains('_active')){
+      document.querySelectorAll('.lang__en').forEach
+      (el => el.classList.remove('_active'))
+      document.querySelectorAll('.lang__ru').forEach
+      (el => el.classList.add('_active'))
     }
 }
-langEn = () => {
-    if(document.querySelector('.lang__ru').classList.contains('_active')){
-        document.querySelector('.lang__ru').classList.remove('_active')
-        document.querySelector('.lang__en').classList.toggle('_active')
-        
-    }
+langEn = (event) => {
+  if(event.target.parentNode.childNodes[3].classList.contains('_active')){
+    document.querySelectorAll('.lang__ru').forEach
+    (el => el.classList.remove('_active'))
+    document.querySelectorAll('.lang__en').forEach
+    (el => el.classList.add('_active'))
+  }
 }
-document.querySelector('.lang__ru').addEventListener('click', langRu);
-document.querySelector('.lang__en').addEventListener('click', langEn);
+document.body.addEventListener('click', (event) => { 
+  if(event.target.classList.contains('lang__ru')){
+  langRu(event);
+}
+});
+document.body.addEventListener('click', (event) => { 
+  if(event.target.classList.contains('lang__en')){
+  langEn(event)
+}
+});
 
 prevSlide = () => {
+
     if(document.querySelector('.slider__next').classList.contains('_chosen')){
         document.querySelector('.slider__next').classList.remove('_chosen')
         document.querySelector('.slider__prev').classList.toggle('_chosen') 
@@ -60,13 +72,30 @@ prevSlide = () => {
     if(document.querySelector('.three__title').classList.contains('_active')){
         document.querySelector('.three__title').classList.remove('_active')
         document.querySelector('.two__title').classList.toggle('_active') 
-        document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/MOBILE/main320px2.png)'
+        if(screen.width < 768 ){
+          document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/MOBILE/main320px2.png)'
+        }
+        else if(screen.width > 769){
+          document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/768px/main2.jpg) 0 0/100%';
+        }
+        else if(screen.width > 1920){
+          document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/768px/main3.jpg) 0 0/100%';
+        }
+    
         
     }
     else if(document.querySelector('.two__title').classList.contains('_active')){
         document.querySelector('.two__title').classList.remove('_active');
         document.querySelector('.one__title').classList.toggle('_active');
-        document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/MOBILE/main320px1.png)';
+        if(screen.width < 768){
+          document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/MOBILE/main320px1.png)';
+        }
+        else if(screen.width > 769){
+          document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/768px/main768px1.png)';
+        }
+        else if(screen.width > 1920){
+          document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/768px/main768px1.png)';
+        }
     }
 }
 nextSlide = () => {
@@ -77,13 +106,29 @@ nextSlide = () => {
     if(document.querySelector('.one__title').classList.contains('_active')){
         document.querySelector('.one__title').classList.remove('_active')
         document.querySelector('.two__title').classList.toggle('_active')
-        document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/MOBILE/main320px2.png)' 
+        if(screen.width < 768 ){
+          document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/MOBILE/main320px2.png)'
+        }
+        else if(screen.width > 769){
+          document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/768px/main2.jpg) 0 0/100%';
+        }
+        else if(screen.width > 1920){
+          document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/768px/main3.jpg) 0 0/100%';
+        }
         
     }
     else if(document.querySelector('.two__title').classList.contains('_active')){
         document.querySelector('.two__title').classList.remove('_active')
         document.querySelector('.three__title').classList.toggle('_active') 
-        document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/MOBILE/main320px3.png)' 
+        if(screen.width < 768){
+          document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/MOBILE/main320px3.png)';
+        }
+        else if(screen.width > 769){
+          document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/768px/main3.jpg) 0 0/100%';
+        }
+        else if(screen.width > 1920){
+          document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/768px/main768px1.png)';
+        } 
     }
     
 }
@@ -91,7 +136,15 @@ document.querySelector('.slider__prev').addEventListener('click', prevSlide);
 document.querySelector('.slider__next').addEventListener('click', nextSlide);
 
 document.querySelector('.one__title').addEventListener('click', (event) => {
+  if(screen.width < 768){
     document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/MOBILE/main320px1.png)';
+  }
+  else if(screen.width > 769){
+    document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/768px/main768px1.png) 0 0/100%';
+  }
+  else if(screen.width > 1920){
+    document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/768px/main768px1.png) 0 0/100%';
+  }
     document.querySelector('.two__title').classList.remove('_active');
     document.querySelector('.three__title').classList.remove('_active');
     document.querySelector('.one__title').classList.add('_active');
@@ -100,13 +153,29 @@ document.querySelector('.one__title').addEventListener('click', (event) => {
 
 })
 document.querySelector('.two__title').addEventListener('click', () => {
+  if(screen.width < 768){
     document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/MOBILE/main320px2.png)';
+  }
+  else if(screen.width > 769){
+    document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/768px/main2.jpg) 0 0/100%';
+  }
+  else if(screen.width > 1920){
+    document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/768px/main768px1.png) 0 0/100%';
+  }
     document.querySelector('.one__title').classList.remove('_active')
     document.querySelector('.three__title').classList.remove('_active');
     document.querySelector('.two__title').classList.add('_active');
 })
 document.querySelector('.three__title').addEventListener('click', () => {
+  if(screen.width < 768){
     document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/MOBILE/main320px3.png)';
+  }
+  else if(screen.width > 769){
+    document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/768px/main3.jpg) 0 0/100%';
+  }
+  else if(screen.width > 1920){
+    document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/768px/main768px1.png) 0 0/100%';
+  }
     document.querySelector('.one__title').classList.remove('_active');
     document.querySelector('.two__title').classList.remove('_active');
     document.querySelector('.three__title').classList.add('_active') ;
@@ -193,7 +262,7 @@ document.querySelector('.discover__reference').addEventListener('mouseout', () =
 //Carts slider
 let slider = document.querySelector('.articles__slider'),
 sliderTrack = slider.querySelector('.slider__track');
-if(screen.width < 769){
+if(screen.width < 768){
 let sliderList = slider.querySelector('.slider-container'),
   slides = slider.querySelectorAll('.slide'),
   slideWidth = slides[0].offsetWidth,
@@ -236,7 +305,6 @@ swipeStart = function() {
   document.addEventListener('mousemove', swipeAction);
   document.addEventListener('mouseup', swipeEnd);
 
-  
   sliderList.classList.remove('grab');
   sliderList.classList.add('grabbing');
 },
@@ -375,8 +443,9 @@ sliderTrack.addEventListener('transitionend', () => allowSwipe = true);
 slider.addEventListener('touchstart', swipeStart);
 slider.addEventListener('mousedown', swipeStart);
 }
-else if(screen.width > 769){
-  firstSlide = () => {  
+
+else if(screen.width > 768){
+  firstSlide = (event) => {  
     sliderTrack.style.transform = 'translate3d(0px, 0px, 0px)';
     sliderTrack.style.transitionDuration = '0.5s'
     event.target.style.background = '#FCD54C';
@@ -397,10 +466,11 @@ else if(screen.width > 769){
     document.querySelector('.pagination__second').style.backgroundColor = '#929292'; 
     event.target.style.background = '#FCD54C';
    }
-}
 document.querySelector('.pagination__first').addEventListener('click', firstSlide)
 document.querySelector('.pagination__second').addEventListener('click', secondSlide)
 document.querySelector('.pagination__third').addEventListener('click', thirdSlide)
+}
+
 //FAQ открытие ответов
 
 function openCloseAnswer  (event)  {
@@ -450,20 +520,21 @@ document.querySelector('.contextMenu__about').addEventListener('click', openClos
 
 openModalWindow = () => {
   document.querySelector('.modal').style.display = 'flex';
-  document.body.style.background = 'rgba(39, 39, 39, 0.9)';
+  document.querySelector('.modal').style.background = 'rgba(39, 39, 39, 0.952)';
+  document.body.style.overflow = 'hidden';
 }
 closeModalWindow = () => {
     document.querySelector('.modal').style.display = 'none';
-    document.body.style.background = '';
+    document.body.style.overflow  = 'visible';
 }
-
-
+document.querySelector('.visible__button').addEventListener('click', openModalWindow)
+document.querySelector('.banner__button').addEventListener('click', openModalWindow)
 document.querySelector('.info__button').addEventListener('click', openModalWindow)
 document.querySelector('.down__button').addEventListener('click', openModalWindow)
 document.querySelector('.window__close').addEventListener('click', closeModalWindow)
 document.querySelector('.modal').addEventListener('click', (event) => {
     if(event.target === document.querySelector('.modal')){
     document.querySelector('.modal').style.display = 'none';
-    document.body.style.background = '';
+    document.body.style.overflow  = 'visible';
 }
 })
