@@ -316,6 +316,7 @@ body {
 .menu__about {
   margin-bottom: 20px;
 }
+
 .buy__submenu div {
   margin-bottom: 15px;
 }
@@ -380,6 +381,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .top__rectangle {
   border: 4px solid #FCD54C;
   border-right: none;
@@ -1130,10 +1132,12 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
 .visible__text {
   width: 243px;
   padding: 22px 0;
 }
+
 .visibleBox {
   border: 1px solid #929292;
   border-left: transparent;
@@ -1634,13 +1638,7 @@ body {
     width: 100%;
     height: 380px;
   }
-  .welcome__picture img {
-    max-width: 100%;
-    max-height: 100%;
-  }
   .picture__top {
-    display: flex;
-    align-items: center;
     justify-content: flex-start;
   }
   .top-container {
@@ -1648,14 +1646,10 @@ body {
     width: 690px;
   }
   .top__rectangle {
-    border: 4px solid #FCD54C;
-    border-right: none;
     width: 74px;
     height: 229px;
   }
   .top__case {
-    display: flex;
-    flex-direction: column;
     height: 120px;
     margin: 0 0 70px -230px;
   }
@@ -1669,6 +1663,7 @@ body {
     margin-right: 15px;
   }
   .social__facebook {
+    background: url(/Dubai/web/img/768px/Facebook.svg) contain no-repeat;
     transition-duration: 0.3s;
   }
   .social__facebook:hover {
@@ -1676,6 +1671,7 @@ body {
     transition-duration: 0.3s;
   }
   .social__twitter {
+    background: url(/Dubai/web/img/768px/Twitter.svg) contain no-repeat;
     transition-duration: 0.3s;
   }
   .social__twitter:hover {
@@ -1683,6 +1679,7 @@ body {
     transition-duration: 0.3s;
   }
   .social__youtube {
+    background: url(/Dubai/web/img/768px/youtube.svg) contain no-repeat;
     transition-duration: 0.3s;
   }
   .social__youtube:hover {
@@ -1690,6 +1687,7 @@ body {
     transition-duration: 0.3s;
   }
   .social__insta {
+    background: url(/Dubai/web/img/768px/Instagram.svg) contain no-repeat;
     transition-duration: 0.3s;
   }
   .social__insta:hover {
@@ -1697,6 +1695,7 @@ body {
     transition-duration: 0.3s;
   }
   .social__linkedIn {
+    background: url(/Dubai/web/img/768px/Linkedin.svg) contain no-repeat;
     transition-duration: 0.3s;
   }
   .social__linkedIn:hover {
@@ -1718,8 +1717,6 @@ body {
     color: #FCD54C;
   }
   .case__link {
-    display: flex;
-    align-items: center;
     width: 170px;
     margin-top: 8px;
   }
@@ -1731,11 +1728,6 @@ body {
     margin-left: 2px;
     width: 10px;
     height: 9px;
-    border: 1px solid #FFFFFF;
-    opacity: 0.8;
-    transform: rotate(45deg);
-    border-left: none;
-    border-bottom: none;
   }
   .bottom__slider {
     margin: 0px 0 0 30px;
@@ -1751,11 +1743,22 @@ body {
     width: 540px;
     height: 70px;
   }
+  .title3 {
+    font-family: "Gilroy-bold";
+    font-size: 40px;
+    line-height: 50px;
+    margin-right: 10px;
+  }
   .title4 {
     font-family: "Gilroy-bold";
     font-size: 30px;
     line-height: 37px;
-    color: #FFFFFF;
+  }
+  .subtitle2 {
+    font-size: 12px;
+    line-height: 14px;
+    margin-top: 4px;
+    margin-bottom: 0;
   }
   .numbers__one {
     display: flex;
@@ -1773,82 +1776,29 @@ body {
     align-items: center;
     justify-content: space-between;
   }
-  .one__title {
-    font-size: 40px;
-    line-height: 50px;
-    margin-right: 10px;
-  }
-  .one__subtitle {
-    font-size: 12px;
-    line-height: 14px;
-    margin-top: 4px;
-    margin-bottom: 0;
-  }
-  .two__title {
-    font-size: 40px;
-    line-height: 50px;
-    margin-right: 10px;
-  }
-  .two__subtitle {
-    font-size: 12px;
-    line-height: 14px;
-    margin-top: 4px;
-    margin-bottom: 0;
-  }
-  .three__title {
-    font-size: 40px;
-    line-height: 50px;
-    margin-right: 10px;
-  }
-  .three__subtitle {
-    font-size: 12px;
-    line-height: 14px;
-    margin-top: 4px;
-    margin-bottom: 0;
-  }
   .main__projects {
     width: 695px;
   }
   .projects__up {
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     margin-bottom: 25px;
-  }
-  .projects__slider {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: hidden;
   }
   .up__title {
     margin-bottom: 0;
   }
   .up__navigation {
-    display: flex;
-    justify-content: space-between;
-    color: #FFFFFF;
     width: 290px;
   }
   .slider__body {
     margin-bottom: 20px;
-    display: grid;
     grid-template: 1fr/1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     width: 695px;
-  }
-  .slider__pagination {
-    display: flex;
-    justify-content: space-between;
-    width: 75px;
-    margin: 0px auto;
   }
   .cart {
     width: 165px;
     height: 220px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
     padding: 17px 24px 13px 11px;
     margin-right: 11px;
   }
@@ -1864,12 +1814,6 @@ body {
     margin-bottom: 0px;
   }
   .body__cartTwo {
-    background-color: #FCD54C;
-    color: #272727;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
     font-size: 12px;
     line-height: 14px;
   }
@@ -1906,59 +1850,27 @@ body {
   .cartTwo__subtitle {
     color: #272727;
   }
-  .cartTwo__link {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 74px;
-  }
-  .cartTwo__link:hover {
-    text-decoration: underline;
-  }
   .main__expertise {
     margin: 80px 0 70px 0;
   }
   .expertise__title {
-    font-family: "Work Sans";
-    font-weight: 600;
     font-size: 16px;
-    line-height: var(--line-heigth);
-    color: #FCD54C;
   }
   .expertise__subtitle {
     margin: 14px 0 23px 0;
     width: 450px;
   }
-  .expertise__text {
-    font-family: "Work Sans";
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 160%;
-    color: #E8E8E8;
-  }
   .expertise__video {
     margin: 70px 0;
     background: url(/Dubai/web/img/768px/Video.jpg) 0 0/100% 100% no-repeat;
-    width: 100%;
     height: 394px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   .expertise__maryKay {
-    border: 1px solid #FCD54C;
     margin-bottom: 70px;
     padding: 37px 60px;
-    font-family: "Gilroy-regular";
     font-size: 18px;
-    line-height: 160%;
-    color: #FFFFFF;
-  }
-  .expertise__maryKay span {
-    color: #FCD54C;
   }
   .expertise__photos {
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 0px;
@@ -1986,93 +1898,34 @@ body {
   .video__playround {
     height: 50px;
     width: 50px;
-    border-radius: 50%;
-    background-color: #FCD54C;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
   }
   .playround__triangle {
-    cursor: pointer;
-    width: 0;
-    height: 0;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
     border-bottom: 8px solid #000000;
-    transform: rotate(90deg);
   }
   .main__contactUs {
-    width: 100%;
     height: 255px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background: url(/Dubai/web/img/768px/ContactUs.png);
     padding: 50px 0 61px 0;
     margin: 70px 0;
   }
-  .contactUs__subtitle {
-    font-family: "Work Sans";
-    font-weight: 600;
-    font-size: 12px;
-    line-height: var(--line-heigth);
-    text-align: center;
-    color: #272727;
-  }
   .contactUs__title {
-    font-family: "Gilroy-bold";
-    font-weight: 700;
     font-size: 70px;
     line-height: 87px;
-    text-align: center;
-    color: #272727;
     margin: 0px;
   }
   .contactUs__form {
     margin-top: 7px;
-    display: flex;
-    align-items: flex-end;
   }
   .contactUs__form input {
     width: 286px;
     height: 41px;
-    background-color: #FFFFFF;
     padding: 13px 28px;
-    border: 1px solid transparent;
-  }
-  .contactUs__form input::-moz-placeholder {
-    font-family: "Work Sans";
-    font-weight: 400;
-    font-size: 12px;
-    line-height: var(--line-heigth);
-    color: #272727;
-    opacity: 0.5;
-  }
-  .contactUs__form input::placeholder {
-    font-family: "Work Sans";
-    font-weight: 400;
-    font-size: 12px;
-    line-height: var(--line-heigth);
-    color: #272727;
-    opacity: 0.5;
   }
   .contactUs__form button {
     width: 165px;
     height: 41.4px;
-    background-color: #272727;
-    font-family: "Work Sans";
-    font-weight: 600;
-    font-size: 14px;
-    line-height: var(--line-heigth);
-    color: #FFFFFF;
-    margin-left: -4px;
-  }
-  .contactUs__form button:active {
-    background-color: #FFFFFF;
-    color: #272727;
-    border: 1px solid #272727;
   }
   .articles__top {
     display: flex;
@@ -2092,7 +1945,6 @@ body {
     height: 220px;
   }
   .mid__discover {
-    border: 1px solid #FCD54C;
     padding: 30px;
     height: 220px;
   }
@@ -2110,49 +1962,20 @@ body {
     width: 105px;
   }
   .subtitleLink__text {
-    font-family: "Gilroy-semibold";
     font-size: 12px;
     line-height: 15px;
-    display: flex;
-    align-items: center;
-  }
-  .discover__title {
-    margin: 13px 0;
   }
   .discover__text {
-    color: #929292;
     width: 151px;
     margin-bottom: 19px;
   }
-  .discover__reference a {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 79px;
-  }
   .articles__slider {
-    display: flex;
-    padding-top: 34px;
-    position: relative;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
     margin-bottom: 0px;
-  }
-  .articles__pagination {
-    display: flex;
-    justify-content: space-between;
-    width: 75px;
-    margin: 0px auto;
   }
   .slider__track {
     width: 690px;
   }
   .slide {
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
-    border: 1px solid #FCD54C;
     padding: 50px 24px 15px 30px;
     width: 333px;
     margin-right: 32px;
@@ -2172,20 +1995,11 @@ body {
   .jack__post {
     margin: 17px 0 13px 0;
   }
-  .jack__post span {
-    color: #FCD54C;
-  }
   .robert__post {
     margin: 17px 0 13px 0;
   }
-  .robert__post span {
-    color: #FCD54C;
-  }
   .kevin__post {
     margin: 17px 0 13px 0;
-  }
-  .kevin__post span {
-    color: #FCD54C;
   }
   .round {
     cursor: pointer;
@@ -2207,24 +2021,14 @@ body {
     width: 680px;
   }
   .footer__top {
-    display: flex;
-    align-items: center;
     justify-content: center;
     margin-bottom: 40px;
   }
   .footer__top-container {
     width: 700px;
-    margin: 0px auto;
-  }
-  .footer__mid {
-    margin-bottom: 42px;
-  }
-  .footer__bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
   }
   .footer__bottom-container {
     width: 700px;
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -2249,25 +2053,8 @@ body {
     line-height: 16px;
     margin-bottom: 0px;
   }
-  .down__button:active {
-    background-color: #000000;
-    color: #FCD54C;
-    transition-duration: 0.3s;
-  }
   .info__email {
-    margin-top: 13px;
     margin-bottom: 0px;
-  }
-  .info__email a {
-    font-family: "Gilroy-regular";
-    font-size: 18px;
-    line-height: 21px;
-    color: #E8E8E8;
-    transition-duration: 0.3s;
-  }
-  .info__email a:hover {
-    color: #FCD54C;
-    transition-duration: 0.3s;
   }
   .visible__title {
     width: 680px;
@@ -2278,48 +2065,22 @@ body {
   .bottom__social {
     margin: 34px 0 41px 0;
     width: 196px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
   .bottom__info {
-    font-family: "Lexend";
-    font-style: normal;
-    font-weight: 300;
-    font-size: 12px;
-    line-height: 15px;
-    color: #E8E8E8;
-    text-align: center;
     margin: 34px 0 41px 0;
   }
   .modal {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
     display: none;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    z-index: 3;
   }
   .modal__window {
     padding-top: 50px;
     width: 400px;
-    margin: 0px auto;
   }
   .modal-container {
     width: 700px;
-    background: #fff;
   }
   .window__close {
     margin: -60px 0 0 600px;
-  }
-  .window__close img {
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
   }
   .window__title {
     font-size: 40px;
@@ -2365,6 +2126,7 @@ body {
   .visible__right {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
   .left__list {
     display: flex;
@@ -2380,7 +2142,7 @@ body {
     width: 142px;
     height: 35px;
     margin-left: 90px;
-    margin-top: 15px;
+    margin-top: 0px;
     background-color: #FCD54C;
     border: transparent;
     font-family: "Work Sans";
@@ -2405,11 +2167,11 @@ body {
     line-height: var(--line-heigth);
     text-transform: uppercase;
     color: #929292;
-    margin-top: 15px;
+    margin-top: 0px;
   }
   .right__phone {
     display: block;
-    margin-top: 20px;
+    margin-top: 0px;
   }
   .right__phone a {
     font-family: "Gilroy-semibold";
@@ -2461,6 +2223,7 @@ body {
     border-bottom: 3px solid #FCD54C;
   }
   .buy__unseen {
+    visibility: hidden;
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -2501,7 +2264,6 @@ body {
   }
   .blog__unseen {
     display: none;
-    display: flex;
     flex-direction: column;
     position: absolute;
     width: 247px;
@@ -2525,110 +2287,334 @@ body {
     color: #000000;
     transition-duration: 0.3s;
   }
-}
-.about__visual {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 60px;
-  cursor: pointer;
-  border-bottom: 3px solid transparent;
-  transition-duration: 0.3s;
-}
-.about__visual:hover {
-  transition-duration: 0.3s;
-  color: #FCD54C;
-  border-bottom: 3px solid #FCD54C;
-}
-.about__unseen {
-  display: none;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  width: 247px;
-  height: 108px;
-  left: 0px;
-  top: 25px;
-  background: #272727;
-  border: 1px solid #979797;
-  transition-duration: 0.3s;
-}
-.about__unseen div {
-  cursor: pointer;
-  font-family: "Gilroy-semibold";
-  font-size: 14px;
-  line-height: var(--line-heigth);
-  color: #FFFFFF;
-  padding: 10px 0 10px 20px;
-}
-.about__unseen div:hover {
-  background: #FCD54C;
-  color: #000000;
-  transition-duration: 0.3s;
-}
-
-.contact__visual {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 80px;
-  cursor: pointer;
-  border-bottom: 3px solid transparent;
-  transition-duration: 0.3s;
-}
-.contact__visual:hover {
-  transition-duration: 0.3s;
-  color: #FCD54C;
-  border-bottom: 3px solid #FCD54C;
-}
-.contact__unseen {
-  display: none;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  width: 247px;
-  height: 108px;
-  left: 0px;
-  top: 25px;
-  background: #272727;
-  border: 1px solid #979797;
-  transition-duration: 0.3s;
-}
-.contact__unseen div {
-  cursor: pointer;
-  font-family: "Gilroy-semibold";
-  font-size: 14px;
-  line-height: var(--line-heigth);
-  color: #FFFFFF;
-  padding: 10px 0 10px 20px;
-}
-.contact__unseen div:hover {
-  background: #FCD54C;
-  color: #000000;
-  transition-duration: 0.3s;
-}
-
-.visual__title {
-  font-family: "Gilroy-semibold";
-  font-size: 14px;
-  line-height: var(--line-heigth);
-  text-transform: uppercase;
-  color: #FFFFFF;
-}
-.visual__arrow {
-  cursor: pointer;
-  width: 0;
-  height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-bottom: 7px solid white;
-  transform: rotate(180deg);
-}
-
-.stack__title {
-  font-size: 20px;
-  margin-bottom: 5px;
-}
-.stack__subtitle {
-  opacity: 0.6;
+  .about__visual {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60px;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition-duration: 0.3s;
+  }
+  .about__visual:hover {
+    transition-duration: 0.3s;
+    color: #FCD54C;
+    border-bottom: 3px solid #FCD54C;
+  }
+  .about__unseen {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    width: 247px;
+    height: 108px;
+    left: 0px;
+    top: 25px;
+    background: #272727;
+    border: 1px solid #979797;
+    transition-duration: 0.3s;
+  }
+  .about__unseen div {
+    cursor: pointer;
+    font-family: "Gilroy-semibold";
+    font-size: 14px;
+    line-height: var(--line-heigth);
+    color: #FFFFFF;
+    padding: 10px 0 10px 20px;
+  }
+  .about__unseen div:hover {
+    background: #FCD54C;
+    color: #000000;
+    transition-duration: 0.3s;
+  }
+  .contact__visual {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80px;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition-duration: 0.3s;
+  }
+  .contact__visual:hover {
+    transition-duration: 0.3s;
+    color: #FCD54C;
+    border-bottom: 3px solid #FCD54C;
+  }
+  .contact__unseen {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    width: 247px;
+    height: 108px;
+    left: 0px;
+    top: 25px;
+    background: #272727;
+    border: 1px solid #979797;
+    transition-duration: 0.3s;
+  }
+  .contact__unseen div {
+    cursor: pointer;
+    font-family: "Gilroy-semibold";
+    font-size: 14px;
+    line-height: var(--line-heigth);
+    color: #FFFFFF;
+    padding: 10px 0 10px 20px;
+  }
+  .contact__unseen div:hover {
+    background: #FCD54C;
+    color: #000000;
+    transition-duration: 0.3s;
+  }
+  .visual__title {
+    font-family: "Gilroy-semibold";
+    font-size: 14px;
+    line-height: var(--line-heigth);
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+  .visual__arrow {
+    cursor: pointer;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 7px solid white;
+    transform: rotate(180deg);
+  }
+  .stack__title {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  .stack__subtitle {
+    opacity: 0.6;
+  }
+  .welcome__picture {
+    margin-top: 26px;
+    background: url(/Dubai/web/img/768px/main768px1.png) 0 0/100%;
+    height: 970px;
+  }
+  .top-container {
+    margin: 310px 0px 310px 356px;
+    width: 1406px;
+  }
+  .top__rectangle {
+    width: 124px;
+    height: 383px;
+  }
+  .top__case {
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    margin: 0 0 70px -730px;
+  }
+  .top__social {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    margin-top: -270px;
+    margin-right: -20px;
+  }
+  .social__facebook {
+    background: url(/Dubai/web/img/1920px/Facebook.svg) contain no-repeat;
+  }
+  .social__twitter {
+    background: url(/Dubai/web/img/1920px/Twitter.svg) contain no-repeat;
+  }
+  .social__youtube {
+    background: url(/Dubai/web/img/1920px/youtube.svg) contain no-repeat;
+  }
+  .social__insta {
+    background: url(/Dubai/web/img/1920px/Instagram.svg) contain no-repeat;
+  }
+  .social__linkedIn {
+    background: url(/Dubai/web/img/1920px/Linkedin.svg) contain no-repeat;
+  }
+  .case__subtitle {
+    margin: 44px 0 22px 0;
+    font-size: 16px;
+  }
+  .case__title {
+    margin-bottom: 30px;
+    width: 714px;
+    font-size: 96px;
+    line-height: 1.04em;
+  }
+  .case__title span {
+    color: #FCD54C;
+  }
+  .case__link {
+    display: flex;
+    align-items: center;
+    width: 215px;
+    margin-top: 0px;
+  }
+  .link__text a {
+    font-size: 20px;
+    line-height: var(--line-heigth);
+  }
+  .link__arrow {
+    margin-left: 2px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #FFFFFF;
+    opacity: 0.8;
+    transform: rotate(45deg);
+    border-left: none;
+    border-bottom: none;
+  }
+  .welcome__numbers {
+    background-color: #272727;
+    margin-top: -150px;
+    margin-left: 800px;
+    border-bottom: 1px solid transparent;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #FFFFFF;
+    width: 1081px;
+    height: 150px;
+  }
+  .bottom__slider {
+    width: 166px;
+    margin: -90px 0 0px 500px;
+  }
+  .slider__prev {
+    font-size: 20px;
+    line-height: var(--line-heigth);
+  }
+  .slider__stick {
+    height: 20px;
+  }
+  .slider__next {
+    font-size: 20px;
+    line-height: var(--line-heigth);
+  }
+  .title3 {
+    font-family: "Gilroy-bold";
+    font-size: 60px;
+    line-height: 24px;
+  }
+  .numbers__one {
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+  .one__title {
+    margin-right: 37px;
+  }
+  .one__subtitle {
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 0px;
+  }
+  .two__title {
+    margin-right: 37px;
+  }
+  .two__subtitle {
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 0px;
+  }
+  .three__title {
+    margin-right: 37px;
+  }
+  .three__subtitle {
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 0px;
+  }
+  .main__projects {
+    width: 1802px;
+    margin-top: 124px;
+  }
+  .projects__up {
+    justify-content: space-evenly;
+    margin-bottom: 78px;
+  }
+  .up__navigation {
+    width: 400px;
+  }
+  .title4 {
+    font-size: 48px;
+    line-height: 1.43em;
+  }
+  .paragraph {
+    font-size: 16px;
+    line-height: 1.31em;
+  }
+  .navigation__viewAll a {
+    font-size: 16px;
+    line-height: 1.31em;
+  }
+  .slider__body {
+    margin-bottom: 100px;
+    width: 1802px;
+  }
+  .cart {
+    width: 430px;
+    height: 572px;
+    padding: 46px 61px 44px 30px;
+    margin-right: 30px;
+  }
+  .body__cartOne {
+    background: url(/Dubai/web/img/1920px/Villas.jpg);
+  }
+  .body__cartTwo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .body__cartThree {
+    background: url(/Dubai/web/img/MOBILE/houses.jpg);
+  }
+  .body__cartFour {
+    background: url(/Dubai/web/img/MOBILE/villas2.jpg);
+  }
+  .body__cartFive {
+    background: url(/Dubai/web/img/MOBILE/villas2.jpg);
+  }
+  .body__cartSix {
+    background: url(/Dubai/web/img/MOBILE/villas2.jpg);
+  }
+  .body__cartSeven {
+    background: url(/Dubai/web/img/MOBILE/villas.jpg);
+  }
+  .body__cartEight {
+    background: url(/Dubai/web/img/MOBILE/houses.jpg);
+  }
+  .body__cartNine {
+    background: url(/Dubai/web/img/MOBILE/villas.jpg);
+  }
+  .body__cartTen {
+    background: url(/Dubai/web/img/MOBILE/houses.jpg);
+  }
+  .body__cartEleven {
+    background: url(/Dubai/web/img/MOBILE/villas2.jpg);
+  }
+  .body__cartTwelve {
+    background: url(/Dubai/web/img/MOBILE/houses.jpg);
+  }
+  .subtitle1 {
+    font-size: 22px;
+  }
+  .title5 {
+    font-size: 32px;
+    line-height: 1.4em;
+  }
+  .cartTwo__link {
+    width: 145px;
+  }
+  .cartTwo__link:hover {
+    text-decoration: underline;
+  }
+  .text {
+    font-size: 20px;
+  }
+  .link__pointer {
+    margin-top: 1px;
+    height: 15px;
+    width: 15px;
+  }
 }

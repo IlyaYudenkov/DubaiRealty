@@ -1669,6 +1669,7 @@ body {
     margin-right: 15px;
   }
   .social__facebook {
+    background: url(/Dubai/web/img/768px/Facebook.svg) contain no-repeat;
     transition-duration: 0.3s;
   }
   .social__facebook:hover {
@@ -1676,6 +1677,7 @@ body {
     transition-duration: 0.3s;
   }
   .social__twitter {
+    background: url(/Dubai/web/img/768px/Twitter.svg) contain no-repeat;
     transition-duration: 0.3s;
   }
   .social__twitter:hover {
@@ -1683,6 +1685,7 @@ body {
     transition-duration: 0.3s;
   }
   .social__youtube {
+    background: url(/Dubai/web/img/768px/youtube.svg) contain no-repeat;
     transition-duration: 0.3s;
   }
   .social__youtube:hover {
@@ -1690,6 +1693,7 @@ body {
     transition-duration: 0.3s;
   }
   .social__insta {
+    background: url(/Dubai/web/img/768px/Instagram.svg) contain no-repeat;
     transition-duration: 0.3s;
   }
   .social__insta:hover {
@@ -1697,6 +1701,7 @@ body {
     transition-duration: 0.3s;
   }
   .social__linkedIn {
+    background: url(/Dubai/web/img/768px/Linkedin.svg) contain no-repeat;
     transition-duration: 0.3s;
   }
   .social__linkedIn:hover {
@@ -1778,12 +1783,6 @@ body {
     line-height: 50px;
     margin-right: 10px;
   }
-  .one__subtitle {
-    font-size: 12px;
-    line-height: 14px;
-    margin-top: 4px;
-    margin-bottom: 0;
-  }
   .two__title {
     font-size: 40px;
     line-height: 50px;
@@ -1813,7 +1812,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     margin-bottom: 25px;
   }
   .projects__slider {
@@ -2365,6 +2364,7 @@ body {
   .visible__right {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
   .left__list {
     display: flex;
@@ -2380,7 +2380,7 @@ body {
     width: 142px;
     height: 35px;
     margin-left: 90px;
-    margin-top: 15px;
+    margin-top: 0px;
     background-color: #FCD54C;
     border: transparent;
     font-family: "Work Sans";
@@ -2405,11 +2405,11 @@ body {
     line-height: var(--line-heigth);
     text-transform: uppercase;
     color: #929292;
-    margin-top: 15px;
+    margin-top: 0px;
   }
   .right__phone {
     display: block;
-    margin-top: 20px;
+    margin-top: 0px;
   }
   .right__phone a {
     font-family: "Gilroy-semibold";
@@ -2461,6 +2461,7 @@ body {
     border-bottom: 3px solid #FCD54C;
   }
   .buy__unseen {
+    visibility: hidden;
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -2501,7 +2502,6 @@ body {
   }
   .blog__unseen {
     display: none;
-    display: flex;
     flex-direction: column;
     position: absolute;
     width: 247px;
@@ -2525,110 +2525,334 @@ body {
     color: #000000;
     transition-duration: 0.3s;
   }
-}
-.about__visual {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 60px;
-  cursor: pointer;
-  border-bottom: 3px solid transparent;
-  transition-duration: 0.3s;
-}
-.about__visual:hover {
-  transition-duration: 0.3s;
-  color: #FCD54C;
-  border-bottom: 3px solid #FCD54C;
-}
-.about__unseen {
-  display: none;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  width: 247px;
-  height: 108px;
-  left: 0px;
-  top: 25px;
-  background: #272727;
-  border: 1px solid #979797;
-  transition-duration: 0.3s;
-}
-.about__unseen div {
-  cursor: pointer;
-  font-family: "Gilroy-semibold";
-  font-size: 14px;
-  line-height: var(--line-heigth);
-  color: #FFFFFF;
-  padding: 10px 0 10px 20px;
-}
-.about__unseen div:hover {
-  background: #FCD54C;
-  color: #000000;
-  transition-duration: 0.3s;
-}
-
-.contact__visual {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 80px;
-  cursor: pointer;
-  border-bottom: 3px solid transparent;
-  transition-duration: 0.3s;
-}
-.contact__visual:hover {
-  transition-duration: 0.3s;
-  color: #FCD54C;
-  border-bottom: 3px solid #FCD54C;
-}
-.contact__unseen {
-  display: none;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  width: 247px;
-  height: 108px;
-  left: 0px;
-  top: 25px;
-  background: #272727;
-  border: 1px solid #979797;
-  transition-duration: 0.3s;
-}
-.contact__unseen div {
-  cursor: pointer;
-  font-family: "Gilroy-semibold";
-  font-size: 14px;
-  line-height: var(--line-heigth);
-  color: #FFFFFF;
-  padding: 10px 0 10px 20px;
-}
-.contact__unseen div:hover {
-  background: #FCD54C;
-  color: #000000;
-  transition-duration: 0.3s;
-}
-
-.visual__title {
-  font-family: "Gilroy-semibold";
-  font-size: 14px;
-  line-height: var(--line-heigth);
-  text-transform: uppercase;
-  color: #FFFFFF;
-}
-.visual__arrow {
-  cursor: pointer;
-  width: 0;
-  height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-bottom: 7px solid white;
-  transform: rotate(180deg);
-}
-
-.stack__title {
-  font-size: 20px;
-  margin-bottom: 5px;
-}
-.stack__subtitle {
-  opacity: 0.6;
+  .about__visual {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60px;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition-duration: 0.3s;
+  }
+  .about__visual:hover {
+    transition-duration: 0.3s;
+    color: #FCD54C;
+    border-bottom: 3px solid #FCD54C;
+  }
+  .about__unseen {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    width: 247px;
+    height: 108px;
+    left: 0px;
+    top: 25px;
+    background: #272727;
+    border: 1px solid #979797;
+    transition-duration: 0.3s;
+  }
+  .about__unseen div {
+    cursor: pointer;
+    font-family: "Gilroy-semibold";
+    font-size: 14px;
+    line-height: var(--line-heigth);
+    color: #FFFFFF;
+    padding: 10px 0 10px 20px;
+  }
+  .about__unseen div:hover {
+    background: #FCD54C;
+    color: #000000;
+    transition-duration: 0.3s;
+  }
+  .contact__visual {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80px;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition-duration: 0.3s;
+  }
+  .contact__visual:hover {
+    transition-duration: 0.3s;
+    color: #FCD54C;
+    border-bottom: 3px solid #FCD54C;
+  }
+  .contact__unseen {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    width: 247px;
+    height: 108px;
+    left: 0px;
+    top: 25px;
+    background: #272727;
+    border: 1px solid #979797;
+    transition-duration: 0.3s;
+  }
+  .contact__unseen div {
+    cursor: pointer;
+    font-family: "Gilroy-semibold";
+    font-size: 14px;
+    line-height: var(--line-heigth);
+    color: #FFFFFF;
+    padding: 10px 0 10px 20px;
+  }
+  .contact__unseen div:hover {
+    background: #FCD54C;
+    color: #000000;
+    transition-duration: 0.3s;
+  }
+  .visual__title {
+    font-family: "Gilroy-semibold";
+    font-size: 14px;
+    line-height: var(--line-heigth);
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+  .visual__arrow {
+    cursor: pointer;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 7px solid white;
+    transform: rotate(180deg);
+  }
+  .stack__title {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  .stack__subtitle {
+    opacity: 0.6;
+  }
+  .welcome__picture {
+    margin-top: 26px;
+    background: url(/Dubai/web/img/768px/main768px1.png) 0 0/100%;
+    height: 970px;
+  }
+  .top-container {
+    margin: 310px 0px 310px 356px;
+    width: 1406px;
+  }
+  .top__rectangle {
+    width: 124px;
+    height: 383px;
+  }
+  .top__case {
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    margin: 0 0 70px -730px;
+  }
+  .top__social {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    margin-top: -270px;
+    margin-right: -20px;
+  }
+  .social__facebook {
+    background: url(/Dubai/web/img/1920px/Facebook.svg) contain no-repeat;
+  }
+  .social__twitter {
+    background: url(/Dubai/web/img/1920px/Twitter.svg) contain no-repeat;
+  }
+  .social__youtube {
+    background: url(/Dubai/web/img/1920px/youtube.svg) contain no-repeat;
+  }
+  .social__insta {
+    background: url(/Dubai/web/img/1920px/Instagram.svg) contain no-repeat;
+  }
+  .social__linkedIn {
+    background: url(/Dubai/web/img/1920px/Linkedin.svg) contain no-repeat;
+  }
+  .case__subtitle {
+    margin: 44px 0 22px 0;
+    font-size: 16px;
+  }
+  .case__title {
+    margin-bottom: 30px;
+    width: 714px;
+    font-size: 96px;
+    line-height: 1.04em;
+  }
+  .case__title span {
+    color: #FCD54C;
+  }
+  .case__link {
+    display: flex;
+    align-items: center;
+    width: 215px;
+    margin-top: 0px;
+  }
+  .link__text a {
+    font-size: 20px;
+    line-height: var(--line-heigth);
+  }
+  .link__arrow {
+    margin-left: 2px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #FFFFFF;
+    opacity: 0.8;
+    transform: rotate(45deg);
+    border-left: none;
+    border-bottom: none;
+  }
+  .welcome__numbers {
+    background-color: #272727;
+    margin-top: -150px;
+    margin-left: 800px;
+    border-bottom: 1px solid transparent;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #FFFFFF;
+    width: 1081px;
+    height: 150px;
+  }
+  .bottom__slider {
+    width: 166px;
+    margin: -90px 0 0px 500px;
+  }
+  .slider__prev {
+    font-size: 20px;
+    line-height: var(--line-heigth);
+  }
+  .slider__stick {
+    height: 20px;
+  }
+  .slider__next {
+    font-size: 20px;
+    line-height: var(--line-heigth);
+  }
+  .title3 {
+    font-family: "Gilroy-bold";
+    font-size: 60px;
+    line-height: 24px;
+  }
+  .numbers__one {
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+  .one__title {
+    margin-right: 37px;
+  }
+  .one__subtitle {
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 0px;
+  }
+  .two__title {
+    margin-right: 37px;
+  }
+  .two__subtitle {
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 0px;
+  }
+  .three__title {
+    margin-right: 37px;
+  }
+  .three__subtitle {
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 0px;
+  }
+  .main__projects {
+    width: 1802px;
+    margin-top: 124px;
+  }
+  .projects__up {
+    justify-content: space-evenly;
+    margin-bottom: 78px;
+  }
+  .up__navigation {
+    width: 400px;
+  }
+  .title4 {
+    font-size: 48px;
+    line-height: 1.43em;
+  }
+  .paragraph {
+    font-size: 16px;
+    line-height: 1.31em;
+  }
+  .navigation__viewAll a {
+    font-size: 16px;
+    line-height: 1.31em;
+  }
+  .slider__body {
+    margin-bottom: 100px;
+    width: 1802px;
+  }
+  .cart {
+    width: 430px;
+    height: 572px;
+    padding: 46px 61px 44px 30px;
+    margin-right: 30px;
+  }
+  .body__cartOne {
+    background: url(/Dubai/web/img/1920px/Villas.jpg);
+  }
+  .body__cartTwo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .body__cartThree {
+    background: url(/Dubai/web/img/MOBILE/houses.jpg);
+  }
+  .body__cartFour {
+    background: url(/Dubai/web/img/MOBILE/villas2.jpg);
+  }
+  .body__cartFive {
+    background: url(/Dubai/web/img/MOBILE/villas2.jpg);
+  }
+  .body__cartSix {
+    background: url(/Dubai/web/img/MOBILE/villas2.jpg);
+  }
+  .body__cartSeven {
+    background: url(/Dubai/web/img/MOBILE/villas.jpg);
+  }
+  .body__cartEight {
+    background: url(/Dubai/web/img/MOBILE/houses.jpg);
+  }
+  .body__cartNine {
+    background: url(/Dubai/web/img/MOBILE/villas.jpg);
+  }
+  .body__cartTen {
+    background: url(/Dubai/web/img/MOBILE/houses.jpg);
+  }
+  .body__cartEleven {
+    background: url(/Dubai/web/img/MOBILE/villas2.jpg);
+  }
+  .body__cartTwelve {
+    background: url(/Dubai/web/img/MOBILE/houses.jpg);
+  }
+  .subtitle1 {
+    font-size: 22px;
+  }
+  .title5 {
+    font-size: 32px;
+    line-height: 1.4em;
+  }
+  .cartTwo__link {
+    width: 145px;
+  }
+  .cartTwo__link:hover {
+    text-decoration: underline;
+  }
+  .text {
+    font-size: 20px;
+  }
+  .link__pointer {
+    margin-top: 1px;
+    height: 15px;
+    width: 15px;
+  }
 }

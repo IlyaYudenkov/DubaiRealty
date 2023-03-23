@@ -538,3 +538,5 @@ document.querySelector('.modal').addEventListener('click', (event) => {
     document.body.style.overflow  = 'visible';
 }
 })
+
+//1920px 
