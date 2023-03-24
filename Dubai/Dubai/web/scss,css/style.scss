@@ -590,7 +590,6 @@ body{
     }
 }
 .navigation {
-
     &__viewAll a{
         font-family: 'Gilroy-semiboldItalic';
         font-size: 12px;
@@ -661,11 +660,7 @@ body{
     }
 
 }
-.cartOne {
 
-    &__title {
-    }
-}
 .title5 {
     font-family: 'Gilroy-bold';
     font-size: 18px;
@@ -918,6 +913,16 @@ body{
         overflow: hidden
     }
 }
+.top {
+
+    &__subtitleLink a{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #929292;
+        width: 72px;
+    }
+}
 
 .mid{
     &__photoOne {
@@ -939,14 +944,14 @@ body{
         height: 219px;
     }
 }
-.top {
-
-    &__subtitleLink a{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: #929292;
-        width: 72px;
+.photoOne{
+    &__title{
+        display: none;
+    }
+}
+.photoTwo{
+    &__title{
+        display: none;
     }
 }
 
@@ -981,6 +986,7 @@ body{
 
     &__title {
         margin: 13px 0;
+        width: 150px;
     }
 
     &__text {
@@ -1068,23 +1074,24 @@ body{
         flex-direction: column;
         flex-shrink: 0;
         border: 1px solid #FCD54C;
-        padding: 50px 25px 10px 23px;
+        padding: 0px 25px 20px 23px;
         width: 288px;
 }
 .paul {
 
-        &__photo img{
+        &__photo{
+            background: url(/Dubai/web/img/MOBILE/Paul.jpg) 0 0/100% no-repeat;
             border-radius: 50%;
             width: 68px;
             height: 68px;
-            margin-top: -85px;
+            margin-top: -35px;
         }
         &__title {
             font-family: 'Gilroy-bold';
             font-size: 25px;
             line-height: var(--line-heigth);
             color: #FFFFFF;
-            margin-top: -50px;
+            margin-top: -52px;
         }
         &__post {
             margin: 13px 0 8px 0;
@@ -1095,7 +1102,7 @@ body{
         &__description {
             color: #929292;
         }
-    }
+}
 
 
 .quotes{
@@ -1104,17 +1111,16 @@ body{
         font-size: 100px;
         color: #FCD54C;
         text-align: right;
-        margin-top: -55px;
-
+        margin-top: -30px;
 }
 .robert {
-    &__photo img{
+    &__photo{
+        background: url(/Dubai/web/img/MOBILE/Robert.jpg) 0 0/100% no-repeat;
         border-radius: 50%;
         width: 68px;
         height: 68px;
-        margin-top: -85px;
+        margin-top: -35px;
     }
-
     &__title {
         font-family: 'Gilroy-bold';
         font-size: 25px;
@@ -1122,14 +1128,12 @@ body{
         color: #FFFFFF;
         margin-top: -50px;
     }
-
     &__post {
-        margin: 13px 0 8px 0;
+        margin: 11px 0 7px 0;
         & span{
         color: #FCD54C;
     }
 }
-
     &__description {
         color: #929292;
     }
@@ -1137,38 +1141,39 @@ body{
 }
 .jack {
 
-    &__photo img{
+    &__photo{
+        background: url(/Dubai/web/img/MOBILE/Paul.jpg) 0 0/100% no-repeat;
         border-radius: 50%;
         width: 68px;
         height: 68px;
-        margin-top: -85px;
+        margin-top: -35px;
     }
-
-    &__post {
-        margin: 13px 0 8px 0;
-        & span{
-        color: #FCD54C;
-    }
-}
     &__title {
         font-family: 'Gilroy-bold';
         font-size: 25px;
         line-height: var(--line-heigth);
         color: #FFFFFF;
-        margin-top: -50px;
+        margin-top: -52px;
+        
     }
-
+    &__post {
+        margin: 13px 0 8px 0;
+        & span{
+        color: #FCD54C;
+        }
+    }
     &__description {
         color: #929292;
     }
 }
 .kevin {
 
-    &__photo img{
+    &__photo{
+        background: url(/Dubai/web/img/MOBILE/Paul.jpg) 0 0/100% no-repeat;
         border-radius: 50%;
         width: 68px;
         height: 68px;
-        margin-top: -85px;
+        margin-top: -35px;
     }
 
     &__post {
@@ -1182,7 +1187,7 @@ body{
         font-size: 25px;
         line-height: var(--line-heigth);
         color: #FFFFFF;
-        margin-top: -50px;
+        margin-top: -52px;
     }
 
     &__description {
@@ -1554,8 +1559,6 @@ body{
 .modal-container{
     width: 100%;
     background: #fff;
-    
-
 }
 .window {
     &__close {
@@ -1648,10 +1651,10 @@ body{
 
 
 @media (min-width: 768px) {
-    .container__main{
+.container__main{
         width: 700px;
     }
-    .header{
+.header{
         &__visible{
             display: flex;
             align-items: center; 
@@ -1662,7 +1665,7 @@ body{
         }
 
     }
-    .visible {
+.visible {
         &__left{  
          
         }
@@ -1915,8 +1918,6 @@ body{
                 transition-duration: 0.3s;
             }
         }
- 
-
 }
 
 .case{
@@ -2062,12 +2063,10 @@ body{
         background: url(/Dubai/web/img/768px/Villas.jpg);
         margin-bottom: 0px;
     }
-
     &__cartTwo {
         font-size: 12px;
         line-height: 14px;
     }
-
     &__cartThree {
         background: url(/Dubai/web/img/768px/Houses.jpg);
     }
@@ -2100,11 +2099,9 @@ body{
     }
 }
 .cartTwo {
-
     &__subtitle {
         color: #272727;   
     }
-
 }
 //expertise
 
@@ -2230,7 +2227,16 @@ body{
         margin: 38px 0 82px 0;
     }
 }
+.top {
 
+    &__subtitleLink a{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #929292;
+        width: 105px;
+    }
+}
 .mid{
     &__photoOne {
         margin: 0px;
@@ -2251,17 +2257,8 @@ body{
         height: 220px;
     }
 }
-.top {
 
-    &__subtitleLink a{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: #929292;
-        width: 105px;
-    }
-}
-.subtitleLink {
+.subtitleLink{
 
     &__text {
         font-size: 12px;
@@ -2282,7 +2279,7 @@ body{
 .articles {
 
     &__slider {
-        margin-bottom: 0px;
+        margin-bottom: 36px;
     }
 }
 .slider{
@@ -2291,9 +2288,35 @@ body{
     }
 }
 .slide{
-        padding: 50px 24px 15px 30px;
+        padding: 50px 24px 0px 30px;
         width: 333px;
         margin-right: 32px;
+        height: 200px;
+}
+.paul {
+    &__photo{
+        margin-top: -88px;
+    }
+}
+.robert {
+    &__photo{
+        margin-top: -88px;
+    }
+}
+.jack {
+    &__photo{
+        margin-top: -88px;
+    }
+}
+.kevin {
+    &__photo{
+        margin-top: -88px;
+    }
+}
+.quotes{
+        color: #FCD54C;
+        text-align: right;
+        margin-top: -25px;
 }
 .track {
 
@@ -2310,24 +2333,7 @@ body{
         margin-right: 0px;
     }
 }
-.jack {
 
-    &__post {
-        margin: 17px 0 13px 0;
-
-}
-}
-.robert {
-    &__post {
-        margin: 17px 0 13px 0;
-}
-}
-.kevin {
-    &__post {
-        margin: 17px 0 13px 0;
-
-}
-}
 .round{
     cursor: pointer;
 }
@@ -2487,7 +2493,6 @@ body{
 @media (min-width: 1920px){
 .container__main{
         width: 1802px;
-        margin: 0xp auto;
     }
 .header{
         &__visible{
@@ -2917,7 +2922,7 @@ body{
 
     &__numbers {
         background-color: #272727;
-        margin-top: -150px;
+        margin-top: -145px;
         margin-left: 800px;
         border-bottom: 1px solid transparent;
         display: flex;
@@ -3051,48 +3056,42 @@ body{
     &__cartOne {
         background: url(/Dubai/web/img/1920px/Villas.jpg);
     }
-
     &__cartTwo {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start; 
     }
-
     &__cartThree {
-        background: url(/Dubai/web/img/MOBILE/houses.jpg);
+        background: url(/Dubai/web/img/1920px/Houses.jpg);
     }
-
     &__cartFour {
-        background: url(/Dubai/web/img/MOBILE/villas2.jpg);
+        background: url(/Dubai/web/img/1920px/Villas2.jpg);
     }
     &__cartFive{
-        background: url(/Dubai/web/img/MOBILE/villas2.jpg);
+        background: url(/Dubai/web/img/1920px/Villas.jpg);
     }
     &__cartSix{
-        background: url(/Dubai/web/img/MOBILE/villas2.jpg);
+        background: url(/Dubai/web/img/1920px/Villas2.jpg);
     }
     &__cartSeven{
-        background: url(/Dubai/web/img/MOBILE/villas.jpg);
+        background: url(/Dubai/web/img/1920px/Villas.jpg);
     }
     &__cartEight{
-        background: url(/Dubai/web/img/MOBILE/houses.jpg);
+        background: url(/Dubai/web/img/1920px/Houses.jpg);
     }
     &__cartNine{
-        background: url(/Dubai/web/img/MOBILE/villas.jpg);
+        background: url(/Dubai/web/img/1920px/Villas.jpg);
     }
     &__cartTen{
-        background: url(/Dubai/web/img/MOBILE/houses.jpg);
+        background: url(/Dubai/web/img/1920px/Houses.jpg);
     }
     &__cartEleven{
-        background: url(/Dubai/web/img/MOBILE/villas2.jpg);
+        background: url(/Dubai/web/img/1920px/Villas2.jpg);
     }
     &__cartTwelve{
-        background: url(/Dubai/web/img/MOBILE/houses.jpg);
+        background: url(/Dubai/web/img/1920px/Houses.jpg);
     }
-}
-.subtitle1{
-    font-size: 22px;
 }
 .title5 {
     font-size: 32px;
@@ -3118,4 +3117,375 @@ body{
         width: 15px;
     }
 }
+
+//expertise
+.main{
+    &__expertise{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.expertise {
+
+    &__title {
+        width: 730px;
+        font-size: 18px;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    &__subtitle {
+        margin: 40px 0 33px 0;
+        width: 730px;
+        font-size: 70px;
+        line-height: 69px;
+    }
+    &__text{
+        width: 730px;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    &__video {
+        margin: 0px auto;
+        background: url(/Dubai/web/img/768px/Video.jpg) 0 0/100% 100% no-repeat ;
+        height: 921.08px;
+        width: 1800px;
+    }
+    &__photos{
+        margin: 0 345px;
+    }
+    &__maryKay {
+        width: 1110px;
+        height: 313px;
+        margin: 120px 345px 65px 345px;
+        padding: 70px 95px;
+        font-size: 30px;     
+    }
+
+}
+.video{
+    &__playround{
+        width: 121.88px;
+        height: 121.88px;
+    }
+}
+.playround{
+    &__triangle{
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 20px solid #000000;
+        margin-left: 5px;
+    }
+}
+.photos{
+    &__one{
+        margin-right: 23px;   
+    }
+    &__two{
+        margin-bottom: 115px;
+    }
+}
+.one{
+    &__image{
+        width: 543px;
+        height: 312px;
+        background: url(/Dubai/web/img/1920px/main2.jpg);
+    }
+    &__text{
+        margin-top: 70px;
+        font-size: 18px;
+    }
+}
+.two{
+    &__image{
+        width: 543px;
+        height: 312px;
+        background: url(/Dubai/web/img/1920px/main3.jpg);
+    }
+    &__text{
+        margin-top: 70px;
+        font-size: 18px;
+    }
+}
+//contactUs
+.main {
+    &__contactUs {
+        width: 1800px;
+        height: 400px;
+        background: url(/Dubai/web/img/1920px/ContactUs.png);
+        padding: 87px 593px 85px 596px;
+        margin: 0px auto;
+    }
+}
+.contactUs {
+    &__subtitle{
+        font-size: 18px;
+        line-height: 160%;
+    }
+    &__title {
+        font-size: 120px;
+        line-height: 69px;
+        margin: 15px 0 54px 0;
+    }
+
+    &__form {
+        margin-top: 7px;
+        & input{
+           width: 307px;
+           height: 61px;
+           padding: 25px 42px;
+        }  
+        & button{
+            width: 165px;
+            height: 61.4px;
+        } 
+       }
+}
+
+//articles
+.text2{
+    font-family: 'Work Sans';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6em;
+    color: #FFFFFF;
+}
+.main{
+    &__articles{
+        margin: 140px 345px 170px 345px;
+        overflow: visible;
+    }
+}
+.articles{
+    &__top{
+        width: 1100px;
+    }
+
+    &__mid{
+        margin: 90px 0 170px 0;
+    }
+}
+.top {
+
+    &__subtitleLink a{
+        width: 154px;
+        padding-bottom: 15px;
+    }
+    &__title{
+        font-size: 70px;
+        line-height: var(--line-heigth);
+    }
+}
+.subtitleLink{
+    &__text{
+        font-size: 16px;
+        line-height: 21px;
+    }
+    &__arrow {
+        height: 15px;
+        width: 15px;
+    }
+}
+.mid{
+    &__photoOne {
+        display: flex;
+        align-items: flex-end;
+        background: url(/Dubai/web/img/1920px/main4.jpg);
+        width: 350px;
+        height: 352px;
+    }
+
+    &__discover {
+        padding: 41px 36px 29px 35px;
+        width: 351px;
+        height: 352px;
+    }
+
+    &__photoTwo {
+        display: flex;
+        align-items: flex-end;
+        background: url(/Dubai/web/img/1920px/main5.jpg);
+        width: 350px;
+        height: 352px;        
+    }
+}
+.photoOne{
+    &__title{
+        display: block;
+        font-family: 'Gilroy-bold';
+        font-size: 25px;
+        line-height: 1.4em;
+        color: #FFFFFF;
+        margin: 0 0 53px 38px;
+    }
+}
+.photoTwo{
+    &__title{
+        display: block;
+        font-family: 'Gilroy-bold';
+        font-size: 25px;
+        line-height: 1.4em;
+        color: #FFFFFF;
+        margin: 0 0 53px 38px;
+    }
+}
+.discover {
+
+    &__title {
+        font-size: 25px;
+        line-height: 1.4em;
+        margin: 15px 0 28px 0;
+    }
+
+    &__text {
+        color: #929292;
+        margin-bottom: 45px;
+        width: 280px;
+    }
+
+    &__reference a{
+        width: 112px;
+    }
+}
+.reference {
+
+    &__text {
+        font-size: 16px;
+        line-height: 1.5em;
+        }
+
+    &__arrow {
+        height: 15px;
+        width: 15px;
+    }
+}
+//slider-articles
+.articles {
+
+    &__slider {
+        margin-bottom: 44px;
+    }
+}
+.slider{
+    &__track{
+        width: 1112px;
+    }
+}
+.track {
+    &__paul{
+        margin-top: 0px;
+        opacity: 1;
+    }
+    &__robert{
+        margin-top: 0px;
+        opacity: 1;
+    }
+    &__jack{
+        margin-top: -30px;
+        opacity: 0.5;
+    }
+    &__kevin{
+        padding: 104px 20px 23px 30px;
+        width: 525px;
+        height: 311px;
+        margin-right: 61px;
+        margin-top: -30px;
+        opacity: 0.5;
+    }
+}
+.slide{
+        padding: 104px 20px 23px 30px;
+        width: 525px;
+        height: 311px;
+        margin-right: 61px;  
+}
+.quotes{
+        font-size: 120px;
+        margin-top: -30px;
+}
+.paul {
+    &__photo{
+        background: url(/Dubai/web/img/1920px/Paul.jpg) 0 0/100% no-repeat;
+        margin-top: -155px;
+        width: 112px;
+        height: 112px;
+    }
+    &__title{
+        margin-top: -45px;
+    }
+    &__post {
+        margin: 19px 0 34px 0;
+        & span{
+        color: #FCD54C;
+        }
+    }
+    &__description {
+        color: #929292;
+    }
+}
+.robert {
+    &__photo{
+        background: url(/Dubai/web/img/1920px/Robert.jpg) 0 0/100% no-repeat;
+        margin-top: -155px;
+        width: 112px;
+        height: 112px;
+    }
+    &__title{
+        margin-top: -45px;
+    }
+    &__post {
+        margin: 19px 0 34px 0;
+        & span{
+        color: #FCD54C;
+        }
+    }
+    &__description {
+        color: #929292;
+    }
+
+}
+.jack {
+    &__photo{
+        background: url(/Dubai/web/img/1920px/Paul.jpg) 0 0/100% no-repeat;
+        margin-top: -155px;
+        width: 112px;
+        height: 112px;
+    }
+    &__title{
+        margin-top: -45px;
+    }
+    &__post {
+        margin: 19px 0 34px 0;
+        & span{
+        color: #FCD54C;
+        }
+    }
+    &__description {
+        color: #929292;
+    }
+
+}
+.kevin {
+    &__photo{
+        background: url(/Dubai/web/img/1920px/Paul.jpg) 0 0/100% no-repeat;
+        margin-top: -155px;
+        width: 112px;
+        height: 112px;
+    }
+    &__title{
+        margin-top: -45px;
+    }
+    &__post {
+        margin: 19px 0 34px 0;
+        & span{
+        color: #FCD54C;
+        }
+    }
+    &__description {
+        color: #929292;
+    }
+}
+
+
 }

@@ -316,6 +316,7 @@ body {
 .menu__about {
   margin-bottom: 20px;
 }
+
 .buy__submenu div {
   margin-bottom: 15px;
 }
@@ -380,6 +381,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .top__rectangle {
   border: 4px solid #FCD54C;
   border-right: none;
@@ -849,6 +851,14 @@ body {
   overflow: hidden;
 }
 
+.top__subtitleLink a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #929292;
+  width: 72px;
+}
+
 .mid__photoOne {
   background: url(/Dubai/web/img/MOBILE/main4.jpg);
   margin: 20px 0;
@@ -866,12 +876,12 @@ body {
   height: 219px;
 }
 
-.top__subtitleLink a {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #929292;
-  width: 72px;
+.photoOne__title {
+  display: none;
+}
+
+.photoTwo__title {
+  display: none;
 }
 
 .subtitleLink__text {
@@ -901,6 +911,7 @@ body {
 
 .discover__title {
   margin: 13px 0;
+  width: 150px;
 }
 .discover__text {
   color: #929292;
@@ -978,22 +989,23 @@ body {
   flex-direction: column;
   flex-shrink: 0;
   border: 1px solid #FCD54C;
-  padding: 50px 25px 10px 23px;
+  padding: 0px 25px 20px 23px;
   width: 288px;
 }
 
-.paul__photo img {
+.paul__photo {
+  background: url(/Dubai/web/img/MOBILE/Paul.jpg) 0 0/100% no-repeat;
   border-radius: 50%;
   width: 68px;
   height: 68px;
-  margin-top: -85px;
+  margin-top: -35px;
 }
 .paul__title {
   font-family: "Gilroy-bold";
   font-size: 25px;
   line-height: var(--line-heigth);
   color: #FFFFFF;
-  margin-top: -50px;
+  margin-top: -52px;
 }
 .paul__post {
   margin: 13px 0 8px 0;
@@ -1011,14 +1023,15 @@ body {
   font-size: 100px;
   color: #FCD54C;
   text-align: right;
-  margin-top: -55px;
+  margin-top: -30px;
 }
 
-.robert__photo img {
+.robert__photo {
+  background: url(/Dubai/web/img/MOBILE/Robert.jpg) 0 0/100% no-repeat;
   border-radius: 50%;
   width: 68px;
   height: 68px;
-  margin-top: -85px;
+  margin-top: -35px;
 }
 .robert__title {
   font-family: "Gilroy-bold";
@@ -1028,7 +1041,7 @@ body {
   margin-top: -50px;
 }
 .robert__post {
-  margin: 13px 0 8px 0;
+  margin: 11px 0 7px 0;
 }
 .robert__post span {
   color: #FCD54C;
@@ -1037,11 +1050,19 @@ body {
   color: #929292;
 }
 
-.jack__photo img {
+.jack__photo {
+  background: url(/Dubai/web/img/MOBILE/Paul.jpg) 0 0/100% no-repeat;
   border-radius: 50%;
   width: 68px;
   height: 68px;
-  margin-top: -85px;
+  margin-top: -35px;
+}
+.jack__title {
+  font-family: "Gilroy-bold";
+  font-size: 25px;
+  line-height: var(--line-heigth);
+  color: #FFFFFF;
+  margin-top: -52px;
 }
 .jack__post {
   margin: 13px 0 8px 0;
@@ -1049,22 +1070,16 @@ body {
 .jack__post span {
   color: #FCD54C;
 }
-.jack__title {
-  font-family: "Gilroy-bold";
-  font-size: 25px;
-  line-height: var(--line-heigth);
-  color: #FFFFFF;
-  margin-top: -50px;
-}
 .jack__description {
   color: #929292;
 }
 
-.kevin__photo img {
+.kevin__photo {
+  background: url(/Dubai/web/img/MOBILE/Paul.jpg) 0 0/100% no-repeat;
   border-radius: 50%;
   width: 68px;
   height: 68px;
-  margin-top: -85px;
+  margin-top: -35px;
 }
 .kevin__post {
   margin: 13px 0 8px 0;
@@ -1077,7 +1092,7 @@ body {
   font-size: 25px;
   line-height: var(--line-heigth);
   color: #FFFFFF;
-  margin-top: -50px;
+  margin-top: -52px;
 }
 .kevin__description {
   color: #929292;
@@ -1130,10 +1145,12 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
 .visible__text {
   width: 243px;
   padding: 22px 0;
 }
+
 .visibleBox {
   border: 1px solid #929292;
   border-left: transparent;
@@ -1634,13 +1651,7 @@ body {
     width: 100%;
     height: 380px;
   }
-  .welcome__picture img {
-    max-width: 100%;
-    max-height: 100%;
-  }
   .picture__top {
-    display: flex;
-    align-items: center;
     justify-content: flex-start;
   }
   .top-container {
@@ -1648,14 +1659,10 @@ body {
     width: 690px;
   }
   .top__rectangle {
-    border: 4px solid #FCD54C;
-    border-right: none;
     width: 74px;
     height: 229px;
   }
   .top__case {
-    display: flex;
-    flex-direction: column;
     height: 120px;
     margin: 0 0 70px -230px;
   }
@@ -1723,8 +1730,6 @@ body {
     color: #FCD54C;
   }
   .case__link {
-    display: flex;
-    align-items: center;
     width: 170px;
     margin-top: 8px;
   }
@@ -1736,11 +1741,6 @@ body {
     margin-left: 2px;
     width: 10px;
     height: 9px;
-    border: 1px solid #FFFFFF;
-    opacity: 0.8;
-    transform: rotate(45deg);
-    border-left: none;
-    border-bottom: none;
   }
   .bottom__slider {
     margin: 0px 0 0 30px;
@@ -1756,11 +1756,22 @@ body {
     width: 540px;
     height: 70px;
   }
+  .title3 {
+    font-family: "Gilroy-bold";
+    font-size: 40px;
+    line-height: 50px;
+    margin-right: 10px;
+  }
   .title4 {
     font-family: "Gilroy-bold";
     font-size: 30px;
     line-height: 37px;
-    color: #FFFFFF;
+  }
+  .subtitle2 {
+    font-size: 12px;
+    line-height: 14px;
+    margin-top: 4px;
+    margin-bottom: 0;
   }
   .numbers__one {
     display: flex;
@@ -1778,76 +1789,29 @@ body {
     align-items: center;
     justify-content: space-between;
   }
-  .one__title {
-    font-size: 40px;
-    line-height: 50px;
-    margin-right: 10px;
-  }
-  .two__title {
-    font-size: 40px;
-    line-height: 50px;
-    margin-right: 10px;
-  }
-  .two__subtitle {
-    font-size: 12px;
-    line-height: 14px;
-    margin-top: 4px;
-    margin-bottom: 0;
-  }
-  .three__title {
-    font-size: 40px;
-    line-height: 50px;
-    margin-right: 10px;
-  }
-  .three__subtitle {
-    font-size: 12px;
-    line-height: 14px;
-    margin-top: 4px;
-    margin-bottom: 0;
-  }
   .main__projects {
     width: 695px;
   }
   .projects__up {
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 25px;
   }
-  .projects__slider {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: hidden;
-  }
   .up__title {
     margin-bottom: 0;
   }
   .up__navigation {
-    display: flex;
-    justify-content: space-between;
-    color: #FFFFFF;
     width: 290px;
   }
   .slider__body {
     margin-bottom: 20px;
-    display: grid;
     grid-template: 1fr/1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     width: 695px;
-  }
-  .slider__pagination {
-    display: flex;
-    justify-content: space-between;
-    width: 75px;
-    margin: 0px auto;
   }
   .cart {
     width: 165px;
     height: 220px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
     padding: 17px 24px 13px 11px;
     margin-right: 11px;
   }
@@ -1863,12 +1827,6 @@ body {
     margin-bottom: 0px;
   }
   .body__cartTwo {
-    background-color: #FCD54C;
-    color: #272727;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
     font-size: 12px;
     line-height: 14px;
   }
@@ -1905,59 +1863,27 @@ body {
   .cartTwo__subtitle {
     color: #272727;
   }
-  .cartTwo__link {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 74px;
-  }
-  .cartTwo__link:hover {
-    text-decoration: underline;
-  }
   .main__expertise {
     margin: 80px 0 70px 0;
   }
   .expertise__title {
-    font-family: "Work Sans";
-    font-weight: 600;
     font-size: 16px;
-    line-height: var(--line-heigth);
-    color: #FCD54C;
   }
   .expertise__subtitle {
     margin: 14px 0 23px 0;
     width: 450px;
   }
-  .expertise__text {
-    font-family: "Work Sans";
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 160%;
-    color: #E8E8E8;
-  }
   .expertise__video {
     margin: 70px 0;
     background: url(/Dubai/web/img/768px/Video.jpg) 0 0/100% 100% no-repeat;
-    width: 100%;
     height: 394px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   .expertise__maryKay {
-    border: 1px solid #FCD54C;
     margin-bottom: 70px;
     padding: 37px 60px;
-    font-family: "Gilroy-regular";
     font-size: 18px;
-    line-height: 160%;
-    color: #FFFFFF;
-  }
-  .expertise__maryKay span {
-    color: #FCD54C;
   }
   .expertise__photos {
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 0px;
@@ -1985,93 +1911,34 @@ body {
   .video__playround {
     height: 50px;
     width: 50px;
-    border-radius: 50%;
-    background-color: #FCD54C;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
   }
   .playround__triangle {
-    cursor: pointer;
-    width: 0;
-    height: 0;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
     border-bottom: 8px solid #000000;
-    transform: rotate(90deg);
   }
   .main__contactUs {
-    width: 100%;
     height: 255px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background: url(/Dubai/web/img/768px/ContactUs.png);
     padding: 50px 0 61px 0;
     margin: 70px 0;
   }
-  .contactUs__subtitle {
-    font-family: "Work Sans";
-    font-weight: 600;
-    font-size: 12px;
-    line-height: var(--line-heigth);
-    text-align: center;
-    color: #272727;
-  }
   .contactUs__title {
-    font-family: "Gilroy-bold";
-    font-weight: 700;
     font-size: 70px;
     line-height: 87px;
-    text-align: center;
-    color: #272727;
     margin: 0px;
   }
   .contactUs__form {
     margin-top: 7px;
-    display: flex;
-    align-items: flex-end;
   }
   .contactUs__form input {
     width: 286px;
     height: 41px;
-    background-color: #FFFFFF;
     padding: 13px 28px;
-    border: 1px solid transparent;
-  }
-  .contactUs__form input::-moz-placeholder {
-    font-family: "Work Sans";
-    font-weight: 400;
-    font-size: 12px;
-    line-height: var(--line-heigth);
-    color: #272727;
-    opacity: 0.5;
-  }
-  .contactUs__form input::placeholder {
-    font-family: "Work Sans";
-    font-weight: 400;
-    font-size: 12px;
-    line-height: var(--line-heigth);
-    color: #272727;
-    opacity: 0.5;
   }
   .contactUs__form button {
     width: 165px;
     height: 41.4px;
-    background-color: #272727;
-    font-family: "Work Sans";
-    font-weight: 600;
-    font-size: 14px;
-    line-height: var(--line-heigth);
-    color: #FFFFFF;
-    margin-left: -4px;
-  }
-  .contactUs__form button:active {
-    background-color: #FFFFFF;
-    color: #272727;
-    border: 1px solid #272727;
   }
   .articles__top {
     display: flex;
@@ -2084,6 +1951,13 @@ body {
     justify-content: space-between;
     margin: 38px 0 82px 0;
   }
+  .top__subtitleLink a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #929292;
+    width: 105px;
+  }
   .mid__photoOne {
     margin: 0px;
     background: url(/Dubai/web/img/768px/main4.jpg);
@@ -2091,7 +1965,6 @@ body {
     height: 220px;
   }
   .mid__discover {
-    border: 1px solid #FCD54C;
     padding: 30px;
     height: 220px;
   }
@@ -2101,60 +1974,42 @@ body {
     width: 208px;
     height: 220px;
   }
-  .top__subtitleLink a {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #929292;
-    width: 105px;
-  }
   .subtitleLink__text {
-    font-family: "Gilroy-semibold";
     font-size: 12px;
     line-height: 15px;
-    display: flex;
-    align-items: center;
-  }
-  .discover__title {
-    margin: 13px 0;
   }
   .discover__text {
-    color: #929292;
     width: 151px;
     margin-bottom: 19px;
   }
-  .discover__reference a {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 79px;
-  }
   .articles__slider {
-    display: flex;
-    padding-top: 34px;
-    position: relative;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
-    margin-bottom: 0px;
-  }
-  .articles__pagination {
-    display: flex;
-    justify-content: space-between;
-    width: 75px;
-    margin: 0px auto;
+    margin-bottom: 36px;
   }
   .slider__track {
     width: 690px;
   }
   .slide {
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
-    border: 1px solid #FCD54C;
-    padding: 50px 24px 15px 30px;
+    padding: 50px 24px 0px 30px;
     width: 333px;
     margin-right: 32px;
+    height: 200px;
+  }
+  .paul__photo {
+    margin-top: -88px;
+  }
+  .robert__photo {
+    margin-top: -88px;
+  }
+  .jack__photo {
+    margin-top: -88px;
+  }
+  .kevin__photo {
+    margin-top: -88px;
+  }
+  .quotes {
+    color: #FCD54C;
+    text-align: right;
+    margin-top: -25px;
   }
   .track__kevin {
     display: flex;
@@ -2167,24 +2022,6 @@ body {
   }
   .track:last-child {
     margin-right: 0px;
-  }
-  .jack__post {
-    margin: 17px 0 13px 0;
-  }
-  .jack__post span {
-    color: #FCD54C;
-  }
-  .robert__post {
-    margin: 17px 0 13px 0;
-  }
-  .robert__post span {
-    color: #FCD54C;
-  }
-  .kevin__post {
-    margin: 17px 0 13px 0;
-  }
-  .kevin__post span {
-    color: #FCD54C;
   }
   .round {
     cursor: pointer;
@@ -2206,24 +2043,14 @@ body {
     width: 680px;
   }
   .footer__top {
-    display: flex;
-    align-items: center;
     justify-content: center;
     margin-bottom: 40px;
   }
   .footer__top-container {
     width: 700px;
-    margin: 0px auto;
-  }
-  .footer__mid {
-    margin-bottom: 42px;
-  }
-  .footer__bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
   }
   .footer__bottom-container {
     width: 700px;
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -2248,25 +2075,8 @@ body {
     line-height: 16px;
     margin-bottom: 0px;
   }
-  .down__button:active {
-    background-color: #000000;
-    color: #FCD54C;
-    transition-duration: 0.3s;
-  }
   .info__email {
-    margin-top: 13px;
     margin-bottom: 0px;
-  }
-  .info__email a {
-    font-family: "Gilroy-regular";
-    font-size: 18px;
-    line-height: 21px;
-    color: #E8E8E8;
-    transition-duration: 0.3s;
-  }
-  .info__email a:hover {
-    color: #FCD54C;
-    transition-duration: 0.3s;
   }
   .visible__title {
     width: 680px;
@@ -2277,48 +2087,22 @@ body {
   .bottom__social {
     margin: 34px 0 41px 0;
     width: 196px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
   .bottom__info {
-    font-family: "Lexend";
-    font-style: normal;
-    font-weight: 300;
-    font-size: 12px;
-    line-height: 15px;
-    color: #E8E8E8;
-    text-align: center;
     margin: 34px 0 41px 0;
   }
   .modal {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
     display: none;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    z-index: 3;
   }
   .modal__window {
     padding-top: 50px;
     width: 400px;
-    margin: 0px auto;
   }
   .modal-container {
     width: 700px;
-    background: #fff;
   }
   .window__close {
     margin: -60px 0 0 600px;
-  }
-  .window__close img {
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
   }
   .window__title {
     font-size: 40px;
@@ -2346,7 +2130,6 @@ body {
 @media (min-width: 1920px) {
   .container__main {
     width: 1802px;
-    margin: 0xp auto;
   }
   .header__visible {
     display: flex;
@@ -2704,7 +2487,7 @@ body {
   }
   .welcome__numbers {
     background-color: #272727;
-    margin-top: -150px;
+    margin-top: -145px;
     margin-left: 800px;
     border-bottom: 1px solid transparent;
     display: flex;
@@ -2805,37 +2588,34 @@ body {
     align-items: flex-start;
   }
   .body__cartThree {
-    background: url(/Dubai/web/img/MOBILE/houses.jpg);
+    background: url(/Dubai/web/img/1920px/Houses.jpg);
   }
   .body__cartFour {
-    background: url(/Dubai/web/img/MOBILE/villas2.jpg);
+    background: url(/Dubai/web/img/1920px/Villas2.jpg);
   }
   .body__cartFive {
-    background: url(/Dubai/web/img/MOBILE/villas2.jpg);
+    background: url(/Dubai/web/img/1920px/Villas.jpg);
   }
   .body__cartSix {
-    background: url(/Dubai/web/img/MOBILE/villas2.jpg);
+    background: url(/Dubai/web/img/1920px/Villas2.jpg);
   }
   .body__cartSeven {
-    background: url(/Dubai/web/img/MOBILE/villas.jpg);
+    background: url(/Dubai/web/img/1920px/Villas.jpg);
   }
   .body__cartEight {
-    background: url(/Dubai/web/img/MOBILE/houses.jpg);
+    background: url(/Dubai/web/img/1920px/Houses.jpg);
   }
   .body__cartNine {
-    background: url(/Dubai/web/img/MOBILE/villas.jpg);
+    background: url(/Dubai/web/img/1920px/Villas.jpg);
   }
   .body__cartTen {
-    background: url(/Dubai/web/img/MOBILE/houses.jpg);
+    background: url(/Dubai/web/img/1920px/Houses.jpg);
   }
   .body__cartEleven {
-    background: url(/Dubai/web/img/MOBILE/villas2.jpg);
+    background: url(/Dubai/web/img/1920px/Villas2.jpg);
   }
   .body__cartTwelve {
-    background: url(/Dubai/web/img/MOBILE/houses.jpg);
-  }
-  .subtitle1 {
-    font-size: 22px;
+    background: url(/Dubai/web/img/1920px/Houses.jpg);
   }
   .title5 {
     font-size: 32px;
@@ -2854,5 +2634,302 @@ body {
     margin-top: 1px;
     height: 15px;
     width: 15px;
+  }
+  .main__expertise {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .expertise__title {
+    width: 730px;
+    font-size: 18px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .expertise__subtitle {
+    margin: 40px 0 33px 0;
+    width: 730px;
+    font-size: 70px;
+    line-height: 69px;
+  }
+  .expertise__text {
+    width: 730px;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .expertise__video {
+    margin: 0px auto;
+    background: url(/Dubai/web/img/768px/Video.jpg) 0 0/100% 100% no-repeat;
+    height: 921.08px;
+    width: 1800px;
+  }
+  .expertise__photos {
+    margin: 0 345px;
+  }
+  .expertise__maryKay {
+    width: 1110px;
+    height: 313px;
+    margin: 120px 345px 65px 345px;
+    padding: 70px 95px;
+    font-size: 30px;
+  }
+  .video__playround {
+    width: 121.88px;
+    height: 121.88px;
+  }
+  .playround__triangle {
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #000000;
+    margin-left: 5px;
+  }
+  .photos__one {
+    margin-right: 23px;
+  }
+  .photos__two {
+    margin-bottom: 115px;
+  }
+  .one__image {
+    width: 543px;
+    height: 312px;
+    background: url(/Dubai/web/img/1920px/main2.jpg);
+  }
+  .one__text {
+    margin-top: 70px;
+    font-size: 18px;
+  }
+  .two__image {
+    width: 543px;
+    height: 312px;
+    background: url(/Dubai/web/img/1920px/main3.jpg);
+  }
+  .two__text {
+    margin-top: 70px;
+    font-size: 18px;
+  }
+  .main__contactUs {
+    width: 1800px;
+    height: 400px;
+    background: url(/Dubai/web/img/1920px/ContactUs.png);
+    padding: 87px 593px 85px 596px;
+    margin: 0px auto;
+  }
+  .contactUs__subtitle {
+    font-size: 18px;
+    line-height: 160%;
+  }
+  .contactUs__title {
+    font-size: 120px;
+    line-height: 69px;
+    margin: 15px 0 54px 0;
+  }
+  .contactUs__form {
+    margin-top: 7px;
+  }
+  .contactUs__form input {
+    width: 307px;
+    height: 61px;
+    padding: 25px 42px;
+  }
+  .contactUs__form button {
+    width: 165px;
+    height: 61.4px;
+  }
+  .text2 {
+    font-family: "Work Sans";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6em;
+    color: #FFFFFF;
+  }
+  .main__articles {
+    margin: 140px 345px 170px 345px;
+    overflow: visible;
+  }
+  .articles__top {
+    width: 1100px;
+  }
+  .articles__mid {
+    margin: 90px 0 170px 0;
+  }
+  .top__subtitleLink a {
+    width: 154px;
+    padding-bottom: 15px;
+  }
+  .top__title {
+    font-size: 70px;
+    line-height: var(--line-heigth);
+  }
+  .subtitleLink__text {
+    font-size: 16px;
+    line-height: 21px;
+  }
+  .subtitleLink__arrow {
+    height: 15px;
+    width: 15px;
+  }
+  .mid__photoOne {
+    display: flex;
+    align-items: flex-end;
+    background: url(/Dubai/web/img/1920px/main4.jpg);
+    width: 350px;
+    height: 352px;
+  }
+  .mid__discover {
+    padding: 41px 36px 29px 35px;
+    width: 351px;
+    height: 352px;
+  }
+  .mid__photoTwo {
+    display: flex;
+    align-items: flex-end;
+    background: url(/Dubai/web/img/1920px/main5.jpg);
+    width: 350px;
+    height: 352px;
+  }
+  .photoOne__title {
+    display: block;
+    font-family: "Gilroy-bold";
+    font-size: 25px;
+    line-height: 1.4em;
+    color: #FFFFFF;
+    margin: 0 0 53px 38px;
+  }
+  .photoTwo__title {
+    display: block;
+    font-family: "Gilroy-bold";
+    font-size: 25px;
+    line-height: 1.4em;
+    color: #FFFFFF;
+    margin: 0 0 53px 38px;
+  }
+  .discover__title {
+    font-size: 25px;
+    line-height: 1.4em;
+    margin: 15px 0 28px 0;
+  }
+  .discover__text {
+    color: #929292;
+    margin-bottom: 45px;
+    width: 280px;
+  }
+  .discover__reference a {
+    width: 112px;
+  }
+  .reference__text {
+    font-size: 16px;
+    line-height: 1.5em;
+  }
+  .reference__arrow {
+    height: 15px;
+    width: 15px;
+  }
+  .articles__slider {
+    margin-bottom: 44px;
+  }
+  .slider__track {
+    width: 1112px;
+  }
+  .track__paul {
+    margin-top: 0px;
+    opacity: 1;
+  }
+  .track__robert {
+    margin-top: 0px;
+    opacity: 1;
+  }
+  .track__jack {
+    margin-top: -30px;
+    opacity: 0.5;
+  }
+  .track__kevin {
+    padding: 104px 20px 23px 30px;
+    width: 525px;
+    height: 311px;
+    margin-right: 61px;
+    margin-top: -30px;
+    opacity: 0.5;
+  }
+  .slide {
+    padding: 104px 20px 23px 30px;
+    width: 525px;
+    height: 311px;
+    margin-right: 61px;
+  }
+  .quotes {
+    font-size: 120px;
+    margin-top: -30px;
+  }
+  .paul__photo {
+    background: url(/Dubai/web/img/1920px/Paul.jpg) 0 0/100% no-repeat;
+    margin-top: -155px;
+    width: 112px;
+    height: 112px;
+  }
+  .paul__title {
+    margin-top: -45px;
+  }
+  .paul__post {
+    margin: 19px 0 34px 0;
+  }
+  .paul__post span {
+    color: #FCD54C;
+  }
+  .paul__description {
+    color: #929292;
+  }
+  .robert__photo {
+    background: url(/Dubai/web/img/1920px/Robert.jpg) 0 0/100% no-repeat;
+    margin-top: -155px;
+    width: 112px;
+    height: 112px;
+  }
+  .robert__title {
+    margin-top: -45px;
+  }
+  .robert__post {
+    margin: 19px 0 34px 0;
+  }
+  .robert__post span {
+    color: #FCD54C;
+  }
+  .robert__description {
+    color: #929292;
+  }
+  .jack__photo {
+    background: url(/Dubai/web/img/1920px/Paul.jpg) 0 0/100% no-repeat;
+    margin-top: -155px;
+    width: 112px;
+    height: 112px;
+  }
+  .jack__title {
+    margin-top: -45px;
+  }
+  .jack__post {
+    margin: 19px 0 34px 0;
+  }
+  .jack__post span {
+    color: #FCD54C;
+  }
+  .jack__description {
+    color: #929292;
+  }
+  .kevin__photo {
+    background: url(/Dubai/web/img/1920px/Paul.jpg) 0 0/100% no-repeat;
+    margin-top: -155px;
+    width: 112px;
+    height: 112px;
+  }
+  .kevin__title {
+    margin-top: -45px;
+  }
+  .kevin__post {
+    margin: 19px 0 34px 0;
+  }
+  .kevin__post span {
+    color: #FCD54C;
+  }
+  .kevin__description {
+    color: #929292;
   }
 }

@@ -186,12 +186,7 @@ document.querySelector('.three__title').addEventListener('click', () => {
 //функции слайдера 
 let offset = 0;
 allSlide = () => {
-  if(screen.width < 768){
     offset = 0;
-  }
-  else if(screen.width > 768){
-    offset = 0;
-  }
     document.querySelector('.slider__body').style.left = offset + 'px';
     document.querySelector('.navigation__all').classList.add('_active')
     document.querySelector('.navigation__interior').classList.remove('_active')
@@ -204,11 +199,14 @@ document.querySelector('.navigation__all').addEventListener('click', allSlide)
 document.querySelector('.pagination__one').addEventListener('click', allSlide)
 
 buildingSlide = () => {
-  if(screen.width < 768){
+  if(screen.width < 767){
     offset = 295;
   }
-  else if(screen.width > 768){
+  else if(1919 > screen.width > 767 ){
     offset = 703;
+  }
+  else if(screen.width > 1919){
+    offset = 1850;
   }
     document.querySelector('.slider__body').style.left = -offset + 'px';
     document.querySelector('.navigation__building').classList.add('_active')
@@ -225,8 +223,11 @@ interiorSlide = () => {
   if(screen.width < 768){
     offset = 590;
   }
-  else if(screen.width > 768){
+  else if(1919 > screen.width > 768){
     offset = 1410;
+  }
+  else if(screen.width > 1919){
+    offset = 3680;
   }
   document.querySelector('.slider__body').style.left = -offset + 'px';
   document.querySelector('.navigation__interior').classList.add('_active')
@@ -444,8 +445,27 @@ slider.addEventListener('touchstart', swipeStart);
 slider.addEventListener('mousedown', swipeStart);
 }
 
-else if(screen.width > 768){
-  firstSlide = (event) => {  
+else if(screen.width > 768){ 
+  let paulSlide = sliderTrack.childNodes[1],
+  robertSlide = sliderTrack.childNodes[3],
+  jackSlide = sliderTrack.childNodes[5],
+  kevin1Slide = sliderTrack.childNodes[7],
+  kevin2Slide = sliderTrack.childNodes[9],
+  kevin3Slide = sliderTrack.childNodes[11];
+
+  firstSlide = (event) => { 
+    if(screen.width > 1919) {
+      paulSlide.style.opacity = '1';
+      paulSlide.style.marginTop = '0px';
+      robertSlide.style.opacity = '1';
+      robertSlide.style.marginTop = '0px';
+      jackSlide.style.opacity = '0.5';
+      jackSlide.style.marginTop = '-30px';
+      kevin1Slide.style.opacity = '0.5';
+      kevin1Slide.style.marginTop = '-30px';
+      paulSlide.style.transitionDuration = '0.5s';
+      robertSlide.style.transitionDuration = '0.5s';
+    }
     sliderTrack.style.transform = 'translate3d(0px, 0px, 0px)';
     sliderTrack.style.transitionDuration = '0.5s'
     event.target.style.background = '#FCD54C';
@@ -453,14 +473,55 @@ else if(screen.width > 768){
     document.querySelector('.pagination__third').style.backgroundColor = '#929292'; 
    }
    secondSlide = (event) => {
-    sliderTrack.style.transform = 'translate3d(-730px, 0px, 0px)';
+    if(screen.width > 768 && screen.width < 1919){
+      sliderTrack.style.transform = 'translate3d(-728px, 0px, 0px)';
+    }
+    else if(screen.width > 1919){
+      sliderTrack.style.transform = 'translate3d(-1171px, 0px, 0px)';
+      paulSlide.style.opacity = '0.5';
+      paulSlide.style.marginTop = '-30px';
+      robertSlide.style.opacity = '0.5';
+      robertSlide.style.marginTop = '-30px'
+      jackSlide.style.opacity = '1';
+      jackSlide.style.marginTop = '0px';
+      kevin1Slide.style.opacity = '1';
+      kevin1Slide.style.marginTop = '0px';
+      paulSlide.style.transitionDuration = '0.5s';
+      robertSlide.style.transitionDuration = '0.5s';
+      jackSlide.style.transitionDuration = '0.5s';
+      kevin1Slide.style.transitionDuration = '0.5s';
+      kevin2Slide.style.opacity = '0.5';
+      kevin2Slide.style.marginTop ='-30px';
+      kevin3Slide.style.opacity = '0.5';
+      kevin3Slide.style.marginTop ='-30px';
+      kevin2Slide.style.transitionDuration = '0.5s';
+      kevin3Slide.style.transitionDuration = '0.5s';
+    }
     sliderTrack.style.transitionDuration = '0.5s'
     document.querySelector('.pagination__first').style.backgroundColor = '#929292';
     event.target.style.background = '#FCD54C';
     document.querySelector('.pagination__third').style.backgroundColor = '#929292'; 
    }
    thirdSlide = (event) => {
-    sliderTrack.style.transform = 'translate3d(-1460px, 0px, 0px)';
+    if(screen.width > 768 && screen.width < 1919){
+      sliderTrack.style.transform = 'translate3d(-1458px, 0px, 0px)';
+    }
+    else if(screen.width > 1919){
+      sliderTrack.style.transform = 'translate3d(-2343px, 0px, 0px)';
+      jackSlide.style.opacity = '0.5';
+      jackSlide.style.marginTop = '-30px';
+      kevin1Slide.style.opacity = '0.5';
+      kevin1Slide.style.marginTop = '-30px';
+      paulSlide.style.transitionDuration = '0.5s';
+      robertSlide.style.transitionDuration = '0.5s';
+      kevin2Slide.style.opacity = '1';
+      kevin2Slide.style.marginTop = '0px';
+      kevin3Slide.style.opacity = '1';
+      kevin3Slide.style.marginTop ='0px';
+      kevin2Slide.style.transitionDuration = '0.5s';
+      kevin3Slide.style.transitionDuration = '0.5s';
+
+    } 
     sliderTrack.style.transitionDuration = '0.5s';
     document.querySelector('.pagination__first').style.backgroundColor = '#929292';
     document.querySelector('.pagination__second').style.backgroundColor = '#929292'; 
@@ -513,8 +574,6 @@ document.querySelector('.contextMenu__buy').addEventListener('click', openCloseS
 document.querySelector('.contextMenu__services').addEventListener('click', openCloseSubmenuFooter)
 document.querySelector('.contextMenu__information').addEventListener('click', openCloseSubmenuFooter)
 document.querySelector('.contextMenu__about').addEventListener('click', openCloseSubmenuFooter)
-
-
 
 //modalWindow
 

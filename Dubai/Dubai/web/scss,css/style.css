@@ -851,6 +851,14 @@ body {
   overflow: hidden;
 }
 
+.top__subtitleLink a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #929292;
+  width: 72px;
+}
+
 .mid__photoOne {
   background: url(/Dubai/web/img/MOBILE/main4.jpg);
   margin: 20px 0;
@@ -868,12 +876,12 @@ body {
   height: 219px;
 }
 
-.top__subtitleLink a {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #929292;
-  width: 72px;
+.photoOne__title {
+  display: none;
+}
+
+.photoTwo__title {
+  display: none;
 }
 
 .subtitleLink__text {
@@ -903,6 +911,7 @@ body {
 
 .discover__title {
   margin: 13px 0;
+  width: 150px;
 }
 .discover__text {
   color: #929292;
@@ -980,22 +989,23 @@ body {
   flex-direction: column;
   flex-shrink: 0;
   border: 1px solid #FCD54C;
-  padding: 50px 25px 10px 23px;
+  padding: 0px 25px 20px 23px;
   width: 288px;
 }
 
-.paul__photo img {
+.paul__photo {
+  background: url(/Dubai/web/img/MOBILE/Paul.jpg) 0 0/100% no-repeat;
   border-radius: 50%;
   width: 68px;
   height: 68px;
-  margin-top: -85px;
+  margin-top: -35px;
 }
 .paul__title {
   font-family: "Gilroy-bold";
   font-size: 25px;
   line-height: var(--line-heigth);
   color: #FFFFFF;
-  margin-top: -50px;
+  margin-top: -52px;
 }
 .paul__post {
   margin: 13px 0 8px 0;
@@ -1013,14 +1023,15 @@ body {
   font-size: 100px;
   color: #FCD54C;
   text-align: right;
-  margin-top: -55px;
+  margin-top: -30px;
 }
 
-.robert__photo img {
+.robert__photo {
+  background: url(/Dubai/web/img/MOBILE/Robert.jpg) 0 0/100% no-repeat;
   border-radius: 50%;
   width: 68px;
   height: 68px;
-  margin-top: -85px;
+  margin-top: -35px;
 }
 .robert__title {
   font-family: "Gilroy-bold";
@@ -1030,7 +1041,7 @@ body {
   margin-top: -50px;
 }
 .robert__post {
-  margin: 13px 0 8px 0;
+  margin: 11px 0 7px 0;
 }
 .robert__post span {
   color: #FCD54C;
@@ -1039,11 +1050,19 @@ body {
   color: #929292;
 }
 
-.jack__photo img {
+.jack__photo {
+  background: url(/Dubai/web/img/MOBILE/Paul.jpg) 0 0/100% no-repeat;
   border-radius: 50%;
   width: 68px;
   height: 68px;
-  margin-top: -85px;
+  margin-top: -35px;
+}
+.jack__title {
+  font-family: "Gilroy-bold";
+  font-size: 25px;
+  line-height: var(--line-heigth);
+  color: #FFFFFF;
+  margin-top: -52px;
 }
 .jack__post {
   margin: 13px 0 8px 0;
@@ -1051,22 +1070,16 @@ body {
 .jack__post span {
   color: #FCD54C;
 }
-.jack__title {
-  font-family: "Gilroy-bold";
-  font-size: 25px;
-  line-height: var(--line-heigth);
-  color: #FFFFFF;
-  margin-top: -50px;
-}
 .jack__description {
   color: #929292;
 }
 
-.kevin__photo img {
+.kevin__photo {
+  background: url(/Dubai/web/img/MOBILE/Paul.jpg) 0 0/100% no-repeat;
   border-radius: 50%;
   width: 68px;
   height: 68px;
-  margin-top: -85px;
+  margin-top: -35px;
 }
 .kevin__post {
   margin: 13px 0 8px 0;
@@ -1079,7 +1092,7 @@ body {
   font-size: 25px;
   line-height: var(--line-heigth);
   color: #FFFFFF;
-  margin-top: -50px;
+  margin-top: -52px;
 }
 .kevin__description {
   color: #929292;
@@ -1938,6 +1951,13 @@ body {
     justify-content: space-between;
     margin: 38px 0 82px 0;
   }
+  .top__subtitleLink a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #929292;
+    width: 105px;
+  }
   .mid__photoOne {
     margin: 0px;
     background: url(/Dubai/web/img/768px/main4.jpg);
@@ -1954,13 +1974,6 @@ body {
     width: 208px;
     height: 220px;
   }
-  .top__subtitleLink a {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #929292;
-    width: 105px;
-  }
   .subtitleLink__text {
     font-size: 12px;
     line-height: 15px;
@@ -1970,15 +1983,33 @@ body {
     margin-bottom: 19px;
   }
   .articles__slider {
-    margin-bottom: 0px;
+    margin-bottom: 36px;
   }
   .slider__track {
     width: 690px;
   }
   .slide {
-    padding: 50px 24px 15px 30px;
+    padding: 50px 24px 0px 30px;
     width: 333px;
     margin-right: 32px;
+    height: 200px;
+  }
+  .paul__photo {
+    margin-top: -88px;
+  }
+  .robert__photo {
+    margin-top: -88px;
+  }
+  .jack__photo {
+    margin-top: -88px;
+  }
+  .kevin__photo {
+    margin-top: -88px;
+  }
+  .quotes {
+    color: #FCD54C;
+    text-align: right;
+    margin-top: -25px;
   }
   .track__kevin {
     display: flex;
@@ -1991,15 +2022,6 @@ body {
   }
   .track:last-child {
     margin-right: 0px;
-  }
-  .jack__post {
-    margin: 17px 0 13px 0;
-  }
-  .robert__post {
-    margin: 17px 0 13px 0;
-  }
-  .kevin__post {
-    margin: 17px 0 13px 0;
   }
   .round {
     cursor: pointer;
@@ -2108,7 +2130,6 @@ body {
 @media (min-width: 1920px) {
   .container__main {
     width: 1802px;
-    margin: 0xp auto;
   }
   .header__visible {
     display: flex;
@@ -2466,7 +2487,7 @@ body {
   }
   .welcome__numbers {
     background-color: #272727;
-    margin-top: -150px;
+    margin-top: -145px;
     margin-left: 800px;
     border-bottom: 1px solid transparent;
     display: flex;
@@ -2567,37 +2588,34 @@ body {
     align-items: flex-start;
   }
   .body__cartThree {
-    background: url(/Dubai/web/img/MOBILE/houses.jpg);
+    background: url(/Dubai/web/img/1920px/Houses.jpg);
   }
   .body__cartFour {
-    background: url(/Dubai/web/img/MOBILE/villas2.jpg);
+    background: url(/Dubai/web/img/1920px/Villas2.jpg);
   }
   .body__cartFive {
-    background: url(/Dubai/web/img/MOBILE/villas2.jpg);
+    background: url(/Dubai/web/img/1920px/Villas.jpg);
   }
   .body__cartSix {
-    background: url(/Dubai/web/img/MOBILE/villas2.jpg);
+    background: url(/Dubai/web/img/1920px/Villas2.jpg);
   }
   .body__cartSeven {
-    background: url(/Dubai/web/img/MOBILE/villas.jpg);
+    background: url(/Dubai/web/img/1920px/Villas.jpg);
   }
   .body__cartEight {
-    background: url(/Dubai/web/img/MOBILE/houses.jpg);
+    background: url(/Dubai/web/img/1920px/Houses.jpg);
   }
   .body__cartNine {
-    background: url(/Dubai/web/img/MOBILE/villas.jpg);
+    background: url(/Dubai/web/img/1920px/Villas.jpg);
   }
   .body__cartTen {
-    background: url(/Dubai/web/img/MOBILE/houses.jpg);
+    background: url(/Dubai/web/img/1920px/Houses.jpg);
   }
   .body__cartEleven {
-    background: url(/Dubai/web/img/MOBILE/villas2.jpg);
+    background: url(/Dubai/web/img/1920px/Villas2.jpg);
   }
   .body__cartTwelve {
-    background: url(/Dubai/web/img/MOBILE/houses.jpg);
-  }
-  .subtitle1 {
-    font-size: 22px;
+    background: url(/Dubai/web/img/1920px/Houses.jpg);
   }
   .title5 {
     font-size: 32px;
@@ -2616,5 +2634,302 @@ body {
     margin-top: 1px;
     height: 15px;
     width: 15px;
+  }
+  .main__expertise {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .expertise__title {
+    width: 730px;
+    font-size: 18px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .expertise__subtitle {
+    margin: 40px 0 33px 0;
+    width: 730px;
+    font-size: 70px;
+    line-height: 69px;
+  }
+  .expertise__text {
+    width: 730px;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .expertise__video {
+    margin: 0px auto;
+    background: url(/Dubai/web/img/768px/Video.jpg) 0 0/100% 100% no-repeat;
+    height: 921.08px;
+    width: 1800px;
+  }
+  .expertise__photos {
+    margin: 0 345px;
+  }
+  .expertise__maryKay {
+    width: 1110px;
+    height: 313px;
+    margin: 120px 345px 65px 345px;
+    padding: 70px 95px;
+    font-size: 30px;
+  }
+  .video__playround {
+    width: 121.88px;
+    height: 121.88px;
+  }
+  .playround__triangle {
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #000000;
+    margin-left: 5px;
+  }
+  .photos__one {
+    margin-right: 23px;
+  }
+  .photos__two {
+    margin-bottom: 115px;
+  }
+  .one__image {
+    width: 543px;
+    height: 312px;
+    background: url(/Dubai/web/img/1920px/main2.jpg);
+  }
+  .one__text {
+    margin-top: 70px;
+    font-size: 18px;
+  }
+  .two__image {
+    width: 543px;
+    height: 312px;
+    background: url(/Dubai/web/img/1920px/main3.jpg);
+  }
+  .two__text {
+    margin-top: 70px;
+    font-size: 18px;
+  }
+  .main__contactUs {
+    width: 1800px;
+    height: 400px;
+    background: url(/Dubai/web/img/1920px/ContactUs.png);
+    padding: 87px 593px 85px 596px;
+    margin: 0px auto;
+  }
+  .contactUs__subtitle {
+    font-size: 18px;
+    line-height: 160%;
+  }
+  .contactUs__title {
+    font-size: 120px;
+    line-height: 69px;
+    margin: 15px 0 54px 0;
+  }
+  .contactUs__form {
+    margin-top: 7px;
+  }
+  .contactUs__form input {
+    width: 307px;
+    height: 61px;
+    padding: 25px 42px;
+  }
+  .contactUs__form button {
+    width: 165px;
+    height: 61.4px;
+  }
+  .text2 {
+    font-family: "Work Sans";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6em;
+    color: #FFFFFF;
+  }
+  .main__articles {
+    margin: 140px 345px 170px 345px;
+    overflow: visible;
+  }
+  .articles__top {
+    width: 1100px;
+  }
+  .articles__mid {
+    margin: 90px 0 170px 0;
+  }
+  .top__subtitleLink a {
+    width: 154px;
+    padding-bottom: 15px;
+  }
+  .top__title {
+    font-size: 70px;
+    line-height: var(--line-heigth);
+  }
+  .subtitleLink__text {
+    font-size: 16px;
+    line-height: 21px;
+  }
+  .subtitleLink__arrow {
+    height: 15px;
+    width: 15px;
+  }
+  .mid__photoOne {
+    display: flex;
+    align-items: flex-end;
+    background: url(/Dubai/web/img/1920px/main4.jpg);
+    width: 350px;
+    height: 352px;
+  }
+  .mid__discover {
+    padding: 41px 36px 29px 35px;
+    width: 351px;
+    height: 352px;
+  }
+  .mid__photoTwo {
+    display: flex;
+    align-items: flex-end;
+    background: url(/Dubai/web/img/1920px/main5.jpg);
+    width: 350px;
+    height: 352px;
+  }
+  .photoOne__title {
+    display: block;
+    font-family: "Gilroy-bold";
+    font-size: 25px;
+    line-height: 1.4em;
+    color: #FFFFFF;
+    margin: 0 0 53px 38px;
+  }
+  .photoTwo__title {
+    display: block;
+    font-family: "Gilroy-bold";
+    font-size: 25px;
+    line-height: 1.4em;
+    color: #FFFFFF;
+    margin: 0 0 53px 38px;
+  }
+  .discover__title {
+    font-size: 25px;
+    line-height: 1.4em;
+    margin: 15px 0 28px 0;
+  }
+  .discover__text {
+    color: #929292;
+    margin-bottom: 45px;
+    width: 280px;
+  }
+  .discover__reference a {
+    width: 112px;
+  }
+  .reference__text {
+    font-size: 16px;
+    line-height: 1.5em;
+  }
+  .reference__arrow {
+    height: 15px;
+    width: 15px;
+  }
+  .articles__slider {
+    margin-bottom: 44px;
+  }
+  .slider__track {
+    width: 1112px;
+  }
+  .track__paul {
+    margin-top: 0px;
+    opacity: 1;
+  }
+  .track__robert {
+    margin-top: 0px;
+    opacity: 1;
+  }
+  .track__jack {
+    margin-top: -30px;
+    opacity: 0.5;
+  }
+  .track__kevin {
+    padding: 104px 20px 23px 30px;
+    width: 525px;
+    height: 311px;
+    margin-right: 61px;
+    margin-top: -30px;
+    opacity: 0.5;
+  }
+  .slide {
+    padding: 104px 20px 23px 30px;
+    width: 525px;
+    height: 311px;
+    margin-right: 61px;
+  }
+  .quotes {
+    font-size: 120px;
+    margin-top: -30px;
+  }
+  .paul__photo {
+    background: url(/Dubai/web/img/1920px/Paul.jpg) 0 0/100% no-repeat;
+    margin-top: -155px;
+    width: 112px;
+    height: 112px;
+  }
+  .paul__title {
+    margin-top: -45px;
+  }
+  .paul__post {
+    margin: 19px 0 34px 0;
+  }
+  .paul__post span {
+    color: #FCD54C;
+  }
+  .paul__description {
+    color: #929292;
+  }
+  .robert__photo {
+    background: url(/Dubai/web/img/1920px/Robert.jpg) 0 0/100% no-repeat;
+    margin-top: -155px;
+    width: 112px;
+    height: 112px;
+  }
+  .robert__title {
+    margin-top: -45px;
+  }
+  .robert__post {
+    margin: 19px 0 34px 0;
+  }
+  .robert__post span {
+    color: #FCD54C;
+  }
+  .robert__description {
+    color: #929292;
+  }
+  .jack__photo {
+    background: url(/Dubai/web/img/1920px/Paul.jpg) 0 0/100% no-repeat;
+    margin-top: -155px;
+    width: 112px;
+    height: 112px;
+  }
+  .jack__title {
+    margin-top: -45px;
+  }
+  .jack__post {
+    margin: 19px 0 34px 0;
+  }
+  .jack__post span {
+    color: #FCD54C;
+  }
+  .jack__description {
+    color: #929292;
+  }
+  .kevin__photo {
+    background: url(/Dubai/web/img/1920px/Paul.jpg) 0 0/100% no-repeat;
+    margin-top: -155px;
+    width: 112px;
+    height: 112px;
+  }
+  .kevin__title {
+    margin-top: -45px;
+  }
+  .kevin__post {
+    margin: 19px 0 34px 0;
+  }
+  .kevin__post span {
+    color: #FCD54C;
+  }
+  .kevin__description {
+    color: #929292;
   }
 }
