@@ -1218,6 +1218,7 @@ body{
 .faq {
     &__title{
         margin-bottom: 20px;
+        
     }
     &__questions {
         display: flex;
@@ -1256,7 +1257,6 @@ body{
 
 }
 .visible {
-
     &__text {
         width: 243px;
         padding: 22px 0;
@@ -1278,9 +1278,8 @@ body{
     font-weight: 400;
     font-size: 11px;
     line-height: 130%;
-    color: #929292;
+    color: #E8E8E8;
     padding: 7px;
-
 }
 .arrow2 {
     height: 12px;
@@ -1302,7 +1301,6 @@ body{
 //footer
 
 .main {
-
     &__footer {
         border-top: 1px solid rgba(255, 255, 255, 0.3);
     }
@@ -1326,7 +1324,6 @@ body{
     &__bottom{
         border-top: 1px solid rgba(255, 255, 255, 0.3);
     }
-
     &__bottom-container {
         width: 216px;
         margin: 0px auto;
@@ -1368,7 +1365,6 @@ body{
 }
 
 .down{
-
     &__button {
         cursor: pointer;
         margin-bottom: 62px;
@@ -1548,12 +1544,9 @@ body{
     justify-content: center;
     align-items: center;
     z-index: 3;
-    padding: 30px 0;
-   
     &__window {
         width: 288px;
         margin: 0px auto;
-    
     }
 }
 .modal-container{
@@ -1562,7 +1555,8 @@ body{
 }
 .window {
     &__close {
-        margin: 20px 0 0 300px;
+        margin-left: 300px;
+        transform: translate(0px, 20px);
         & img{
             cursor: pointer;
             width: 30px;
@@ -1666,9 +1660,7 @@ body{
 
     }
 .visible {
-        &__left{  
-         
-        }
+
         &__right{
             display: flex;
             justify-content: space-between;
@@ -1701,9 +1693,6 @@ body{
                     transition-duration: 0.3s;
                 }
         }
-        &__logo{
-            
-        }
         &__lang{
             display: flex;
             align-items: center;
@@ -1724,8 +1713,7 @@ body{
             font-size: 16px;
             line-height: 20px;
             color: #FFFFFF;
-            }
-            
+            }      
         }
         &__burger{
             display: block;
@@ -1754,7 +1742,6 @@ body{
         font-size: 20px;
         margin-bottom: 5px;
     }
-
     &__subtitle {
         opacity: 0.6;
     }
@@ -1806,10 +1793,8 @@ body{
         font-family: 'Gilroy-semibold';
         font-size: 16px;
         line-height: 20px;
-        color: #FFFFFF;
-       
-        }
-        
+        color: #FFFFFF; 
+        }     
     }
 }
 .logo{
@@ -1818,7 +1803,6 @@ body{
             height: 59px;
             border: 2px solid #FCD54C;
             border-right: none;
-
         }
         &__stack {
             margin-top: -49px;
@@ -2051,11 +2035,7 @@ body{
     margin-right: 11px;
 }
 .subtitle1{
-    font-family: 'Work Sans';
-    font-weight: 400;
     font-size: 12px;
-    line-height: var(--line-heigth);
-    color: #FFFFFF;
 }
 .body {
 
@@ -2357,7 +2337,6 @@ body{
     color: #FFFFFF;
 }
 .visible {
-
     &__text {
         width: 680px;
     }
@@ -2374,8 +2353,6 @@ body{
     &__top-container{
         width: 700px;
     } 
-
-
     &__bottom-container {
         width: 700px;
         flex-direction: row;
@@ -2398,8 +2375,7 @@ body{
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
-    }
-    
+    }  
 }
 .down{
 
@@ -2444,21 +2420,21 @@ body{
 .modal {
     display: none;  
     &__window {
-        padding-top: 50px;
         width: 400px;
     }
 }
 .modal-container{
-    width: 700px; 
+    width: 700px;
 }
 .window {
     &__close {
-        margin: -60px 0 0 600px;
+        margin-left: 500px;
+        transform: translate(0px, 10px);
     }
     
     &__title {
         font-size: 40px;
-        margin: 40px 0 15px 0;
+        margin: 0px 0 15px 0;
     }
 
     &__subtitle {
@@ -2493,6 +2469,7 @@ body{
 @media (min-width: 1920px){
 .container__main{
         width: 1802px;
+        margin: 0px auto;
     }
 .header{
         &__visible{
@@ -2793,28 +2770,18 @@ body{
     
         }
     }
-    .unseen{
-        &__first{
+
+.stack {
     
+        &__title {
+            font-size: 20px;
+            margin-bottom: 5px;
         }
-        &__second{
-    
-        }
-        &__third{
-    
+        
+        &__subtitle {
+            opacity: 0.6;
         }
     }
-    .stack {
-    
-            &__title {
-                font-size: 20px;
-                margin-bottom: 5px;
-            }
-        
-            &__subtitle {
-                opacity: 0.6;
-            }
-        }
 
 //welcome
 .welcome {
@@ -2836,7 +2803,6 @@ body{
         width: 124px;
         height: 383px;
     }
-
     &__case {
         display: flex;
         flex-direction: column;
@@ -2890,7 +2856,6 @@ body{
             color: #FCD54C;
         }
     }
-    
     &__link {
         display: flex;
         align-items: center;
@@ -2941,18 +2906,15 @@ body{
     }
 }
 
-
 .slider {
 
     &__prev {
         font-size: 20px;
         line-height: var(--line-heigth);
     }
-
     &__stick {
         height: 20px;
     }
-
     &__next {
         font-size: 20px;
         line-height: var(--line-heigth);
@@ -2969,7 +2931,6 @@ body{
         margin-left: 0px;
         margin-top: 10px;
     }
-
 }
 .one {
     &__title{
@@ -2981,7 +2942,6 @@ body{
         margin-top: 0px; 
     }
 }
-
 .two {
     &__title{
         margin-right: 37px;
@@ -3006,12 +2966,10 @@ body{
 .main{
     &__projects{
         width: 1802px;
-        margin-top: 124px;
-        
+        margin-top: 124px;  
     }
 }
 .projects {
-
     &__up{
         justify-content: space-evenly;
         margin-bottom: 78px;
@@ -3031,13 +2989,11 @@ body{
     line-height: 1.31em;
 }
 .navigation {
-
     &__viewAll a{
         font-size: 16px;
         line-height: 1.31em;
     }
 }
-
 .slider {
 
     &__body {  
@@ -3098,13 +3054,14 @@ body{
     line-height: 1.4em;
 }
 .cartTwo {
-
+    &__subtitle{
+        font-size: 22px;
+    }
     &__link {
         width: 145px;
         &:hover{
             text-decoration: underline;
         }
-       
     }
 }
 .text{
@@ -3162,7 +3119,6 @@ body{
         padding: 70px 95px;
         font-size: 30px;     
     }
-
 }
 .video{
     &__playround{
@@ -3374,15 +3330,15 @@ body{
 }
 .track {
     &__paul{
-        margin-top: 0px;
+        transform: translate3d(0px,0px,0px);
         opacity: 1;
     }
     &__robert{
-        margin-top: 0px;
+        transform: translate3d(0px,0px,0px);
         opacity: 1;
     }
     &__jack{
-        margin-top: -30px;
+        transform: translate3d(0px,-30px,0px);
         opacity: 0.5;
     }
     &__kevin{
@@ -3390,7 +3346,7 @@ body{
         width: 525px;
         height: 311px;
         margin-right: 61px;
-        margin-top: -30px;
+        transform: translate3d(0px,-30px,0px);
         opacity: 0.5;
     }
 }
@@ -3398,7 +3354,7 @@ body{
         padding: 104px 20px 23px 30px;
         width: 525px;
         height: 311px;
-        margin-right: 61px;  
+        margin-right: 61px;
 }
 .quotes{
         font-size: 120px;
@@ -3486,6 +3442,192 @@ body{
         color: #929292;
     }
 }
+//FAQ
+.main {
+    &__faq {
+        margin: 110px 345px 122px 345px;     
+    }
+}
+.faq {
+    &__title{
+        margin-bottom: 30px;
+    }
+    
+}
+.text3{
+    font-size: 18px;
+}
+.visible {
+
+    &__text {
+        width: 1108px;
+        padding: 20px 0;
+    }
+}
+.invisibleBox{
+    font-size: 14px;
+    line-height: 160%;
+    padding: 33px 65px 40px 65px;
+}
+//footer
+.footer {
+    &__top {
+        margin: 70px 0 51px 0;
+    }
+    &__top-container{
+        width: 1785px;
+        
+    }
+    &__mid {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;  
+        margin-bottom: 95px;
+    }
+    &__bottom-container {
+        width: 1785px;
+        flex-direction: row;
+    }
+}
+.mid{
+    &__contextMenu{
+        display: flex;    
+        justify-content: space-between;  
+    }
+    &__down{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+.visible{
+    &__title{
+        width: 174px;
+    }
+    &__boom{
+        display: none;
+    }
+}
+.visibleMenu{
+    border-bottom: none;
+    margin-bottom: 40px;
+    padding-bottom: 0px;
+    cursor: none;
+}
+.invisible {
+    &__submenu {
+        margin: 20px 0;
+        & a{
+            font-size: 18px;
+            line-height: var(--line-heigth);
+        }  
+    }
+}
+.buy{
+    &__invisible{
+        display: block;
+        margin-right: 184px;
+    }
+}
+.services{
+    &__invisible{
+        display: block;
+        margin-right: 184px;
+    }
+}
+.information{
+    &__invisible{
+        display: block;
+        margin-right: 184px;
+    }
+}
+.about{
+    &__invisible{
+        display: block;
+        margin-right: 184px;
+    }
+}
+.address {
+
+    &__title {
+        margin-top: 15px;
+    }
+    &__subtitle{
+        margin: 40px 0 23px 0;
+    }
+}
+.info{
+    &__email {
+        margin-bottom: 78px;
+    }  
+}
+.bottom{
+    &__social {
+        margin: 35px 0 38px 0;
+        width: 180px;
+    }
+
+    &__info {
+        margin: 35px 0 38px 0;
+        font-size: 18px;
+        line-height: 1.6em;
+    } 
+}
+
+//modal
+.modal {
+    &__window {
+        width: 449px;
+    }
+}
+.modal-container{
+    width: 730px;
+    height: 445px;
+}
+.window {
+    &__close {
+        margin-left: 700px;
+        transform: translate(0px, -50px);
+    }
+    
+    &__title {
+        font-size: 48px;
+        margin: 30px 0 7px 0;
+    }
+
+    &__subtitle {
+        font-size: 20px;
+    }
+
+    &__input {
+        margin: 40px 10px;
+    }
+
+    &__button {
+            margin-bottom: 44px;
+                button{
+                width: 216px;
+                height: 54px;
+                font-size: 18px;
+        }
+    }
+}
+.input {
+
+    &__name {
+        width: 453px;
+        padding: 15px 0;
+        margin-bottom: 20px;
+    }
+
+    &__phone {
+        width: 453px;
+        padding: 15px 0;
+    }
+}
+
+
+
+
 
 
 }

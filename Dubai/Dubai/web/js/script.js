@@ -456,13 +456,13 @@ else if(screen.width > 768){
   firstSlide = (event) => { 
     if(screen.width > 1919) {
       paulSlide.style.opacity = '1';
-      paulSlide.style.marginTop = '0px';
+      paulSlide.style.transform = 'translate3d(0px,0px,0px)';
       robertSlide.style.opacity = '1';
-      robertSlide.style.marginTop = '0px';
+      robertSlide.style.transform = 'translate3d(0px,0px,0px)';
       jackSlide.style.opacity = '0.5';
-      jackSlide.style.marginTop = '-30px';
+      jackSlide.style.transform = 'translate3d(0px,-30px,0px)';
       kevin1Slide.style.opacity = '0.5';
-      kevin1Slide.style.marginTop = '-30px';
+      kevin1Slide.style.transform = 'translate3d(0px,-30px,0px)';
       paulSlide.style.transitionDuration = '0.5s';
       robertSlide.style.transitionDuration = '0.5s';
     }
@@ -475,25 +475,26 @@ else if(screen.width > 768){
    secondSlide = (event) => {
     if(screen.width > 768 && screen.width < 1919){
       sliderTrack.style.transform = 'translate3d(-728px, 0px, 0px)';
+      
     }
     else if(screen.width > 1919){
       sliderTrack.style.transform = 'translate3d(-1171px, 0px, 0px)';
       paulSlide.style.opacity = '0.5';
-      paulSlide.style.marginTop = '-30px';
+      paulSlide.style.transform = 'translate3d(0px,-30px,0px)';
       robertSlide.style.opacity = '0.5';
-      robertSlide.style.marginTop = '-30px'
+      robertSlide.style.transform = 'translate3d(0px,-30px,0px)';
       jackSlide.style.opacity = '1';
-      jackSlide.style.marginTop = '0px';
+      jackSlide.style.transform = 'translate3d(0px,0px,0px)';
       kevin1Slide.style.opacity = '1';
-      kevin1Slide.style.marginTop = '0px';
+      kevin1Slide.style.transform = 'translate3d(0px,0px,0px)';
       paulSlide.style.transitionDuration = '0.5s';
       robertSlide.style.transitionDuration = '0.5s';
       jackSlide.style.transitionDuration = '0.5s';
       kevin1Slide.style.transitionDuration = '0.5s';
       kevin2Slide.style.opacity = '0.5';
-      kevin2Slide.style.marginTop ='-30px';
+      kevin2Slide.style.transform = 'translate3d(0px,-30px,0px)';
       kevin3Slide.style.opacity = '0.5';
-      kevin3Slide.style.marginTop ='-30px';
+      kevin3Slide.style.transform = 'translate3d(0px,-30px,0px)';
       kevin2Slide.style.transitionDuration = '0.5s';
       kevin3Slide.style.transitionDuration = '0.5s';
     }
@@ -509,15 +510,15 @@ else if(screen.width > 768){
     else if(screen.width > 1919){
       sliderTrack.style.transform = 'translate3d(-2343px, 0px, 0px)';
       jackSlide.style.opacity = '0.5';
-      jackSlide.style.marginTop = '-30px';
+      jackSlide.style.transform = 'translate3d(0px,-30px,0px)';
       kevin1Slide.style.opacity = '0.5';
-      kevin1Slide.style.marginTop = '-30px';
+      kevin1Slide.style.transform = 'translate3d(0px,-30px,0px)';
       paulSlide.style.transitionDuration = '0.5s';
       robertSlide.style.transitionDuration = '0.5s';
       kevin2Slide.style.opacity = '1';
-      kevin2Slide.style.marginTop = '0px';
+      kevin2Slide.style.transform = 'translate3d(0px,0px,0px)';
       kevin3Slide.style.opacity = '1';
-      kevin3Slide.style.marginTop ='0px';
+      kevin3Slide.style.transform = 'translate3d(0px,0px,0px)';
       kevin2Slide.style.transitionDuration = '0.5s';
       kevin3Slide.style.transitionDuration = '0.5s';
 
@@ -540,11 +541,13 @@ function openCloseAnswer  (event)  {
   if(questionMainMenu.dataset.trigger == 'false'){
     this.querySelector('div:last-child').style.transform = 'rotate(135deg)';
     questionSubmenu.style.display = 'block';
+    questionSubmenu.style.borderBottom = '1px solid #929292';
     questionMainMenu.dataset.trigger = 'true';
   }
   else if(questionMainMenu.dataset.trigger == 'true'){
     this.querySelector('div:last-child').style.transform = 'rotate(45deg)';
     questionSubmenu.style.display = 'none';
+    questionSubmenu.style.borderBottom = 'none';
     questionMainMenu.dataset.trigger = 'false';
   }
 }
@@ -570,10 +573,12 @@ function openCloseSubmenuFooter (event){
     mainMenuFooter.dataset.trigger = 'true';
   }
 }
-document.querySelector('.contextMenu__buy').addEventListener('click', openCloseSubmenuFooter)
-document.querySelector('.contextMenu__services').addEventListener('click', openCloseSubmenuFooter)
-document.querySelector('.contextMenu__information').addEventListener('click', openCloseSubmenuFooter)
-document.querySelector('.contextMenu__about').addEventListener('click', openCloseSubmenuFooter)
+if(screen.width < 1919){
+  document.querySelector('.contextMenu__buy').addEventListener('click', openCloseSubmenuFooter)
+  document.querySelector('.contextMenu__services').addEventListener('click', openCloseSubmenuFooter)
+  document.querySelector('.contextMenu__information').addEventListener('click', openCloseSubmenuFooter)
+  document.querySelector('.contextMenu__about').addEventListener('click', openCloseSubmenuFooter)
+}
 
 //modalWindow
 
