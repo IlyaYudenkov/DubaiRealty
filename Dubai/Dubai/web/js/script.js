@@ -13,7 +13,6 @@ visibleBurger.addEventListener('click', showHiddenMenu)
 invisibleBurger.addEventListener('click', closeHiddenMenu)
 
 
-
 //функция позволяет открывать скрытые submenu конкретного пункта через data-trigger и this
 function openCloseSubmenu (event){
   let mainMenu = event.target.parentNode.parentNode;
@@ -75,14 +74,13 @@ prevSlide = () => {
         if(screen.width < 768 ){
           document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/MOBILE/main320px2.png)'
         }
-        else if(screen.width > 769){
+        else if(screen.width > 768){
           document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/768px/main2.jpg) 0 0/100%';
         }
-        else if(screen.width > 1920){
+        else if(screen.width > 1919){
           document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/1920px/main2.jpg) 0 0/100% no-repeat';
         }
-    
-        
+         
     }
     else if(document.querySelector('.two__title').classList.contains('_active')){
         document.querySelector('.two__title').classList.remove('_active');
@@ -90,10 +88,10 @@ prevSlide = () => {
         if(screen.width < 768){
           document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/MOBILE/main320px1.png) 0 0/100%';
         }
-        else if(screen.width > 769){
+        else if(screen.width > 768){
           document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/768px/main768px1.png) 0 0/100%';
         }
-        else if(screen.width > 1920){
+        else if(screen.width > 1919){
           document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/1920px/main1920px1.png) 0 0/100% no-repeat';
         }
     }
@@ -109,10 +107,10 @@ nextSlide = () => {
         if(screen.width < 768 ){
           document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/MOBILE/main320px2.png) 0 0/100%'
         }
-        else if(screen.width > 769){
+        else if(screen.width > 768){
           document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/768px/main2.jpg) 0 0/100%';
         }
-        else if(screen.width > 1920){
+        else if(screen.width > 1919){
           document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/1920px/main2.jpg) 0 0/100% no-repeat';
         }
         
@@ -123,10 +121,10 @@ nextSlide = () => {
         if(screen.width < 768){
           document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/MOBILE/main320px3.png)';
         }
-        else if(screen.width > 769){
+        else if(screen.width > 768){
           document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/768px/main3.jpg) 0 0/100%';
         }
-        else if(screen.width > 1920){
+        else if(screen.width > 1919){
           document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/1920px/main3.jpg) 0 0/100% no-repeat' ;
         } 
     }
@@ -139,10 +137,10 @@ document.querySelector('.one__title').addEventListener('click', (event) => {
   if(screen.width < 768){
     document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/MOBILE/main320px1.png) 0 0/100% ' ;
   }
-  else if(screen.width > 769){
+  else if(screen.width > 768){
     document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/768px/main768px1.png) 0 0/100%';
   }
-  else if(screen.width > 1920){
+  else if(screen.width > 1919){
     document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/1920px/main1920px1.png) 0 0/100% no-repeat';
   }
     document.querySelector('.two__title').classList.remove('_active');
@@ -156,10 +154,10 @@ document.querySelector('.two__title').addEventListener('click', () => {
   if(screen.width < 768){
     document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/MOBILE/main320px2.png)';
   }
-  else if(screen.width > 769){
+  else if(screen.width > 768){
     document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/768px/main2.jpg) 0 0/100%';
   }
-  else if(screen.width > 1920){
+  else if(screen.width > 1919){
     document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/1920px/main2.jpg) 0 0/100% no-repeat';
   }
     document.querySelector('.one__title').classList.remove('_active')
@@ -170,10 +168,10 @@ document.querySelector('.three__title').addEventListener('click', () => {
   if(screen.width < 768){
     document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/MOBILE/main320px3.png)';
   }
-  else if(screen.width > 769){
+  else if(screen.width > 768){
     document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/768px/main3.jpg) 0 0/100%';
   }
-  else if(screen.width > 1920){
+  else if(screen.width > 1919){
     document.querySelector('.welcome__picture').style.background = 'url(/Dubai/web/img/1920px/main3.jpg) 0 0/100% no-repeat';
   }
     document.querySelector('.one__title').classList.remove('_active');
@@ -199,10 +197,10 @@ document.querySelector('.navigation__all').addEventListener('click', allSlide)
 document.querySelector('.pagination__one').addEventListener('click', allSlide)
 
 buildingSlide = () => {
-  if(screen.width < 767){
+  if(screen.width < 768){
     offset = 295;
   }
-  else if(1919 > screen.width > 767 ){
+  else if(screen.width > 768 && screen.width < 1919){
     offset = 703;
   }
   else if(screen.width > 1919){
@@ -223,7 +221,7 @@ interiorSlide = () => {
   if(screen.width < 768){
     offset = 590;
   }
-  else if(1919 > screen.width > 768){
+  else if(screen.width > 768 && screen.width < 1919){
     offset = 1410;
   }
   else if(screen.width > 1919){
@@ -459,12 +457,16 @@ else if(screen.width > 768){
       paulSlide.style.transform = 'translate3d(0px,0px,0px)';
       robertSlide.style.opacity = '1';
       robertSlide.style.transform = 'translate3d(0px,0px,0px)';
+      paulSlide.style.transitionDuration = '0.5s';
+      robertSlide.style.transitionDuration = '0.5s';
       jackSlide.style.opacity = '0.5';
       jackSlide.style.transform = 'translate3d(0px,-30px,0px)';
       kevin1Slide.style.opacity = '0.5';
       kevin1Slide.style.transform = 'translate3d(0px,-30px,0px)';
-      paulSlide.style.transitionDuration = '0.5s';
-      robertSlide.style.transitionDuration = '0.5s';
+      kevin2Slide.style.opacity = '0.5';
+      kevin2Slide.style.transform = 'translate3d(0px,-30px,0px)';
+      kevin3Slide.style.opacity = '0.5';
+      kevin3Slide.style.transform = 'translate3d(0px,-30px,0px)';
     }
     sliderTrack.style.transform = 'translate3d(0px, 0px, 0px)';
     sliderTrack.style.transitionDuration = '0.5s'
@@ -475,7 +477,6 @@ else if(screen.width > 768){
    secondSlide = (event) => {
     if(screen.width > 768 && screen.width < 1919){
       sliderTrack.style.transform = 'translate3d(-728px, 0px, 0px)';
-      
     }
     else if(screen.width > 1919){
       sliderTrack.style.transform = 'translate3d(-1171px, 0px, 0px)';
@@ -603,4 +604,4 @@ document.querySelector('.modal').addEventListener('click', (event) => {
 }
 })
 
-//1920px 
+//translate

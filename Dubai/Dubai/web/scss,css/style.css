@@ -130,9 +130,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .submenu {
   display: none;
-  margin: 20px 0 20px 22px;
 }
 .submenu a {
+  display: block;
+  margin: 20px 0 20px 22px;
   font-family: "Gilroy-semibold";
   text-decoration: none;
   font-size: 14px;
@@ -317,28 +318,28 @@ body {
   margin-bottom: 20px;
 }
 
-.buy__submenu div {
+.buy__submenu a {
   margin-bottom: 15px;
 }
 
 .blog__box {
   width: 140px;
 }
-.blog__submenu div {
+.blog__submenu a {
   margin-bottom: 15px;
 }
 
 .about__box {
   width: 150px;
 }
-.about__submenu div {
+.about__submenu a {
   margin-bottom: 15px;
 }
 
 .contact__box {
   width: 200px;
 }
-.contact__submenu div {
+.contact__submenu a {
   margin-bottom: 15px;
 }
 
@@ -2038,6 +2039,9 @@ body {
   .visible__text {
     width: 680px;
   }
+  .invisibleBox {
+    padding: 15px 7px;
+  }
   .footer__top {
     justify-content: center;
     margin-bottom: 40px;
@@ -2208,23 +2212,56 @@ body {
   }
   .list__buy {
     position: relative;
+    padding-bottom: 5px;
     top: 0;
     left: 0;
+  }
+  .list__buy:hover .buy__visual {
+    transition-duration: 0.3s;
+    color: #FCD54C;
+    border-bottom: 3px solid #FCD54C;
+  }
+  .list__buy:hover .buy__unseen {
+    display: flex;
   }
   .list__blog {
     position: relative;
     top: 0;
     left: 0;
   }
+  .list__blog:hover .blog__visual {
+    transition-duration: 0.3s;
+    color: #FCD54C;
+    border-bottom: 3px solid #FCD54C;
+  }
+  .list__blog:hover .blog__unseen {
+    display: flex;
+  }
   .list__about {
     position: relative;
     top: 0;
     left: 0;
   }
+  .list__about:hover .about__visual {
+    transition-duration: 0.3s;
+    color: #FCD54C;
+    border-bottom: 3px solid #FCD54C;
+  }
+  .list__about:hover .about__unseen {
+    display: flex;
+  }
   .list__contact {
     position: relative;
     top: 0;
     left: 0;
+  }
+  .list__contact:hover .contact__visual {
+    transition-duration: 0.3s;
+    color: #FCD54C;
+    border-bottom: 3px solid #FCD54C;
+  }
+  .list__contact:hover .contact__unseen {
+    display: flex;
   }
   .buy__visual {
     display: flex;
@@ -2235,25 +2272,19 @@ body {
     border-bottom: 3px solid transparent;
     transition-duration: 0.3s;
   }
-  .buy__visual:hover {
-    transition-duration: 0.3s;
-    color: #FCD54C;
-    border-bottom: 3px solid #FCD54C;
-  }
   .buy__unseen {
-    visibility: hidden;
-    display: flex;
+    display: none;
     flex-direction: column;
     position: absolute;
     width: 247px;
-    height: 108px;
+    height: 115px;
     left: 0px;
     top: 25px;
     background: #272727;
     border: 1px solid #979797;
     transition-duration: 0.3s;
   }
-  .buy__unseen div {
+  .buy__unseen a {
     cursor: pointer;
     font-family: "Gilroy-semibold";
     font-size: 14px;
@@ -2261,7 +2292,7 @@ body {
     color: #FFFFFF;
     padding: 10px 0 10px 20px;
   }
-  .buy__unseen div:hover {
+  .buy__unseen a:hover {
     background: #FCD54C;
     color: #000000;
     transition-duration: 0.3s;
@@ -2275,24 +2306,19 @@ body {
     border-bottom: 3px solid transparent;
     transition-duration: 0.3s;
   }
-  .blog__visual:hover {
-    transition-duration: 0.3s;
-    color: #FCD54C;
-    border-bottom: 3px solid #FCD54C;
-  }
   .blog__unseen {
     display: none;
     flex-direction: column;
     position: absolute;
     width: 247px;
-    height: 108px;
+    height: 115px;
     left: 0px;
     top: 25px;
     background: #272727;
     border: 1px solid #979797;
     transition-duration: 0.3s;
   }
-  .blog__unseen div {
+  .blog__unseen a {
     cursor: pointer;
     font-family: "Gilroy-semibold";
     font-size: 14px;
@@ -2300,7 +2326,7 @@ body {
     color: #FFFFFF;
     padding: 10px 0 10px 20px;
   }
-  .blog__unseen div:hover {
+  .blog__unseen a:hover {
     background: #FCD54C;
     color: #000000;
     transition-duration: 0.3s;
@@ -2314,24 +2340,19 @@ body {
     border-bottom: 3px solid transparent;
     transition-duration: 0.3s;
   }
-  .about__visual:hover {
-    transition-duration: 0.3s;
-    color: #FCD54C;
-    border-bottom: 3px solid #FCD54C;
-  }
   .about__unseen {
     display: none;
     flex-direction: column;
     position: absolute;
     width: 247px;
-    height: 108px;
+    height: 115px;
     left: 0px;
     top: 25px;
     background: #272727;
     border: 1px solid #979797;
     transition-duration: 0.3s;
   }
-  .about__unseen div {
+  .about__unseen a {
     cursor: pointer;
     font-family: "Gilroy-semibold";
     font-size: 14px;
@@ -2339,7 +2360,7 @@ body {
     color: #FFFFFF;
     padding: 10px 0 10px 20px;
   }
-  .about__unseen div:hover {
+  .about__unseen a:hover {
     background: #FCD54C;
     color: #000000;
     transition-duration: 0.3s;
@@ -2353,24 +2374,19 @@ body {
     border-bottom: 3px solid transparent;
     transition-duration: 0.3s;
   }
-  .contact__visual:hover {
-    transition-duration: 0.3s;
-    color: #FCD54C;
-    border-bottom: 3px solid #FCD54C;
-  }
   .contact__unseen {
     display: none;
     flex-direction: column;
     position: absolute;
     width: 247px;
-    height: 108px;
+    height: 115px;
     left: 0px;
     top: 25px;
     background: #272727;
     border: 1px solid #979797;
     transition-duration: 0.3s;
   }
-  .contact__unseen div {
+  .contact__unseen a {
     cursor: pointer;
     font-family: "Gilroy-semibold";
     font-size: 14px;
@@ -2378,7 +2394,7 @@ body {
     color: #FFFFFF;
     padding: 10px 0 10px 20px;
   }
-  .contact__unseen div:hover {
+  .contact__unseen a:hover {
     background: #FCD54C;
     color: #000000;
     transition-duration: 0.3s;
