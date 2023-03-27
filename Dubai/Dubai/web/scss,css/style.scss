@@ -175,8 +175,6 @@ body{
 
 .banner {
 
-    &__logo {
-    }
     &__burger img{
         cursor: pointer;
         margin-top: 10px;
@@ -306,7 +304,7 @@ body{
     &__box {
         width: 200px;
     }
-    &__submenu a{
+    &__submenu {
         margin-bottom: 15px;  
     }
 }
@@ -370,7 +368,8 @@ body{
         display: flex;
         flex-direction: column;
         margin-left: -44px;
-        margin-top: 12px;    
+        margin-top: 12px; 
+        cursor: pointer;   
     }
     &__social{
         display: none;
@@ -398,16 +397,16 @@ body{
         }
     }
     
-    &__link {
+    &__book{
         display: flex;
         align-items: center;
         width: 135px;
         margin-top: -11px;
 }
 }
-.link {
+.book {
 
-    &__text a{
+    &__text {
         color: #FFFFFF;
     }
 
@@ -531,6 +530,7 @@ body{
     &__navigation{
         display: flex;
         justify-content: space-between;
+        align-items: center;
         color: #FFFFFF; 
     }
 }
@@ -560,13 +560,12 @@ body{
     font-weight: 600;
     font-size: 12px;
     line-height: var(--line-heigth);
-    
     &:hover{
         color: #FCD54C;
     }
 }
-.navigation {
-    &__viewAll a{
+.navigation{
+    &__viewAll {
         font-family: 'Gilroy-semiboldItalic';
         font-size: 12px;
         line-height: var(--line-heigth);
@@ -697,7 +696,7 @@ body{
 }
 
 
-////////////////////expertise
+//expertise
 .main {
 
     &__expertise {
@@ -743,9 +742,9 @@ body{
         font-family: 'Gilroy-regular';
         font-size: 16px;
         line-height: 160%;
-        color: #FFFFFF;
+        color: #fff;
         & span{
-            color: #FCD54C;
+           color: #FCD54C;
         }   
     }
 
@@ -1028,6 +1027,7 @@ body{
 .slider-container.grab {
     cursor: grab;
 }
+
 .slider-container.grabbing {
     cursor: grabbing;
 }
@@ -1532,7 +1532,7 @@ body{
 .window {
     &__close {
         margin-left: 300px;
-        transform: translate(0px, 20px);
+        transform: translate(0px, 55px);
         & img{
             cursor: pointer;
             width: 30px;
@@ -1546,7 +1546,7 @@ body{
         line-height: var(--line-heigth);
         text-align: center;
         color: #000000;
-        margin: 40px 0 15px 0;
+        margin: 20px 0 15px 0;
     }
 
     &__subtitle {
@@ -1894,20 +1894,18 @@ body{
             & span{
                 color: #FCD54C;
             }
-        }
-        
-        &__link {
+        } 
+        &__book{
             width: 170px;
             margin-top: 8px;
     }
 }
-.link {
+.book {
 
-    &__text a{
+    &__text {
         font-size: 16px;
         line-height: 19px;
     }
-
     &__arrow {
         margin-left: 2px;
         width: 10px;
@@ -2449,6 +2447,7 @@ body{
 .container__main{
         width: 1802px;
         margin: 0px auto;
+        overflow: hidden;
     }
 .header{
         &__visible{
@@ -2614,7 +2613,7 @@ body{
         flex-direction: column;
         position: absolute;
         width: 247px;
-        height: 115px;
+        height: 113px;
         left: 0px;
         top: 25px;
         background: #272727;
@@ -2650,7 +2649,7 @@ body{
         flex-direction: column;
         position: absolute;
         width: 247px;
-        height: 115px;
+        height: 113px;
         left: 0px;
         top: 25px;
         background: #272727;
@@ -2687,7 +2686,7 @@ body{
             flex-direction: column;
             position: absolute;
             width: 247px;
-            height: 115px;
+            height: 113px;
             left: 0px;
             top: 25px;
             background: #272727;
@@ -2723,7 +2722,7 @@ body{
             flex-direction: column;
             position: absolute;
             width: 247px;
-            height: 115px;
+            height: 113px;
             left: 0px;
             top: 25px;
             background: #272727;
@@ -2779,7 +2778,6 @@ body{
 
 //welcome
 .welcome {
-
     &__picture {
         margin-top: 26px;
         background: url(/Dubai/web/img/768px/main768px1.png) 0 0/100%;
@@ -2792,7 +2790,6 @@ body{
 }
 
 .top {
-
     &__rectangle {
         width: 124px;
         height: 383px;
@@ -2850,21 +2847,20 @@ body{
             color: #FCD54C;
         }
     }
-    &__link {
+    &__book{
         display: flex;
         align-items: center;
-        width: 215px;
+        width: 217px;
         margin-top: 0px;
 }
 }
 
-.link {
+.book {
 
-    &__text a{
+    &__text {
         font-size: 20px;
         line-height: var(--line-heigth);
     }
-
     &__arrow {
         margin-left: 2px;
         width: 15px;
@@ -3565,7 +3561,7 @@ body{
         font-size: 18px;
         line-height: 1.6em;
     } 
-}
+};
 
 //modal
 .modal {
@@ -3618,9 +3614,6 @@ body{
         padding: 15px 0;
     }
 }
-
-
-
 
 
 

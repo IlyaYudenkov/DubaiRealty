@@ -339,7 +339,7 @@ body {
 .contact__box {
   width: 200px;
 }
-.contact__submenu a {
+.contact__submenu {
   margin-bottom: 15px;
 }
 
@@ -395,6 +395,7 @@ body {
   flex-direction: column;
   margin-left: -44px;
   margin-top: 12px;
+  cursor: pointer;
 }
 .top__social {
   display: none;
@@ -417,17 +418,17 @@ body {
 .case__title span {
   color: #FCD54C;
 }
-.case__link {
+.case__book {
   display: flex;
   align-items: center;
   width: 135px;
   margin-top: -11px;
 }
 
-.link__text a {
+.book__text {
   color: #FFFFFF;
 }
-.link__arrow {
+.book__arrow {
   margin-left: 2px;
   width: 10px;
   height: 9px;
@@ -534,6 +535,7 @@ body {
 .up__navigation {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   color: #FFFFFF;
 }
 
@@ -566,14 +568,14 @@ body {
   color: #FCD54C;
 }
 
-.navigation__viewAll a {
+.navigation__viewAll {
   font-family: "Gilroy-semiboldItalic";
   font-size: 12px;
   line-height: var(--line-heigth);
   color: #929292;
   cursor: pointer;
 }
-.navigation__viewAll a:hover {
+.navigation__viewAll:hover {
   color: #FCD54C;
 }
 
@@ -715,7 +717,7 @@ body {
   font-family: "Gilroy-regular";
   font-size: 16px;
   line-height: 160%;
-  color: #FFFFFF;
+  color: #fff;
 }
 .expertise__maryKay span {
   color: #FCD54C;
@@ -1410,7 +1412,7 @@ body {
 
 .window__close {
   margin-left: 300px;
-  transform: translate(0px, 20px);
+  transform: translate(0px, 55px);
 }
 .window__close img {
   cursor: pointer;
@@ -1423,7 +1425,7 @@ body {
   line-height: var(--line-heigth);
   text-align: center;
   color: #000000;
-  margin: 40px 0 15px 0;
+  margin: 20px 0 15px 0;
 }
 .window__subtitle {
   font-family: "Work Sans";
@@ -1730,15 +1732,15 @@ body {
   .case__title span {
     color: #FCD54C;
   }
-  .case__link {
+  .case__book {
     width: 170px;
     margin-top: 8px;
   }
-  .link__text a {
+  .book__text {
     font-size: 16px;
     line-height: 19px;
   }
-  .link__arrow {
+  .book__arrow {
     margin-left: 2px;
     width: 10px;
     height: 9px;
@@ -2131,6 +2133,7 @@ body {
   .container__main {
     width: 1802px;
     margin: 0px auto;
+    overflow: hidden;
   }
   .header__visible {
     display: flex;
@@ -2277,7 +2280,7 @@ body {
     flex-direction: column;
     position: absolute;
     width: 247px;
-    height: 115px;
+    height: 113px;
     left: 0px;
     top: 25px;
     background: #272727;
@@ -2311,7 +2314,7 @@ body {
     flex-direction: column;
     position: absolute;
     width: 247px;
-    height: 115px;
+    height: 113px;
     left: 0px;
     top: 25px;
     background: #272727;
@@ -2345,7 +2348,7 @@ body {
     flex-direction: column;
     position: absolute;
     width: 247px;
-    height: 115px;
+    height: 113px;
     left: 0px;
     top: 25px;
     background: #272727;
@@ -2379,7 +2382,7 @@ body {
     flex-direction: column;
     position: absolute;
     width: 247px;
-    height: 115px;
+    height: 113px;
     left: 0px;
     top: 25px;
     background: #272727;
@@ -2478,17 +2481,17 @@ body {
   .case__title span {
     color: #FCD54C;
   }
-  .case__link {
+  .case__book {
     display: flex;
     align-items: center;
-    width: 215px;
+    width: 217px;
     margin-top: 0px;
   }
-  .link__text a {
+  .book__text {
     font-size: 20px;
     line-height: var(--line-heigth);
   }
-  .link__arrow {
+  .book__arrow {
     margin-left: 2px;
     width: 15px;
     height: 15px;
