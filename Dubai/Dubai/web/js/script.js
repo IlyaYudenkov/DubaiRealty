@@ -104,7 +104,6 @@ translateRu = () => {
     document.querySelector('.discover__reference a').style.transform = 'translate(0px,-20px)';
     document.querySelector('.window__title').style.marginTop = '3px' 
   }
-
 }
 
 translateEn = () => {
@@ -387,7 +386,6 @@ let sliderList = slider.querySelector('.slider-container'),
   isSwipe = false,
   isScroll = false,
   allowSwipe = true,
-  transition = true,
   nextTrf = 0,
   prevTrf = 0,
   lastTrf = (--slides.length - 1) * slideWidth,
@@ -693,14 +691,14 @@ if(screen.width < 1919){
 }
 
 //modalWindow
-
+let modalWindow =  document.querySelector('.modal');
 openModalWindow = () => {
-  document.querySelector('.modal').style.display = 'flex';
-  document.querySelector('.modal').style.background = 'rgba(39, 39, 39, 0.952)';
+  modalWindow.style.display = 'flex';
+  modalWindow.style.background = 'rgba(39, 39, 39, 0.952)';
   document.body.style.overflow = 'hidden';
 }
 closeModalWindow = () => {
-    document.querySelector('.modal').style.display = 'none';
+  modalWindow.style.display = 'none';
     document.body.style.overflow  = 'visible';
 }
 document.querySelector('.right__button').addEventListener('click', openModalWindow)
@@ -709,10 +707,10 @@ document.querySelector('.info__button').addEventListener('click', openModalWindo
 document.querySelector('.down__button').addEventListener('click', openModalWindow)
 document.querySelector('.case__book').addEventListener('click', openModalWindow)
 document.querySelector('.window__close').addEventListener('click', closeModalWindow)
-document.querySelector('.modal').addEventListener('click', (event) => {
-    if(event.target === document.querySelector('.modal')){
-    document.querySelector('.modal').style.display = 'none';
-    document.body.style.overflow  = 'visible';
+modalWindow.addEventListener('click', (event) => {
+    if(event.target ===  modalWindow){
+      modalWindow.style.display = 'none';
+      document.body.style.overflow  = 'visible';
 }
 })
 

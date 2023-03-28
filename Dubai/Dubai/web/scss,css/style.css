@@ -173,7 +173,7 @@ body {
   top: 0%;
   left: 50%;
   transform: translate(-50%, 0%);
-  width: 320px;
+  width: 345px;
   height: 100%;
   overflow-y: scroll;
   padding: 0 25px;
@@ -703,7 +703,7 @@ body {
 }
 .expertise__video {
   margin: 40px 0;
-  background: url(/Dubai/web/img/MOBILE/mainVideo.jpg) 0 0/100% 100% no-repeat;
+  background: url(/Dubai/web/img/1920px/Video.png) 0 0/100% 100% no-repeat;
   width: 100%;
   height: 185px;
   display: flex;
@@ -731,7 +731,7 @@ body {
 .one__image {
   width: 288px;
   height: 194px;
-  background: url(/Dubai/web/img/MOBILE/main2.jpg);
+  background: url(/Dubai/web/img/768px/main2.jpg);
 }
 .one__text {
   margin: 20px 0;
@@ -745,7 +745,7 @@ body {
 .two__image {
   width: 288px;
   height: 194px;
-  background: url(/Dubai/web/img/MOBILE/main3.jpg);
+  background: url(/Dubai/web/img/768px/main3.jpg);
 }
 .two__text {
   margin-top: 20px;
@@ -997,7 +997,7 @@ body {
 }
 
 .paul__photo {
-  background: url(/Dubai/web/img/MOBILE/Paul.jpg) 0 0/100% no-repeat;
+  background: url(/Dubai/web/img/1920px/Paul.jpg) 0 0/100% no-repeat;
   border-radius: 50%;
   width: 68px;
   height: 68px;
@@ -1030,7 +1030,7 @@ body {
 }
 
 .robert__photo {
-  background: url(/Dubai/web/img/MOBILE/Robert.jpg) 0 0/100% no-repeat;
+  background: url(/Dubai/web/img/1920px/Robert.jpg) 0 0/100% no-repeat;
   border-radius: 50%;
   width: 68px;
   height: 68px;
@@ -1054,7 +1054,7 @@ body {
 }
 
 .jack__photo {
-  background: url(/Dubai/web/img/MOBILE/Paul.jpg) 0 0/100% no-repeat;
+  background: url(/Dubai/web/img/1920px/Paul.jpg) 0 0/100% no-repeat;
   border-radius: 50%;
   width: 68px;
   height: 68px;
@@ -1078,7 +1078,7 @@ body {
 }
 
 .kevin__photo {
-  background: url(/Dubai/web/img/MOBILE/Paul.jpg) 0 0/100% no-repeat;
+  background: url(/Dubai/web/img/1920px/Paul.jpg) 0 0/100% no-repeat;
   border-radius: 50%;
   width: 68px;
   height: 68px;
@@ -1512,7 +1512,7 @@ body {
     align-items: center;
   }
   .header__invisible {
-    width: 768px;
+    width: 750px;
     overflow-y: auto;
   }
   .visible__right {
@@ -1874,7 +1874,6 @@ body {
   }
   .expertise__video {
     margin: 70px 0;
-    background: url(/Dubai/web/img/768px/Video.jpg) 0 0/100% 100% no-repeat;
     height: 394px;
   }
   .expertise__maryKay {
@@ -1894,7 +1893,6 @@ body {
   .one__image {
     width: 328px;
     height: 194px;
-    background: url(/Dubai/web/img/768px/main2.jpg);
   }
   .one__text {
     margin-top: 30px;
@@ -1902,7 +1900,6 @@ body {
   .two__image {
     width: 328px;
     height: 194px;
-    background: url(/Dubai/web/img/768px/main3.jpg);
   }
   .two__text {
     margin-top: 30px;
@@ -1959,7 +1956,7 @@ body {
   }
   .mid__photoOne {
     margin: 0px;
-    background: url(/Dubai/web/img/768px/main4.jpg);
+    background: url(/Dubai/web/img/MOBILE/main4.jpg) cover no-repeat;
     width: 208px;
     height: 220px;
   }
@@ -1969,7 +1966,7 @@ body {
   }
   .mid__photoTwo {
     margin: 0px;
-    background: url(/Dubai/web/img/768px/main5.jpg);
+    background: url(/Dubai/web/img/MOBILE/main5.jpg) cover no-repeat;
     width: 208px;
     height: 220px;
   }
@@ -2678,7 +2675,6 @@ body {
   }
   .expertise__video {
     margin: 0px auto;
-    background: url(/Dubai/web/img/768px/Video.jpg) 0 0/100% 100% no-repeat;
     height: 921.08px;
     width: 1800px;
   }

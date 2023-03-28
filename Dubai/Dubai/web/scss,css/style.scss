@@ -95,7 +95,6 @@ body{
     justify-content: space-between;
     align-items: center;
     margin-top: 16px;
-
     }
     &__invisible{
         position: fixed;
@@ -105,7 +104,7 @@ body{
         top: 0%;
         left: 50%;
         transform: translate(-50%, 0%);
-        width: 320px;
+        width: 345px;
         height: 100%;
         overflow-y: scroll;
         padding: 0 25px;
@@ -727,7 +726,7 @@ body{
 
     &__video {
         margin: 40px 0;
-        background: url(/Dubai/web/img/MOBILE/mainVideo.jpg) 0 0/100% 100% no-repeat;
+        background: url(/Dubai/web/img/1920px/Video.png) 0 0/100% 100% no-repeat;
         width: 100%;
         height: 185px;
         display: flex;
@@ -759,7 +758,7 @@ body{
     &__image{
         width: 288px;
         height: 194px;
-        background: url(/Dubai/web/img/MOBILE/main2.jpg);
+        background: url(/Dubai/web/img/768px/main2.jpg);
     }
     &__text{
         margin: 20px 0;
@@ -774,7 +773,7 @@ body{
     &__image{
         width: 288px;
         height: 194px;
-        background: url(/Dubai/web/img/MOBILE/main3.jpg);
+        background: url(/Dubai/web/img/768px/main3.jpg);
     }
     &__text{
         margin-top: 20px;
@@ -1056,7 +1055,7 @@ body{
 .paul {
 
         &__photo{
-            background: url(/Dubai/web/img/MOBILE/Paul.jpg) 0 0/100% no-repeat;
+            background: url(/Dubai/web/img/1920px/Paul.jpg) 0 0/100% no-repeat;
             border-radius: 50%;
             width: 68px;
             height: 68px;
@@ -1091,7 +1090,7 @@ body{
 }
 .robert {
     &__photo{
-        background: url(/Dubai/web/img/MOBILE/Robert.jpg) 0 0/100% no-repeat;
+        background: url(/Dubai/web/img/1920px/Robert.jpg) 0 0/100% no-repeat;
         border-radius: 50%;
         width: 68px;
         height: 68px;
@@ -1118,7 +1117,7 @@ body{
 .jack {
 
     &__photo{
-        background: url(/Dubai/web/img/MOBILE/Paul.jpg) 0 0/100% no-repeat;
+        background: url(/Dubai/web/img/1920px/Paul.jpg) 0 0/100% no-repeat;
         border-radius: 50%;
         width: 68px;
         height: 68px;
@@ -1145,7 +1144,7 @@ body{
 .kevin {
 
     &__photo{
-        background: url(/Dubai/web/img/MOBILE/Paul.jpg) 0 0/100% no-repeat;
+        background: url(/Dubai/web/img/1920px/Paul.jpg) 0 0/100% no-repeat;
         border-radius: 50%;
         width: 68px;
         height: 68px;
@@ -1630,7 +1629,7 @@ body{
             align-items: center; 
         }
         &__invisible{
-            width: 768px;
+            width: 750px;
             overflow-y: auto;
         }
 
@@ -2078,7 +2077,6 @@ body{
 
     &__video {
         margin: 70px 0;
-        background: url(/Dubai/web/img/768px/Video.jpg) 0 0/100% 100% no-repeat ;
         height: 394px;
     }
 
@@ -2105,7 +2103,6 @@ body{
     &__image{
         width: 328px;
         height: 194px;
-        background: url(/Dubai/web/img/768px/main2.jpg);
     }
     &__text{
         margin-top: 30px;
@@ -2115,7 +2112,6 @@ body{
     &__image{
         width: 328px;
         height: 194px;
-        background: url(/Dubai/web/img/768px/main3.jpg);
     }
     &__text{
         margin-top: 30px;
@@ -2194,7 +2190,7 @@ body{
 .mid{
     &__photoOne {
         margin: 0px;
-        background: url(/Dubai/web/img/768px/main4.jpg);
+        background: url(/Dubai/web/img/MOBILE/main4.jpg) cover no-repeat;
         width: 208px;
         height: 220px;
     }
@@ -2206,7 +2202,7 @@ body{
 
     &__photoTwo {
         margin: 0px;
-        background: url(/Dubai/web/img/768px/main5.jpg);
+        background: url(/Dubai/web/img/MOBILE/main5.jpg) cover no-repeat;
         width: 208px;
         height: 220px;
     }
@@ -3095,7 +3091,6 @@ body{
     }
     &__video {
         margin: 0px auto;
-        background: url(/Dubai/web/img/768px/Video.jpg) 0 0/100% 100% no-repeat ;
         height: 921.08px;
         width: 1800px;
     }
